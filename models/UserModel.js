@@ -4,17 +4,26 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema(
  {
-  username: String,
-  mail:String,
-  password:String,
+  username: { type: String, required: true },
+  mail: { type: String, required: true },
+  password: { type: String, required: true },
   namedog: String,
-  image:String,
+  image: {
+    type: String,
+    default: "/images/userprofiledefault"
+  },
   breed:String,
-  sex:String,
+  sex: {
+    type:String,
+    enum: [
+      "male",
+      "female",
+    ],
+  },
   telephone: String,
   description: String,
-  age: Number,
-  weight: Number,
+  age: { type: Number, min: 0 },
+  weight: String,
   cp:String,
   review:[
     {type: Schema.Types.ObjectId, ref:'Review'}
