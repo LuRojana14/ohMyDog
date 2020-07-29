@@ -9,12 +9,13 @@ const userSchema = new Schema(
   password:String,
   namedog: String,
   image:String,
-  raza:String,
-  telephone: Number,
+  breed:String,
+  sex:String,
+  telephone: String,
   description: String,
   age: Number,
   weight: Number,
-  cp:Number,
+  cp:String,
   review:[
     {type: Schema.Types.ObjectId, ref:'Review'}
   ],
