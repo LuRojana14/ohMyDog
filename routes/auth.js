@@ -58,7 +58,7 @@ router.post('/signup', (req, res, next) => {
         return;
       }
 
-      res.redirect('/');
+      res.redirect('/login');
     });
   });
 });
@@ -99,7 +99,7 @@ router.post('/login', (req, res, next) => {
     }
 
     req.session.currentUser = theUser;
-    res.redirect('/');
+    res.redirect('/homeprivate');
   });
 });
 
