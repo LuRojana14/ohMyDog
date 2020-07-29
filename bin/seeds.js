@@ -13,7 +13,7 @@ const users = [
     mail: "aricel@gmail.com",
     password: "123456",
     namedog: "Lucky",
-    image: "./images/...",
+    image: "",
     breed: "Affenpinscher",
     sex: "female",
     telephone: "603624611",
