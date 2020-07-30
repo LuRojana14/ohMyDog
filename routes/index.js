@@ -10,13 +10,13 @@ router.get('/', function(req, res, next) {
 // /homeprivate
 // en caso contrario, redirigimos al usuario a /login
 
-router.use((req, res, next) => {
-  if (req.session.currentUser) { 
-    next(); 
-  } else {
-    res.redirect("/login");
-  }
-});
+// router.use((req, res, next) => {
+//   if (req.session.currentUser) { 
+//     next(); 
+//   } else {
+//     res.redirect("/login");
+//   }
+// });
  
 // renderizamos la plantilla homeprivate.hbs con el username
 // deconstruimos en la variable username el username de req.session.currentUser
@@ -24,12 +24,20 @@ router.get("/homeprivate", function (req, res, next) {
   res.render("homeprivate");
 });
 
-// router.get("/logout", (req, res, next) => {
-//   req.session.destroy((err) => {
-//     // si no puede acceder a los datos de sesión, redirige a /login
-//     res.redirect("/login");
-//   });
-// });
+router.get("/profile", function (req, res, next) {
+  res.render("profile");
+});
+
+router.get("/reviews", function (req, res, next) {
+  res.render("reviews");
+});
+
+router.get("/logout", (req, res, next) => {
+  req.session.destroy((err) => {
+    // si no puede acceder a los datos de sesión, redirige a /login
+    res.redirect("/login");
+  });
+});
 
 
 module.exports = router;
