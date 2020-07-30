@@ -15,7 +15,7 @@ router.get('/signup', (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
-  const nameInput = req.body.name;
+  const nameInput = req.body.userame;
   const emailInput = req.body.email;
   const passwordInput = req.body.password;
 
