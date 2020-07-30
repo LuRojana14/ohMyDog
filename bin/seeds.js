@@ -249,3 +249,9 @@ const users = [
     review: []
   },
 ]
+
+User.create(users, (err) => {
+  if (err) { throw(err) }
+  console.log(`Created ${users.length} users`)
+  mongoose.connection.close();
+});
