@@ -29,7 +29,7 @@ List of other features outside of the MVPs scope
 
 ## Server Routes (Back-end):
 
-
+<img src="/Users/usuario/Library/Application Support/typora-user-images/image-20200730150442638.png" alt="image-20200730150442638" style="zoom:50%;" />
 
 ## Models
 
