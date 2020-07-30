@@ -52,7 +52,7 @@ router.post("/user/edit", (req, res, next) => {
   const { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
   User.update(
     { _id: req.query.user_id },
-    { $set: { title, author, description, rating }}, 
+    { $set: { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp }}, 
     { new: true})
 
     .then((user) => {

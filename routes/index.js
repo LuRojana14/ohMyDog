@@ -36,6 +36,10 @@ router.get("/user-add", function (req, res, next) {
   res.render("user-add");
 });
 
+router.get("/user-edit", function (req, res, next) {
+  res.render("user-edit");
+});
+
 router.get("/reviews", function (req, res, next) {
   res.render("reviews");
 });
