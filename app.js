@@ -15,8 +15,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
 const indexRouter = require("./routes/index");
-const authRouter = require("./routes/auth");
-const homeprivateRouter = require("./routes/homeprivate");
+const authRouter = require("./routes/auth")
 
 const app = express();
 
@@ -74,7 +73,6 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 app.use("/", indexRouter);
 app.use("/", authRouter);
-app.use("/", homeprivateRouter);
 
 
 // catch 404 and forward to error handler
