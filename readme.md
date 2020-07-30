@@ -41,10 +41,8 @@ List of other features outside of the MVPs scope
 | POST   | / profiles      | New- Private route. Render profile. Send the data from the form to this route to create the celebrity and save to DB |                                                              |
 | POST   | / profiles      | FindbyId. Private route. Render profile                      |                                                              |
 | GET    | / profiles      | FindbyId: Show a form to edit a profile                      |                                                              |
-| POST   | / profiles      | FindbyId: Send the data from the form to this route to update and save the profile from DB |                                                              |
+| POST   | / profiles      | FindbyId: Send the data from the form to this route to update and save the profile from DB | { email, password, sex, telephone, description, age, weigth, cp } |
 | POST   | / review        | Profile.update                                               |                                                              |
-
-
 
 
 

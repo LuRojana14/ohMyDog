@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
+// const User = require('../models/UserModel.js')
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
 
 // verificamos si el usuario tiene una session activa, de ser así, lo redirigimos a la siguiente ruta, en este caso
 // /homeprivate
@@ -20,6 +23,7 @@ router.get('/', function(req, res, next) {
  
 // renderizamos la plantilla homeprivate.hbs con el username
 // deconstruimos en la variable username el username de req.session.currentUser
+
 router.get("/homeprivate", function (req, res, next) {
   res.render("homeprivate");
 });

@@ -1,12 +1,31 @@
 
-<h2>Home Private Page</h2>
+<h2>This is Home Private Page</h2>
 
 <nav>
 <ul>
 <li><a href="/profile">My Profile</a></li>
-
 <li><a href="/">Log Out</a></li>
 </ul>
-
 </nav>
+
+
+{{#each alldogs}}
+
+<img src="{{this.image}}" alt="">
+<h3>{{this.namedog}}</h3>
+<p>{{this.description}}</p>
+
+{{!-- <a href="/users/{{_id}}">Details</a> --}}
+
+{{/each}}
+
+{{!-- <form action="/users/{{this._id}}/delete" method="POST" id="form">
+    <button type="submit">Delete</button>
+</form>
+
+<form action="/users/{{this._id}}/edit" method="POST" id="form">
+    <button type="submit">Edit</button>
+</form> --}}
+
+
 

@@ -15,12 +15,13 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
 const authRouter = require("./routes/auth");
+const users = require("./routes/users");
 const indexRouter = require("./routes/index");
+
 // const homeprivate = require("./routes/homeprivate");
 // const profile = require("./routes/profile");
 // const reviews = require("./routes/reviews");
 // const userRouter = require("./routes/user");
-
 
 const app = express();
 
@@ -76,13 +77,13 @@ app.use((req, res, next) => {
 
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
-app.use("/",authRouter);
-app.use("/",indexRouter);
+app.use("/", authRouter);
+app.use("/", users);
+app.use("/", indexRouter);
 // app.use("/",homeprivate);
 // app.use("/", profile);
 // app.use("/", reviews);
 // app.use("/", user);
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
