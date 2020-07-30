@@ -32,6 +32,10 @@ router.get("/profile", function (req, res, next) {
   res.render("profile");
 });
 
+router.get("/user-add", function (req, res, next) {
+  res.render("user-add");
+});
+
 router.get("/reviews", function (req, res, next) {
   res.render("reviews");
 });
