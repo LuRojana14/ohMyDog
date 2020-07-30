@@ -29,14 +29,31 @@ List of other features outside of the MVPs scope
 
 ## Server Routes (Back-end):
 
-<img src="/Users/usuario/Library/Application Support/typora-user-images/image-20200730150442638.png" alt="image-20200730150442638" style="zoom:50%;" />
+| Method | Route           | Description                                                  | Request- Body                                                |
+| ------ | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| GET    | /               | Main page route. Renders home index view.                    |                                                              |
+| GET    | / auth / signup | Renders signup form view.                                    |                                                              |
+| POST   | / auth / signup | Renders the signup form and creates user in the DB.          | { email, password }                                          |
+| GET    | / auth / login  | Renders login form view.                                     |                                                              |
+| POST   | / auth / login  | Sends Login form data to the server. Redirects to home private page | { email, password, sex, telephone, description, age, weigth, cp } |
+| GET    | / profiles      | Show all profiles                                            |                                                              |
+| GET    | / profiles      | New- Private route. Create a profile                         |                                                              |
+| POST   | / profiles      | New- Private route. Render profile. Send the data from the form to this route to create the celebrity and save to DB |                                                              |
+| POST   | / profiles      | FindbyId. Private route. Render profile                      |                                                              |
+| GET    | / profiles      | FindbyId: Show a form to edit a profile                      |                                                              |
+| POST   | / profiles      | FindbyId: Send the data from the form to this route to update and save the profile from DB |                                                              |
+| POST   | / review        | Profile.update                                               |                                                              |
+
+
+
+
 
 ## Models
 
 User model
 
-```
- username: { type: String, required: true },
+```js
+ {	username: { type: String, required: true },
   mail: { type: String, required: true },
   password: { type: String, required: true },
   namedog: String,
@@ -44,7 +61,7 @@ User model
     type: String,
     default: "/images/userprofiledefault.jpg"
   },
-  breed:String,
+  breed: String,
   sex: {
     type:String,
     enum: [
@@ -60,13 +77,17 @@ User model
   review:[
     {type: Schema.Types.ObjectId, ref:'Review'}
   ],
+  }
 ```
 
 Review model
 
-```
-    user: { type: Schema.Types.ObjectId, ref: "User" },
-    comments: String,
+```js
+   
+{
+  user: { type: Schema.Types.ObjectId, ref: "User" },
+  comment: String,
+}
 ```
 
 ## Links
@@ -84,4 +105,6 @@ The url to your repository and to your deployed project
 ### Slides
 
 The url to your presentation slides
+
+
 
