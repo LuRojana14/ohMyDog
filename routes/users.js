@@ -66,6 +66,12 @@ router.post("/user/edit", (req, res, next) => {
 
 //DELETE A USER
 
+User.deleteOne({ title: "Carrot Cake" })
+  .then((recipe) => console.log("Receta eliminada", recipe))
+
+  .catch((error) => {
+    console.error("Error connecting to the database", error);
+  });
 
 
 //REVIEW
