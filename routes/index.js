@@ -32,12 +32,12 @@ router.get("/reviews", function (req, res, next) {
   res.render("reviews");
 });
 
-router.get("/logout", (req, res, next) => {
-  req.session.destroy((err) => {
-    // si no puede acceder a los datos de sesión, redirige a /login
-    res.redirect("/login");
-  });
-});
+// router.get("/logout", (req, res, next) => {
+//   req.session.destroy((err) => {
+//     // si no puede acceder a los datos de sesión, redirige a /login
+//     res.redirect("/login");
+//   });
+// });
 
 
 module.exports = router;

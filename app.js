@@ -19,6 +19,7 @@ const indexRouter = require("./routes/index");
 // const homeprivate = require("./routes/homeprivate");
 // const profile = require("./routes/profile");
 // const reviews = require("./routes/reviews");
+// const userRouter = require("./routes/user");
 
 
 const app = express();
@@ -80,7 +81,7 @@ app.use("/",indexRouter);
 // app.use("/",homeprivate);
 // app.use("/", profile);
 // app.use("/", reviews);
-
+// app.use("/", user);
 
 
 // catch 404 and forward to error handler
