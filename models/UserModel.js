@@ -10,7 +10,7 @@ const userSchema = new Schema(
   namedog: String,
   image: {
     type: String,
-    default: "../images/userprofiledefault.jpg"
+    default: "/images/userprofiledefault.jpg"
   },
   breed:String,
   sex: {

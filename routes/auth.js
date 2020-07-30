@@ -15,7 +15,7 @@ router.get('/signup', (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
-  const nameInput = req.body.userame;
+  const nameInput = req.body.username;
   const emailInput = req.body.email;
   const passwordInput = req.body.password;
 
@@ -26,7 +26,7 @@ router.post('/signup', (req, res, next) => {
     return;
   }
 
-  User.findOne({ email: emailInput }, '_id', (err, existingUser) => {
+  User.findOne({ mail: emailInput }, (err, existingUser) => {
     if (err) {
       next(err);
       return;
@@ -43,15 +43,15 @@ router.post('/signup', (req, res, next) => {
     const hashedPass = bcrypt.hashSync(passwordInput, salt);
 
     const userSubmission = {
-      name: nameInput,
-      email: emailInput,
+      username: nameInput,
+      mail: emailInput,
       password: hashedPass
     };
 
     const theUser = new User(userSubmission);
-
+console.log(userSubmission)
     theUser.save(err => {
-      if (err) {
+      if (err) { console.log(err)
         res.render('auth/signup', {
           errorMessage: 'Something went wrong. Try again later.'
         });
@@ -83,7 +83,7 @@ router.post('/login', (req, res, next) => {
     return;
   }
 
-  User.findOne({ email: emailInput }, (err, theUser) => {
+  User.findOne({ mail: emailInput }, (err, theUser) => {
     if (err || theUser === null) {
       res.render('auth/login', {
         errorMessage: `There isn't an account with email ${emailInput}.`
