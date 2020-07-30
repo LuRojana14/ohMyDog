@@ -67,8 +67,22 @@ router.post("/user/edit", (req, res, next) => {
 //DELETE A USER
 
 
+
 //REVIEW
 
+router.post('/reviews/add', (req, res, next) => {
+  const { user, comments } = req.body;
+  User.update(
+    { _id: req.query.user_id },
+    { $push: { reviews: { user, comments } } }
+  )
+    .then(user => {
+      res.redirect('/profile' + req.query.user_id);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
 
 
 
