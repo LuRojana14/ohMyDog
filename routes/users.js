@@ -21,12 +21,13 @@ router.get('/homeprivate', (req, res, next) => {
 
 //EDIT USER
 router.get('/edituser', (req, res, next) => {
+  const _id = req.session.currentUser._id;
   res.render("edituser");
 });
 
 
 router.post("/edituser", (req, res, next) => {
-  console.log('HERE', req.session);
+  // console.log('HERE', req.session);
   const { namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
   const _id = req.session.currentUser._id;
   User.findByIdAndUpdate( _id, { namedog, image, breed, sex, telephone, description, age, weigth, cp }, {new: true})

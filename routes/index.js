@@ -12,9 +12,9 @@ router.get("/profile", function (req, res, next) {
   res.render("profile");
 });
 
-router.get("/edituser", function (req, res, next) {
-  res.render("edituser");
-});
+// router.get("/edituser", function (req, res, next) {
+//   res.render("edituser");
+// });
 
 router.get("/reviews", function (req, res, next) {
   res.render("reviews");

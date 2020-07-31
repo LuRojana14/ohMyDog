@@ -1,52 +1,70 @@
 <h2>EDIT YOUR PROFILE - TEST</h2>
 
 
-<form action="/edituser" method="post">
+{{!-- 
+<form action="/book/edit?book_id={{book._id}}" method="post">
+  <label for="">Title:</label>
+  <input type="text" name="title" value="{{book.title}}" />
+
+  <label for="">Author:</label>
+  <input type="text" name="author" value="{{book.author}}" />
+
+  <label for="">Description:</label>
+  <input type="text" name="description" value="{{book.description}}" />
+
+  <label for="">Rate:</label>
+  <input type="number" name="rating" value="{{book.rating}}" />
+
+  <button type="submit">EDIT</button>
+</form> --}}
+
+
+<form action="/users/edituser" method="post">
 
   <div>
     <label for="namedog">Namedog</label>
-    <input type="text" name="text">
+    <input type="text" name="namedog" value="{{}}">
   </div>
 
   <div>
     <label for="">Image</label>
-    <input type="file" name="image">
+    <input type="file" name="image" value="{{}}">
   </div>
 
   <div>
     <label for="">Breed</label>
-    <input type="text" name="breed">
+    <input type="text" name="breed" value="{{}}">
   </div>
 
   <div>
     <label for="">Sex</label>
-    <input type="text" name="sex" id="sex-input"
+    <input type="text" name="sex" id="sex-input" value="{{}}"
       placeholder="e.g., male female">
   </div>
 
   <div>
     <label for="">Telephone</label>
-    <input type="text" name="telephone">
+    <input type="text" name="telephone" value="{{}}">
   </div>
 
   <div>
     <label for="">Description</label>
-    <input type="text" name="text">
+    <input type="text" name="description" value="{{}}">
   </div>
 
   <div>
     <label for="">Age</label>
-    <input type="text" name="text">
+    <input type="text" name="age" value="{{}}">
   </div>
 
   <div>
     <label for="">Weigth</label>
-    <input type="text" name="text">
+    <input type="text" name="weigth" value="{{}}">
   </div>
 
   <div>
     <label for="">CP</label>
-    <input type="text" name="text">
+    <input type="text" name="cp" value="{{}}">
   </div>
 
   <button type="submit">EDIT</button>
