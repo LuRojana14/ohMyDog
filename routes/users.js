@@ -9,7 +9,8 @@ const User = require("./../models/UserModel");
 router.get('/homeprivate', (req, res, next) => {
   User.find()
     .then(allTheUsersFromDB => {
-      // console.log('Retrieved books from DB:', allTheBooksFromDB);
+      console.log('hola');
+      // console.log('Retrieved dogs from DB:', allTheUsersFromDB);
       res.render('homeprivate', { alldogs: allTheUsersFromDB });
     })
     .catch(error => {
@@ -18,7 +19,7 @@ router.get('/homeprivate', (req, res, next) => {
 });
 
 
-//CREATE A NEW USER
+//EDIT USER
 router.get('/edituser', (req, res, next) => {
   res.render("edituser");
 });
@@ -28,7 +29,7 @@ router.post("/edituser", (req, res, next) => {
   console.log('HERE', req.session);
   const { namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
   const _id = req.session.currentUser._id;
-  User.findByIdAndUpdate( _id, { namedog, image, breed, sex, telephone, description, age, weigth, cp })
+  User.findByIdAndUpdate( _id, { namedog, image, breed, sex, telephone, description, age, weigth, cp }, {new: true})
   .then((updateUser) => {
     res.redirect('/profile');
   })
@@ -36,43 +37,6 @@ router.post("/edituser", (req, res, next) => {
     console.log(error);
   })
 });
-
-//EDIT A USER
-
-// router.get("/user/edit", (req, res, next) => {
-//   Book.findOne({ _id: req.query.user_id })
-//     .then((user) => {
-//       res.render("user-edit", { user });
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
-
-// router.post("/user/edit", (req, res, next) => {
-//   const { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
-//   User.update(
-//     { _id: req.query.user_id },
-//     { $set: { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp }}, 
-//     { new: true})
-
-//     .then((user) => {
-//       res.redirect("/profile");
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
-
-
-//DELETE A USER
-
-// User.deleteOne({ title: "Carrot Cake" })
-//   .then((recipe) => console.log("Receta eliminada", recipe))
-
-//   .catch((error) => {
-//     console.error("Error connecting to the database", error);
-//   });
 
 
 //REVIEW

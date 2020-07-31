@@ -8,6 +8,19 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get("/profile", function (req, res, next) {
+  res.render("profile");
+});
+
+router.get("/edituser", function (req, res, next) {
+  res.render("edituser");
+});
+
+router.get("/reviews", function (req, res, next) {
+  res.render("reviews");
+});
+
+module.exports = router;
 
 // verificamos si el usuario tiene una session activa, de ser así, lo redirigimos a la siguiente ruta, en este caso
 // /homeprivate
@@ -24,25 +37,10 @@ router.get('/', function(req, res, next) {
 // renderizamos la plantilla homeprivate.hbs con el username
 // deconstruimos en la variable username el username de req.session.currentUser
 
-router.get("/homeprivate", function (req, res, next) {
-  res.render("homeprivate");
-});
+// router.get("/user-add", function (req, res, next) {
+//   res.render("user-add");
+// });
 
-router.get("/profile", function (req, res, next) {
-  res.render("profile");
-});
-
-router.get("/user-add", function (req, res, next) {
-  res.render("user-add");
-});
-
-router.get("/user-edit", function (req, res, next) {
-  res.render("user-edit");
-});
-
-router.get("/reviews", function (req, res, next) {
-  res.render("reviews");
-});
 
 // router.get("/logout", (req, res, next) => {
 //   req.session.destroy((err) => {
@@ -51,8 +49,6 @@ router.get("/reviews", function (req, res, next) {
 //   });
 // });
 
-
-module.exports = router;
 
 // const isLoggedIn = (req, res, next) => {
 //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)

@@ -18,11 +18,6 @@ const authRouter = require("./routes/auth");
 const users = require("./routes/users");
 const indexRouter = require("./routes/index");
 
-// const homeprivate = require("./routes/homeprivate");
-// const profile = require("./routes/profile");
-// const reviews = require("./routes/reviews");
-// const userRouter = require("./routes/user");
-
 const app = express();
 
 mongoose
@@ -77,8 +72,8 @@ app.use((req, res, next) => {
 
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
-app.use("/", authRouter);
-app.use("/", users);
+app.use("/auth", authRouter);
+app.use("/users", users);
 app.use("/", indexRouter);
 
 
