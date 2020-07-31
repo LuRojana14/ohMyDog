@@ -3,9 +3,9 @@ const User = require('../models/UserModel');
 const Review = require('../models/ReviewModel');
 
 const dbtitle = 'ohmydog';
-mongoose.connect(`mongodb://localhost/${dbtitle}`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`mongodb://localhost:27017/${dbtitle}`, { useNewUrlParser: true, useUnifiedTopology: true });
 User.collection.drop();
-Review.collection.drop();
+// Review.collection.drop();
 
 const users = [
   {

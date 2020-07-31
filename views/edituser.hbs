@@ -1,25 +1,7 @@
-<h2>CREATE YOUR PROFILE</h2>
+<h2>EDIT YOUR PROFILE - TEST</h2>
 
 
-<form action="/newuser/add" method="post">
-
-  <div>
-    <label for="name-input"> Username </label>
-    <input type="text" name="username" id="name-input" placeholder="e.g., Diana
-      Prince">
-  </div>
-
-  <div>
-    <label for="email-input"> Email </label>
-    <input type="email" name="email" id="email-input" placeholder="e.g.,
-      diana@themyscira.agency">
-  </div>
-
-  <div>
-    <label for="password-input"> Password </label>
-    <input type="password" name="password" id="password-input"
-      placeholder="e.g., ••••••••••••">
-  </div>
+<form action="/edituser" method="post">
 
   <div>
     <label for="namedog">Namedog</label>
@@ -28,7 +10,7 @@
 
   <div>
     <label for="">Image</label>
-    <input type="image" name="image">
+    <input type="file" name="image">
   </div>
 
   <div>
@@ -67,5 +49,5 @@
     <input type="text" name="text">
   </div>
 
-  <button type="submit">CREATE</button>
+  <button type="submit">EDIT</button>
 </form>

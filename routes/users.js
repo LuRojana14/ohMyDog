@@ -19,16 +19,17 @@ router.get('/homeprivate', (req, res, next) => {
 
 
 //CREATE A NEW USER
-router.get('/newuser/add', (req, res, next) => {
-  res.render("user-add");
+router.get('/edituser', (req, res, next) => {
+  res.render("edituser");
 });
 
 
-router.post('/newuser/add', (req, res, next) => {
-  const { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
-  const newUser = new User({ username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp })
-  newUser.save()
-  .then((newuser) => {
+router.post("/edituser", (req, res, next) => {
+  console.log('HERE', req.session);
+  const { namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
+  const _id = req.session.currentUser._id;
+  User.findByIdAndUpdate( _id, { namedog, image, breed, sex, telephone, description, age, weigth, cp })
+  .then((updateUser) => {
     res.redirect('/profile');
   })
   .catch((error) => {
@@ -38,57 +39,57 @@ router.post('/newuser/add', (req, res, next) => {
 
 //EDIT A USER
 
-router.get("/user/edit", (req, res, next) => {
-  Book.findOne({ _id: req.query.user_id })
-    .then((user) => {
-      res.render("user-edit", { user });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
+// router.get("/user/edit", (req, res, next) => {
+//   Book.findOne({ _id: req.query.user_id })
+//     .then((user) => {
+//       res.render("user-edit", { user });
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// });
 
-router.post("/user/edit", (req, res, next) => {
-  const { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
-  User.update(
-    { _id: req.query.user_id },
-    { $set: { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp }}, 
-    { new: true})
+// router.post("/user/edit", (req, res, next) => {
+//   const { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp } = req.body;
+//   User.update(
+//     { _id: req.query.user_id },
+//     { $set: { username, mail, password, namedog, image, breed, sex, telephone, description, age, weigth, cp }}, 
+//     { new: true})
 
-    .then((user) => {
-      res.redirect("/profile");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
+//     .then((user) => {
+//       res.redirect("/profile");
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// });
 
 
 //DELETE A USER
 
-User.deleteOne({ title: "Carrot Cake" })
-  .then((recipe) => console.log("Receta eliminada", recipe))
+// User.deleteOne({ title: "Carrot Cake" })
+//   .then((recipe) => console.log("Receta eliminada", recipe))
 
-  .catch((error) => {
-    console.error("Error connecting to the database", error);
-  });
+//   .catch((error) => {
+//     console.error("Error connecting to the database", error);
+//   });
 
 
 //REVIEW
 
-router.post('/reviews/add', (req, res, next) => {
-  const { user, comments } = req.body;
-  User.update(
-    { _id: req.query.user_id },
-    { $push: { reviews: { user, comments } } }
-  )
-    .then(user => {
-      res.redirect('/profile' + req.query.user_id);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-});
+// router.post('/reviews/add', (req, res, next) => {
+//   const { user, comments } = req.body;
+//   User.update(
+//     { _id: req.query.user_id },
+//     { $push: { reviews: { user, comments } } }
+//   )
+//     .then(user => {
+//       res.redirect('/profile' + req.query.user_id);
+//     })
+//     .catch(error => {
+//       console.log(error);
+//     });
+// });
 
 
 

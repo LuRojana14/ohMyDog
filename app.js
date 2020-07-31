@@ -53,14 +53,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   session({
-    secret: "find the best friend for your dog",
-    resave: true,
-    saveUninitialized: true,
-    cookie: { maxAge: 6000 },
+    secret: "basic-auth-secret",
+    cookie: { maxAge: 6000000 },
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60, // 1 day
+      ttl: 24 * 60 * 60, //1 day
     }),
+    revsave: true,
+    saveuninitialized: true,
   })
 );
 
@@ -80,10 +80,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.use("/", authRouter);
 app.use("/", users);
 app.use("/", indexRouter);
-// app.use("/",homeprivate);
-// app.use("/", profile);
-// app.use("/", reviews);
-// app.use("/", user);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
