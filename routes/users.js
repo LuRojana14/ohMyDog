@@ -23,12 +23,12 @@ router.get("/profile", function (req, res, next) {
 
 
 //EDIT USER
-router.get("/edituser", (req, res, next) => {
-  const _id = req.session.currentUser._id;
-  res.render("edituser");
-});
+// router.get("/edituser", (req, res, next) => {
+//   const _id = req.session.currentUser._id;
+//   res.render("edituser");
+// });
 
-router.post("/edituser", (req, res, next) => {
+router.post("/pedo", (req, res, next) => {
   // console.log('HERE', req.session);
   const {
     namedog,
@@ -48,7 +48,7 @@ router.post("/edituser", (req, res, next) => {
     { new: true }
   )
     .then((updateUser) => {
-      res.redirect("/profile");
+      res.redirect("/users/profile");
     })
     .catch((error) => {
       console.log(error);
