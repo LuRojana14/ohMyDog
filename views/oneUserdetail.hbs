@@ -1,0 +1,27 @@
+<h2>hola</h2>
+
+
+
+
+
+
+
+
+<h2>Reviews</h2>
+<p>Add a review</p>
+<form action="/reviews/add?user_id={{user._id}}" method="post">
+  <label for="">User:</label>
+  <input type="text" name="user">
+
+  <label for="">Comments:</label>
+  <textarea type="text" name="comments"></textarea>
+
+  <button type="submit">ADD</button>
+</form>
+
+{{#each user.reviews}}
+<div class="review-item">
+  <p>{{this.comments}}</p>
+  <span>{{this.user}}</span>
+</div>
+{{/each}}
