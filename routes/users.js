@@ -16,35 +16,6 @@ router.get("/homeprivate", (req, res, next) => {
     });
 });
 
-// VIEW PROFILE EN SEE MORE
-
-router.get("/oneUser/:userId", (req, res, next) => {
-  User.findById(req.params.userId)
-    .then(theUser => {
-      res.render("oneUserdetail", { user: theUser });
-    })
-    .catch(error => {
-      console.log('Error')
-    })
-});
-
-//REVIEW
-
-router.post('/reviews/add', (req, res, next) => {
-  const { user, comments } = req.body;
-  User.update(
-    { _id: req.query.user_id },
-    { $push: { reviews: { user, comments } } }
-  )
-    .then(user => {
-      res.redirect('/users/oneUser' + req.query.user_id);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-});
-
-
 
 //EDIT USER
 router.get("/edituser", (req, res, next) => {
@@ -78,6 +49,41 @@ router.post("/edituser", (req, res, next) => {
       console.log(error);
     });
 });
+
+
+//REVIEW
+
+router.post('/reviews/add', (req, res, next) => {
+  
+  const { userId, user, comments, } = req.body;
+  User.update(
+    { _id: userId },
+    { $push: { reviews: { user, comments } } }
+    )
+
+    .then(user => {
+      res.redirect('/users/oneUser/' + userId);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
+
+
+// VIEW PROFILE EN SEE MORE
+
+router.get("/oneUser/:userId", (req, res, next) => {
+  User.findById(req.params.userId)
+    .then(theUser => {
+      res.render("oneUserdetail", { user: theUser });
+    })
+    .catch(error => {
+      console.log('Error')
+    })
+});
+
+
+
 
 
 

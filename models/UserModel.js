@@ -25,9 +25,12 @@ const userSchema = new Schema(
   age: { type: Number, min: 0 },
   weight: String,
   cp:String,
-  review:[
-    {type: Schema.Types.ObjectId, ref:'Review'}
-  ],
+  reviews:[
+    {
+      user: String,
+      comments: String
+    }
+  ]
 },
 {
   timestamps: {
