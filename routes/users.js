@@ -2,22 +2,41 @@ const express = require("express");
 const router = express.Router();
 
 const User = require("../models/UserModel");
-const Dog = require('../models/UserModel');
+const Dog = require('../models/DogModel');
 
 
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
-  User.find()
-    .then((allTheUsersFromDB) => {
+  Dog.find()
+    .then((allTheDogFromDB) => {
       // console.log("hola");
-      // console.log('Retrieved dogs from DB:', allTheUsersFromDB);
-      res.render("homeprivate", { alldogs: allTheUsersFromDB });
+      // console.log('Retrieved dogs from DB:', allTheDogFromDB);
+      res.render("homeprivate", { alldogs: allTheDogFromDB });
     })
     .catch((error) => {
       console.log("Error while getting the books from the DB: ", error);
     });
 });
 
+//ACA VOY A HACER EL POPULATE
+
+router.get('/:userId', (req, res, next) => {
+  let userId = req.params.userId;
+  if (!/^[0-9a-fA-F]{24}$/.test(userId)) { 
+    return res.status(404).render('not-found');
+  }
+  User.findOne({'_id': userId})
+    .populate('dog')
+    .then(user => {
+      if (!user) {
+          return res.status(404).render('not-found');
+      }
+      res.render("oneUserdetail", { user })
+    })
+    .catch(next)
+});
+
+//ACA TERMINA EL POPULATE
 
 router.get("/profile", function (req, res, next) {
   res.render("profile");
