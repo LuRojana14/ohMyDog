@@ -26,6 +26,9 @@ module.exports = router;
 // /homeprivate
 // en caso contrario, redirigimos al usuario a /login
 
+
+//MIDDLEWARE
+
 // router.use((req, res, next) => {
 //   if (req.session.currentUser) { 
 //     next(); 

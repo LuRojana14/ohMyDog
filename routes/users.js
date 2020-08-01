@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-const User = require("./../models/UserModel");
+const User = require("../models/UserModel");
+const Dog = require('../models/UserModel');
+
 
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
   User.find()
     .then((allTheUsersFromDB) => {
-      console.log("hola");
+      // console.log("hola");
       // console.log('Retrieved dogs from DB:', allTheUsersFromDB);
       res.render("homeprivate", { alldogs: allTheUsersFromDB });
     })
@@ -22,15 +24,8 @@ router.get("/profile", function (req, res, next) {
 });
 
 
-//EDIT USER
-// router.get("/edituser", (req, res, next) => {
-//   const _id = req.session.currentUser._id;
-//   res.render("edituser");
-// });
-
 router.post("/pedo", (req, res, next) => {
-  // console.log('HERE', req.session);
-  const {
+    const {
     namedog,
     image,
     breed,

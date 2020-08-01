@@ -7,30 +7,15 @@ const userSchema = new Schema(
   username: { type: String, required: true },
   mail: { type: String, required: true },
   password: { type: String, required: true },
-  namedog: String,
-  image: {
-    type: String,
-    default: "/images/userprofiledefault.jpg"
-  },
-  breed:String,
-  sex: {
-    type:String,
-    enum: [
-      "male",
-      "female",
-    ],
-  },
   telephone: String,
-  description: String,
-  age: { type: Number, min: 0 },
-  weight: String,
   cp:String,
+  dog:[{type : Schema.Types.ObjectId, ref: 'Dog'}],
   reviews:[
     {
       user: String,
       comments: String
-    }
-  ]
+    },
+  ],
 },
 {
   timestamps: {
