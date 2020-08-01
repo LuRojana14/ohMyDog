@@ -1,70 +1,51 @@
 <h2>EDIT YOUR PROFILE - TEST</h2>
 
 
-{{!-- 
-<form action="/book/edit?book_id={{book._id}}" method="post">
-  <label for="">Title:</label>
-  <input type="text" name="title" value="{{book.title}}" />
-
-  <label for="">Author:</label>
-  <input type="text" name="author" value="{{book.author}}" />
-
-  <label for="">Description:</label>
-  <input type="text" name="description" value="{{book.description}}" />
-
-  <label for="">Rate:</label>
-  <input type="number" name="rating" value="{{book.rating}}" />
-
-  <button type="submit">EDIT</button>
-</form> --}}
-
-
 <form action="/users/edituser" method="post">
 
   <div>
     <label for="namedog">Namedog</label>
-    <input type="text" name="namedog" value="{{}}">
+    <input type="text" name="namedog" value={{this.namedog}}>
   </div>
 
   <div>
     <label for="">Image</label>
-    <input type="file" name="image" value="{{}}">
+    <input type="file" name="image" value={{this.image}}>
   </div>
 
   <div>
     <label for="">Breed</label>
-    <input type="text" name="breed" value="{{}}">
+    <input type="text" name="breed" value={{this.breed}}>
   </div>
 
   <div>
     <label for="">Sex</label>
-    <input type="text" name="sex" id="sex-input" value="{{}}"
-      placeholder="e.g., male female">
+    <input type="text" name="sex" id="sex-input" placeholder="e.g., male female" value={{this.sex}}>
   </div>
 
   <div>
     <label for="">Telephone</label>
-    <input type="text" name="telephone" value="{{}}">
+    <input type="text" name="telephone" value={{this.telephone}}>
   </div>
 
   <div>
     <label for="">Description</label>
-    <input type="text" name="description" value="{{}}">
+    <input type="text" name="description" value={{this.description}}>
   </div>
 
   <div>
     <label for="">Age</label>
-    <input type="text" name="age" value="{{}}">
+    <input type="text" name="age" value={{this.age}}>
   </div>
 
   <div>
     <label for="">Weigth</label>
-    <input type="text" name="weigth" value="{{}}">
+    <input type="text" name="weigth" value={{this.weigth}}>
   </div>
 
   <div>
     <label for="">CP</label>
-    <input type="text" name="cp" value="{{}}">
+    <input type="text" name="cp" value={{this.cp}}>
   </div>
 
   <button type="submit">EDIT</button>
