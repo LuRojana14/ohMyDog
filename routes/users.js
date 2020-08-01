@@ -18,7 +18,75 @@ router.get("/homeprivate", (req, res, next) => {
     });
 });
 
-//ACA VOY A HACER EL POPULATE
+
+router.get("/profile", function (req, res, next) {
+  res.render("profile");
+});
+
+//ROUTER.POST ORIGINAL
+// router.post("/prueba", (req, res, next) => {
+//     const {
+//     namedog,
+//     image,
+//     breed,
+//     sex,
+//     telephone,
+//     description,
+//     age,
+//     weigth,
+//     cp,
+//   } = req.body;
+//   const _id = req.session.currentUser._id;
+//   Dog.findByIdAndUpdate(
+//     _id,
+//     { namedog, image, breed, sex, telephone, description, age, weigth, cp },
+//     { new: true }
+//   )
+//     .then((updateDog) => {
+//       res.redirect("/users/profile");
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// });
+
+//ROUTER.POST MODIFICADO 
+
+router.post("/prueba", (req, res, next) => {
+  const {
+  namedog,
+  image,
+  breed,
+  sex,
+  description,
+  age,
+  weigth,
+  cp,
+  telephone,
+  
+} = req.body;
+const _id = req.session.currentUser._id;
+Dog.findByIdAndUpdate(
+  _id,
+  { namedog, image, breed, sex, telephone, description, age, weigth, cp },
+  { new: true }
+)
+
+User.findByIdAndUpdate(
+  _id,
+  { telephone, cp },
+  { new: true }  
+)
+  .then((updateDog) => {
+    res.redirect("/users/profile");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+});
+
+
+// ACA VOY A HACER EL POPULATE
 
 router.get('/:userId', (req, res, next) => {
   let userId = req.params.userId;
@@ -38,44 +106,13 @@ router.get('/:userId', (req, res, next) => {
 
 //ACA TERMINA EL POPULATE
 
-router.get("/profile", function (req, res, next) {
-  res.render("profile");
-});
-
-
-router.post("/pedo", (req, res, next) => {
-    const {
-    namedog,
-    image,
-    breed,
-    sex,
-    telephone,
-    description,
-    age,
-    weigth,
-    cp,
-  } = req.body;
-  const _id = req.session.currentUser._id;
-  User.findByIdAndUpdate(
-    _id,
-    { namedog, image, breed, sex, telephone, description, age, weigth, cp },
-    { new: true }
-  )
-    .then((updateUser) => {
-      res.redirect("/users/profile");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
-
-
 //REVIEW
 
+//NUEVA VERSION
 router.post('/reviews/add', (req, res, next) => {
   
   const { userId, user, comments, } = req.body;
-  User.update(
+  Dog.update(
     { _id: userId },
     { $push: { reviews: { user, comments } } }
     )
@@ -89,12 +126,30 @@ router.post('/reviews/add', (req, res, next) => {
 });
 
 
+//VERSION FERRAN
+// router.post('/reviews/add', (req, res, next) => {
+  
+//   const { userId, user, comments, } = req.body;
+//   User.update(
+//     { _id: userId },
+//     { $push: { reviews: { user, comments } } }
+//     )
+
+//     .then(user => {
+//       res.redirect('/users/oneUser/' + userId);
+//     })
+//     .catch(error => {
+//       console.log(error);
+//     });
+// });
+
+
 // VIEW PROFILE EN SEE MORE
 
-router.get("/oneUser/:userId", (req, res, next) => {
-  User.findById(req.params.userId)
-    .then(theUser => {
-      res.render("oneUserdetail", { user: theUser });
+router.get("/oneDog/:dogId", (req, res, next) => {
+  Dog.findById(req.params.dogId)
+    .then(theDog => {
+      res.render("oneDogdetail", { dog: theDog });
     })
     .catch(error => {
       console.log('Error')
