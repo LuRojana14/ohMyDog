@@ -17,6 +17,11 @@ router.get("/homeprivate", (req, res, next) => {
 });
 
 
+router.get("/profile", function (req, res, next) {
+  res.render("profile");
+});
+
+
 //EDIT USER
 router.get("/edituser", (req, res, next) => {
   const _id = req.session.currentUser._id;
