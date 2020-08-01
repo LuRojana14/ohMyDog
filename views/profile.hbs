@@ -9,3 +9,57 @@
   </ul>
 </nav>
 
+<h2>EDIT YOUR PROFILE - TEST</h2>
+
+
+<form action="/users/edituser" method="post">
+
+  <div>
+    <label for="namedog">Namedog</label>
+    <input type="text" name="namedog" value={{this.namedog}}>
+  </div>
+
+  <div>
+    <label for="">Image</label>
+    <input type="file" name="image" value={{this.image}}>
+  </div>
+
+  <div>
+    <label for="">Breed</label>
+    <input type="text" name="breed" value={{this.breed}}>
+  </div>
+
+  <div>
+    <label for="">Sex</label>
+    <input type="text" name="sex" id="sex-input" placeholder="e.g., male female" value={{this.sex}}>
+  </div>
+
+  <div>
+    <label for="">Telephone</label>
+    <input type="text" name="telephone" value={{this.telephone}}>
+  </div>
+
+  <div>
+    <label for="">Description</label>
+    <input type="text" name="description" value={{this.description}}>
+  </div>
+
+  <div>
+    <label for="">Age</label>
+    <input type="text" name="age" value={{this.age}}>
+  </div>
+
+  <div>
+    <label for="">Weigth</label>
+    <input type="text" name="weigth" value={{this.weigth}}>
+  </div>
+
+  <div>
+    <label for="">CP</label>
+    <input type="text" name="cp" value={{this.cp}}>
+  </div>
+
+  <button type="submit">EDIT</button>
+
+  <button><a href="/users/homeprivate">CANCEL</a></button>
+</form>
