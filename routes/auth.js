@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 
 const User = require("../models/UserModel");
+const Dog = require("../models/DogModel");
 
 const router = express.Router();
 const bcryptSalt = 10;
@@ -51,22 +52,30 @@ router.post("/signup", (req, res, next) => {
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashedPass = bcrypt.hashSync(passwordInput, salt);
 
-    const userSubmission = {
-      username: nameInput,
-      mail: emailInput,
-      password: hashedPass,
+    
+
+    const dogSubmission = {
       namedog: namedogInput,
-      image: imageInput,
+      //          condicion       TRUE          FALSE  
+      image: imageInput === '' ? undefined : imageInput,
       description: descriptionInput,
       age: ageInput,
       weigth: weigthInput,
       breed: breedInput,
       sex: sexInput,
-      telephone: telephoneInput,
-      cp: cpInput,
     };
 
-    const theUser = new User(userSubmission);
+    Dog.create(dogSubmission)
+.then(dog => { 
+  const userSubmission = {
+    username: nameInput,
+    mail: emailInput,
+    password: hashedPass,
+    telephone: telephoneInput,
+    cp: cpInput,
+    dog: dog._id
+  };
+  const theUser = new User(userSubmission);
     console.log(userSubmission);
     theUser.save((err) => {
       if (err) {
@@ -79,6 +88,9 @@ router.post("/signup", (req, res, next) => {
 
       res.redirect("/users/homeprivate");
     });
+})
+
+    
   });
 });
 

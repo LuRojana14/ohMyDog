@@ -106,9 +106,9 @@ router.get('/:userId', (req, res, next) => {
 
 //REVIEW
 
-router.get("/reviews", function (req, res, next) {
-  res.render("oneUser");
-});
+// router.get("/reviews", function (req, res, next) {
+//   res.render("oneUser");
+// });
 
 //NUEVA VERSION AGREGAR REVIEW
 router.post('/reviews/add', (req, res, next) => {
@@ -126,9 +126,6 @@ router.post('/reviews/add', (req, res, next) => {
       console.log(error);
     });
 });
-
-
-
 
 // VIEW PROFILE EN SEE MORE
 
