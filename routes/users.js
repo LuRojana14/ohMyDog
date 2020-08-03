@@ -66,7 +66,7 @@ router.post("/prueba", (req, res, next) => {
 const _id = req.session.currentUser._id;
 Dog.findByIdAndUpdate(
   _id,
-  { namedog, image, breed, sex, telephone, description, age, weigth, cp },
+  { namedog, image, breed, sex, description, age, weigth},
   { new: true }
 )
 
