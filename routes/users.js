@@ -108,7 +108,12 @@ router.get('/:userId', (req, res, next) => {
 
 //REVIEW
 
-//NUEVA VERSION
+
+router.get("/reviews", function (req, res, next) {
+  res.render("reviews");
+});
+
+//NUEVA VERSION AGREGAR REVIEW
 router.post('/reviews/add', (req, res, next) => {
   
   const { userId, user, comments, } = req.body;
@@ -126,7 +131,7 @@ router.post('/reviews/add', (req, res, next) => {
 });
 
 
-//VERSION FERRAN
+//ANTERIOR VERSION AGREGAR REVIEW
 // router.post('/reviews/add', (req, res, next) => {
   
 //   const { userId, user, comments, } = req.body;
@@ -155,9 +160,6 @@ router.get("/oneDog/:dogId", (req, res, next) => {
       console.log('Error')
     })
 });
-
-
-
 
 
 

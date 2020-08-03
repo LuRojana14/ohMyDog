@@ -16,9 +16,9 @@ router.get('/', function(req, res, next) {
 //   res.render("edituser");
 // });
 
-router.get("/reviews", function (req, res, next) {
-  res.render("reviews");
-});
+// router.get("/reviews", function (req, res, next) {
+//   res.render("reviews");
+// });
 
 module.exports = router;
 
