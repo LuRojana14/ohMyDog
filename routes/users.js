@@ -16,41 +16,24 @@ router.get("/homeprivate", (req, res, next) => {
     });
 });
 
+router.get("/profile", (req, res, next) => {
+  if (req.session.currentUser._id) {
+    User.findOne({ _id: req.session.currentUser._id})
+    .populate('dog')
+    .then(myUser => {
+      
+      // console.log("hola", myUser.dog[0])
+      res.render("profile", { myInfoProfile: myUser});
+    })
+     .catch(error => {
+        console.log('Error');
+      })
+    }});
 
-router.get("/profile", function (req, res, next) {
-  res.render("profile");
-});
 
-//ROUTER.POST ORIGINAL
-// router.post("/prueba", (req, res, next) => {
-//     const {
-//     namedog,
-//     image,
-//     breed,
-//     sex,
-//     telephone,
-//     description,
-//     age,
-//     weigth,
-//     cp,
-//   } = req.body;
-//   const _id = req.session.currentUser._id;
-//   Dog.findByIdAndUpdate(
-//     _id,
-//     { namedog, image, breed, sex, telephone, description, age, weigth, cp },
-//     { new: true }
-//   )
-//     .then((updateDog) => {
-//       res.redirect("/users/profile");
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
+//EDIT USER
 
-//ROUTER.POST MODIFICADO 
-
-router.post("/prueba", (req, res, next) => {
+router.post("/editUser", (req, res, next) => {
   const {
   namedog,
   image,
@@ -82,6 +65,44 @@ User.findByIdAndUpdate(
     console.log(error);
   });
 });
+
+
+//EDIT DOGPROFILE
+
+router.post("/editDog", (req, res, next) => {
+  const {
+  namedog,
+  image,
+  breed,
+  sex,
+  description,
+  age,
+  weigth,
+  cp,
+  telephone,
+  
+} = req.body;
+const _id = req.session.currentUser._id;
+Dog.findByIdAndUpdate(
+  _id,
+  { namedog, image, breed, sex, description, age, weigth},
+  { new: true }
+)
+
+User.findByIdAndUpdate(
+  _id,
+  { telephone, cp },
+  { new: true }  
+)
+  .then((updateDog) => {
+    res.redirect("/users/profile");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+});
+
+
 
 
 // ACA VOY A HACER EL POPULATE
@@ -139,10 +160,32 @@ router.get("/oneDog/:dogId", (req, res, next) => {
     })
 });
 
-//NEW DOG
+//ADD NEW DOG
 
-router.get("/newdog", function (req, res, next) {
+router.get("/add/newdog", (req, res, next) => {
   res.render("newdog");
 });
+
+// router.post('/newdog/add', (req, res, next) => {
+//   const { namedog, image, breed, sex, description, age, weigth } = req.body;
+//   const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
+//   newDog.save()
+//   .then((dog) => {
+//     res.redirect('/users/profile');
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+// });
+
+//DELETE
+
+// User.findByIdAndUpdate( req.session.currentUser._id, {dog: {$pull:_id}})
+// .then((user) => console.log(user))
+// .catch((err) => console.log(err));
+
+// User.deleteOne({dog: "_id"})
+// .then((user) => console.log(user))
+// .catch((err) => console.log(err));
 
 module.exports = router;
