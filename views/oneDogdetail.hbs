@@ -1,0 +1,42 @@
+<h2>Este es el perfil de otro perro!</h2>
+
+
+  <h3>Hello! I'm {{dog.namedog}}</h3>
+
+<div>
+  <img src="{{dog.image}}" alt="">
+</div>
+
+<div>
+  <p>Breed: {{dog.breed}}</p>
+  <p>Sex: {{dog.sex}}</p>
+  <p>Telephone:{{user.telephone}}</p>
+  <p>Age:{{dog.age}}</p>
+  <p>Weight:{{dog.weight}}</p>
+  <p>CP:{{user.cp}}</p>
+</div>
+
+<div>
+<h3>Reviews</h3>
+<p>Add a review</p>
+<form action="/users/reviews/add" method="post">
+  <label for="">User:</label>
+  <input type="text" name="user">
+  <input type="hidden" name= "userId" value='{{user._id}}'>
+
+  <label for="">Comments:</label>
+  <textarea type="text" name="comments"></textarea>
+
+  <button type="submit">ADD</button>
+</form>
+</div>
+
+{{#each user.reviews}}
+<div class="review-item">
+  <p>{{this.comments}}</p>
+  <span>{{this.user}}</span>
+</div>
+{{/each}}
+
+
+<button><a href="/users/homeprivate">Home</a></button>

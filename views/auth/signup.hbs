@@ -6,28 +6,87 @@
 </p>
 {{/if}}
 
-<form action="/signup" method="post">
+<form action="/auth/signup" method="post" enctype="multipart/form-data">
+
+    <p>Dog Information</p>
+
     <div>
-        <label for="name-input"> Name </label>
-        <input type="text" name="name" id="name-input" placeholder="e.g., Diana Prince">
+        <label for="namedog">Namedog</label>
+        <input type="text" name="namedog">
+    </div>
+
+    <div>
+        <label for="">Image</label>
+        <input type="file" name="photo">
+    </div>
+
+    <div>
+        <label for="">Description</label>
+        <input type="text" name="description">
+    </div>
+
+    <div>
+        <label for="">Age</label>
+        <input type="text" name="age">
+    </div>
+
+    <div>
+        <label for="">Weigth</label>
+        <input type="text" name="weigth">
+    </div>
+
+    <div>
+        <label for="">Breed</label>
+        <input type="text" name="breed">
+    </div>
+
+    <div>
+        <label for="">Sex</label>
+        <input type="text" name="sex" id="sex-input"
+            placeholder="e.g., male female">
+    </div>
+
+    <p>Account Information</p>
+
+    <div>
+        <label for="name-input"> Username </label>
+        <input type="text" name="username" id="name-input" placeholder="e.g.,
+            Diana Prince">
     </div>
 
     <div>
         <label for="email-input"> Email </label>
-        <input type="email" name="email" id="email-input" placeholder="e.g., diana@themyscira.agency">
+        <input type="email" name="email" id="email-input" placeholder="e.g.,
+            diana@themyscira.agency">
     </div>
 
     <div>
         <label for="password-input"> Password </label>
-        <input type="password" name="password" id="password-input" placeholder="e.g., ••••••••••••">
+        <input type="password" name="password" id="password-input"
+            placeholder="e.g., ••••••••••••">
     </div>
 
-    <button> Create New Account </button>
+    <p>Personal Information</p>
+
+    <div>
+        <label for="">Telephone</label>
+        <input type="text" name="telephone">
+    </div>
+
+    <div>
+        <label for="">CP</label>
+        <input type="text" name="cp">
+    </div>
+
+    <div>
+        <button type="submit">Create Account</button>
+    </div>
+
 </form>
 
 <p>
     Already have an account?
-    <a href="/login">
-        Log in.
+    <a href="/auth/login"> Log In </a>
+       
     </a>
 </p>

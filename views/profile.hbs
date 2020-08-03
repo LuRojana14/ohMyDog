@@ -1,0 +1,65 @@
+<h2>My Profile</h2>
+
+
+<nav>
+  <ul>
+  
+
+    <li><a href="/auth/logout">Log Out </a> </li>
+  </ul>
+</nav>
+
+<h2>EDIT YOUR PROFILE - PRUEBA 2</h2>
+
+
+<form action="/users/prueba" method="post">
+
+  <div>
+    <label for="namedog">Namedog</label>
+    <input type="text" name="namedog" value={{dog.namedog}}>
+  </div>
+
+  <div>
+    <label for="">Image</label>
+    <input type="file" name="image" value={{dog.image}}>
+  </div>
+
+  <div>
+    <label for="">Breed</label>
+    <input type="text" name="breed" value={{dog.breed}}>
+  </div>
+
+  <div>
+    <label for="">Sex</label>
+    <input type="text" name="sex" id="sex-input" placeholder="e.g., male female" value={{dog.sex}}>
+  </div>
+
+  <div>
+    <label for="">Telephone</label>
+    <input type="text" name="telephone" value={{user.telephone}}>
+  </div>
+
+  <div>
+    <label for="">Description</label>
+    <input type="text" name="description" value={{dog.description}}>
+  </div>
+
+  <div>
+    <label for="">Age</label>
+    <input type="text" name="age" value={{dog.age}}>
+  </div>
+
+  <div>
+    <label for="">Weigth</label>
+    <input type="text" name="weigth" value={{dog.weigth}}>
+  </div>
+
+  <div>
+    <label for="">CP</label>
+    <input type="text" name="cp" value={{dog.cp}}>
+  </div>
+
+  <button type="submit">EDIT</button>
+
+  <button><a href="/users/homeprivate">CANCEL</a></button>
+</form>

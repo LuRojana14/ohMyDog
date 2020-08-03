@@ -4,19 +4,17 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema(
  {
-  username: String,
-  mail:String,
-  password:String,
-  namedog: String,
-  image:String,
-  raza:String,
-  telephone: Number,
-  description: String,
-  age: Number,
-  weight: Number,
-  cp:Number,
-  review:[
-    {type: Schema.Types.ObjectId, ref:'Review'}
+  username: { type: String, required: true },
+  mail: { type: String, required: true },
+  password: { type: String, required: true },
+  telephone: String,
+  cp:String,
+  dog:[{type : Schema.Types.ObjectId, ref: 'Dog'}],
+  reviews:[
+    {
+      user: String,
+      comments: String
+    },
   ],
 },
 {
