@@ -11,8 +11,8 @@ const users = [
     cp: "08005",
     dog: {
       namedog: "Lucky",
-      image: "https://www.purina.es/sites/g/files/mcldtz1656/files/2019-06/Perro%20salchicha%20%28Miniatura%20de%20pelo%20liso%29_400x378_0.jpg",
-      breed: "Affenpinscher",
+      image: "https://www.guiaparaperros.com/wp-content/uploads/2019/03/Teckel-o-Dachshund-portada.jpg",
+      breed: "Dachshund",
       sex: "female",
       description: "I am the best friend you were looking for",
       age: 5,
@@ -28,7 +28,7 @@ const users = [
     cp: "08013",
     dog: {
       namedog: "Freda",
-      image: undefined,
+      image: "https://www.planetacan.com/assets/img/razas/2013/07/24/1731/fila-de-san-miguel-b5.jpg",
       breed: "Cao de Fila de Sao Miguel",
       sex: "female",
       description: "I am a lazy dog, I like to sleep a lot",
@@ -45,8 +45,8 @@ const users = [
     cp: "08010",
     dog: {
       namedog: "Furi",
-      image: undefined,
-      breed: "Affenpinscher",
+      image: "https://www.feelcats.com/blog/wp-content/uploads/2019/08/pequines.jpg",
+      breed: "Pekines",
       sex: "male",
       description: "I am the strongest dog of all, I want to be your boyfriend",
       age: 5,
@@ -62,7 +62,7 @@ const users = [
     cp: "08019",
     dog: {
       namedog: "Topo",
-      image: undefined,
+      image: "https://i.pinimg.com/736x/3a/7a/86/3a7a86f61e8ab9324f92fde20e7692c2.jpg",
       breed: "Ovejero alemán",
       sex: "male",
       description:
@@ -80,7 +80,7 @@ const users = [
     cp: "08039",
     dog: {
       namedog: "Mac",
-      image: undefined,
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sophie_the_Welsh_Terrier_2.jpg/450px-Sophie_the_Welsh_Terrier_2.jpg",
       breed: "Terrier galés",
       sex: "male",
       description: "I am small but very effective",
@@ -97,7 +97,7 @@ const users = [
     cp: "08031",
     dog: {
       namedog: "Lili",
-      image: undefined,
+      image: "https://www.hola.com/imagenes/estar-bien/20200124158928/razas-de-perro-beagle/0-773-994/razas-de-perro-beagle-m.jpg",
       breed: "Beagle",
       sex: "female",
       description: "The best mom you can find for your children",
@@ -114,7 +114,7 @@ const users = [
     cp: "08028",
     dog: {
       namedog: "Ringo",
-      image: undefined,
+      image: "https://t2.ea.ltmcdn.com/es/razas/6/3/0/img_36_bull-terrier-ingles_0_600.jpg",
       breed: "Bull terrier",
       sex: "male",
       description:
@@ -132,7 +132,7 @@ const users = [
     cp: "08030",
     dog: {
       namedog: "Pako",
-      image: undefined,
+      image: "https://toppercan.es/wp-content/uploads/Weimaraner__1514405056.jpg",
       breed: "Braco de Ariege",
       sex: "male",
       description: "Soy el mas romantico, si buscas amor, ya lo encontraste",
@@ -149,7 +149,7 @@ const users = [
     cp: "08005",
     dog: {
       namedog: "Evita",
-      image: undefined,
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.petdarling.com%2Farticulos%2Fbulldog-frances-blue%2F&psig=AOvVaw0PK3ifKvYY7kV--fnJPP51&ust=1596576372144000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDmqdD8_-oCFQAAAAAdAAAAABAD",
       breed: "Bulldog francés",
       sex: "female",
       description:
@@ -167,7 +167,7 @@ const users = [
     cp: "08024",
     dog: {
       namedog: "Rifu",
-      image: undefined,
+      image: "https://www.hola.com/imagenes/estar-bien/20200320162955/chihuahua-razas-perro-caracteristicas-cuidado-gt/0-797-393/corto-z.jpg",
       breed: "Chihuahua",
       sex: "female",
       description:
@@ -185,7 +185,7 @@ const users = [
     cp: "08021",
     dog: {
       namedog: "Pancho",
-      image: undefined,
+      image: "https://www.canecorsobarcelona.com/wp-content/uploads/2020/03/Comprar-cachorros-cane-corso-en-Valencia.-Nos-dedicamos-a-la-venta-de-perros-Cane-Corso-en-el-comunidad-Valenciana3.jpg",
       breed: "Cane Corso",
       sex: "male",
       description: "I like to eat, sleep, and watch series with my parents",
@@ -202,7 +202,7 @@ const users = [
     cp: "08024",
     dog: {
       namedog: "Freda",
-      image: undefined,
+      image: "https://cdn.akc.org/content/article-body-image/cesky_terrier_body_image_2.jpg",
       breed: "Cesky Terrier",
       sex: "female",
       description:
@@ -220,7 +220,7 @@ const users = [
     cp: "08019",
     dog: {
       namedog: "Carli",
-      image: undefined,
+      image: "https://imagenwhatsapp.com/wp-content/uploads/2017/08/977be00fce96349ce98c33900a004f85-funny-dogs-funny-animals.jpg",
       breed: "Dálmata",
       sex: "female",
       description:
@@ -238,7 +238,7 @@ const users = [
     cp: "08006",
     dog: {
       namedog: "Yanka",
-      image: undefined,
+      image: "https://d1wn0q81ehzw6k.cloudfront.net/additional/thul/media/71a48b88641d8ad3?w=890&h=590&crop=1",
       breed: "Greyhound",
       sex: "female",
       description:
@@ -256,7 +256,7 @@ const users = [
     cp: "08002",
     dog: {
       namedog: "Panka",
-      image: undefined,
+      image: "https://lh3.googleusercontent.com/proxy/PL7OiEKuH6ESE7QaBKIHKPQWocDX3Wia0-4XgD-e3oZ7pSTk6wSGDPlcr-rJfQG_m0VGH0K1XYAoounL7orh4VOzIbPGN-FYJObK-wXk",
       breed: "Landseer",
       sex: "female",
       description: "I'm very tall",
@@ -273,7 +273,7 @@ const users = [
     cp: "08024",
     dog: {
       namedog: "Greca",
-      image: undefined,
+      image: "https://www.dogster.com/wp-content/uploads/2019/11/GettyImages-1182498853-768x512.jpg",
       breed: "Scottish terrier",
       sex: "male",
       description:
