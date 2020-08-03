@@ -2,15 +2,6 @@ const mongoose = require("mongoose");
 const User = require("../models/UserModel");
 const Dog = require("../models/DogModel");
 
-const dbtitle = "ohmydog";
-mongoose.connect(`mongodb://localhost:27017/${dbtitle}`, {
-  useCreateIndex:true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-User.collection.drop();
-Dog.collection.drop();
-
 const users = [
   {
     username: "aricel",
@@ -294,86 +285,74 @@ const users = [
   },
 ];
 
-/*et dogs = [];
-data.forEach(users => {
-  dogs = dogs.concat(user.dog);
-});
-
-Dog.create(dogs)
-  .then(dogs => {
-    console.log(`${dogs.length} dogs created.`);
-
-    const dogsIds = dogs.map(dog => dog.id);
-
-    let nth = 0;
-
-    const users = data.map(user => {
-      user.dog.forEach((dog, i) => {
-        user.dog[i] = dogsIds[++nth];
-      });
-      return user;
-    });
- 
-    User.create(users)
-      .then(users => {
-        console.log(`${users.length} users created.`);
- 
-        mongoose.connection.close();
-      })
-      .catch(err => console.error(err));
+const dbtitle = "ohmydog";
+mongoose
+  .connect(`mongodb://localhost:27017/${dbtitle}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
-  .catch(err => console.error(err));*/
 
+  .then(() => {
+    // const pr1 = User.collection.drop();
+    // const pr2 = Dog.collection.drop();
 
-const createDog = users.map((user) => {
-  const newDog = new Dog(user.dog);
-  return newDog
-    .save()
-    .then((dog) => {
-      return dog.name;
-    })
-    .catch((error) => {
-      throw new Error(`Impossible to add the dog. ${error}`);
-    });
-});
+    // return Promise.all([pr1, pr2]);
 
-let findDog = Promise.all(createDog)
-  .then((dog) => {
-    return users.map((user) => {
-      return Dog.findOne({
-        namedog: user.dog.namedog,
-        breed: user.dog.breed,
-        sex: user.dog.sex,
-        description: user.dog.description,
-        age: user.dog.age,
-        weight: user.dog.weight,
-      }).then((dog) => {
-        if (!dog) {
-          throw new Error(`unknown dog ${user.dog.namedog} 
-${user.dog.sex}`);
-        }
-        return Object.assign({}, user, { dog: dog._id });
-      });
-    });
+    return mongoose.connection.db.dropDatabase();
   })
-  .catch((error) => {
-    throw new Error(error);
-  });
 
-const saveUsers = findDog
-  .then((findDog) => {
-    return Promise.all(findDog).then((users) => {
-      return users.map((user) => {
-        const newUser = new User(user);
-        return newUser.save();
-      });
+  .then(() => {
+    // es un array de promesas de crear perros (.save)
+
+    const createDog = users.map((user) => {
+      const newDog = new Dog(user.dog);
+      return newDog.save(); //map nos devuelve un array nuevo de promesas  con los perros creados
     });
-  })
-  .then((savedUser) => {
-    Promise.all(savedUser)
+
+    let updateUsersPrArr = Promise.all(createDog) //esperando q todas las promesas terminen hasta q se creen todos los perros
+      .then((dogs) => {
+        return users.map((user) => {
+          return Dog.findOne({
+            namedog: user.dog.namedog,
+            breed: user.dog.breed,
+            sex: user.dog.sex,
+            description: user.dog.description,
+            age: user.dog.age,
+            weight: user.dog.weight,
+          }).then((dog) => {
+  //           if (!dog) {
+  //             throw new Error(`unknown dog ${user.dog.namedog} 
+  // ${user.dog.sex}`);
+  //           }
+            const updatedUser = Object.assign({}, user, { dog: dog._id });
+            return updatedUser;
+          });
+        });
+      }) // cuando se cumple toda esta promesa, me devuelve el id de un nuevo usr
+      .catch((error) => {
+        throw new Error(error);
+      });
+
+    //aca en este paso lo grabo en la base de datos
+    const saveUsersPrArr = updateUsersPrArr // findDog is an array with updated User objects
+      .then(userPromises => Promise.all(userPromises))
+      .then((usersObj) => {
+        return usersObj.map((user) => {
+          console.log(user);
+          //  este map devuelve las promesas de crear usuarios guardados en la base de datos
+          const newUser = new User(user);
+          return newUser.save();
+        });
+      });
+
+    console.log("aqui", saveUsersPrArr);
+
+    saveUsersPrArr
+      .then(createdUserPromises => Promise.all(createdUserPromises))
       .then((users) =>
         users.forEach((user) => console.log(`created ${user.username}`))
       )
       .then(() => mongoose.connection.close())
       .catch((err) => console.log("Error while saving the user: ", err));
+    // });
   });

@@ -3,16 +3,13 @@
 
 <nav>
   <ul>
-  
-
     <li><a href="/auth/logout">Log Out </a> </li>
   </ul>
 </nav>
 
 <h2>EDIT YOUR PROFILE - PRUEBA 2</h2>
 
-
-<form action="/users/prueba" method="post">
+<form action="/users/prueba" method="post" enctype="multipart/form-data">
 
   <div>
     <label for="namedog">Namedog</label>
@@ -21,7 +18,7 @@
 
   <div>
     <label for="">Image</label>
-    <input type="file" name="image" value={{dog.image}}>
+    <input type="file" name="photo" value={{dog.image}}>
   </div>
 
   <div>
@@ -61,5 +58,9 @@
 
   <button type="submit">EDIT</button>
 
+
+  <button><a href="/users/newdog">ADD A DOG</a></button>
+
   <button><a href="/users/homeprivate">CANCEL</a></button>
+  
 </form>
