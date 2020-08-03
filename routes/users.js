@@ -9,8 +9,6 @@ const Dog = require('../models/DogModel');
 router.get("/homeprivate", (req, res, next) => {
   Dog.find()
     .then((allTheDogFromDB) => {
-      // console.log("hola");
-      // console.log('Retrieved dogs from DB:', allTheDogFromDB);
       res.render("homeprivate", { alldogs: allTheDogFromDB });
     })
     .catch((error) => {
@@ -108,16 +106,15 @@ router.get('/:userId', (req, res, next) => {
 
 //REVIEW
 
-
 router.get("/reviews", function (req, res, next) {
-  res.render("reviews");
+  res.render("oneUser");
 });
 
 //NUEVA VERSION AGREGAR REVIEW
 router.post('/reviews/add', (req, res, next) => {
   
   const { userId, user, comments, } = req.body;
-  Dog.update(
+  User.update(
     { _id: userId },
     { $push: { reviews: { user, comments } } }
     )
@@ -131,22 +128,6 @@ router.post('/reviews/add', (req, res, next) => {
 });
 
 
-//ANTERIOR VERSION AGREGAR REVIEW
-// router.post('/reviews/add', (req, res, next) => {
-  
-//   const { userId, user, comments, } = req.body;
-//   User.update(
-//     { _id: userId },
-//     { $push: { reviews: { user, comments } } }
-//     )
-
-//     .then(user => {
-//       res.redirect('/users/oneUser/' + userId);
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// });
 
 
 // VIEW PROFILE EN SEE MORE
@@ -161,6 +142,10 @@ router.get("/oneDog/:dogId", (req, res, next) => {
     })
 });
 
+//NEW DOG
 
+router.get("/newdog", function (req, res, next) {
+  res.render("newdog");
+});
 
 module.exports = router;
