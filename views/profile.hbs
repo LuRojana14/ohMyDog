@@ -1,66 +1,90 @@
 <h2>My Profile</h2>
 
 
+{{myInfoProfile}}
+
+<h1>{{dog.namedog}}</h1>
+<img src="{{dog.image}}" alt="">
+
+{{!-- {{/each}} --}}
+
 <nav>
   <ul>
     <li><a href="/auth/logout">Log Out </a> </li>
   </ul>
 </nav>
 
-<h2>EDIT YOUR PROFILE - PRUEBA 2</h2>
+<h2>EDIT YOUR PROFILE</h2>
 
-<form action="/users/prueba" method="post" enctype="multipart/form-data">
-
-  <div>
-    <label for="namedog">Namedog</label>
-    <input type="text" name="namedog" value={{dog.namedog}}>
+<form action="/users/editUser" method="post" enctype="multipart/form-data">
+  
+    <div>
+    <label for="">Username</label>
+    <input type="text" name="telephone" value={{myInfoProfile.username}}>
   </div>
-
-  <div>
-    <label for="">Image</label>
-    <input type="file" name="photo" value={{dog.image}}>
-  </div>
-
-  <div>
-    <label for="">Breed</label>
-    <input type="text" name="breed" value={{dog.breed}}>
-  </div>
-
-  <div>
-    <label for="">Sex</label>
-    <input type="text" name="sex" id="sex-input" placeholder="e.g., male female" value={{dog.sex}}>
-  </div>
-
-  <div>
+  
+ <div>
     <label for="">Telephone</label>
-    <input type="text" name="telephone" value={{user.telephone}}>
-  </div>
-
-  <div>
-    <label for="">Description</label>
-    <input type="text" name="description" value={{dog.description}}>
-  </div>
-
-  <div>
-    <label for="">Age</label>
-    <input type="text" name="age" value={{dog.age}}>
-  </div>
-
-  <div>
-    <label for="">Weigth</label>
-    <input type="text" name="weigth" value={{dog.weigth}}>
+    <input type="text" name="telephone" value={{myInfoProfile.telephone}}>
   </div>
 
   <div>
     <label for="">CP</label>
-    <input type="text" name="cp" value={{dog.cp}}>
+    <input type="text" name="cp" value={{myInfoProfile.cp}}>
   </div>
 
   <button type="submit">EDIT</button>
 
+  {{#each myInfoProfile.dog}}
+
+<h2>PERRO</h2>
+
+
+<form action="/dogs/editdog/{{this._id}}" method="post" enctype="multipart/form-data">
+
+    <div>
+      <label for="namedog">Namedog</label>
+      <input type="text" name="namedog" value={{this.namedog}}>
+    </div>
+
+    <div>
+      <label for="">Image</label>
+      <input type="file" name="photo" value={{this.image}}>
+    </div>
+
+    <div>
+      <label for="">Breed</label>
+      <input type="text" name="breed" value={{this.breed}}>
+    </div>
+
+    <div>
+      <label for="">Sex</label>
+      <input type="text" name="sex" id="sex-input" placeholder="e.g., male
+        female" value={{this.sex}}>
+    </div>
+
+    <div>
+      <label for="">Description</label>
+      <input type="text" name="description" value={{this.description}}>
+    </div>
+
+    <div>
+      <label for="">Age</label>
+      <input type="text" name="age" value={{this.age}}>
+    </div>
+
+    <div>
+      <label for="">Weigth</label>
+      <input type="text" name="weigth" value={{this.weigth}}>
+    </div>
+
+  </form>
+
+
+  {{/each}}
 
   <button><a href="/users/newdog">ADD A DOG</a></button>
 
   <button><a href="/users/homeprivate">CANCEL</a></button>
-  
+
 </form>

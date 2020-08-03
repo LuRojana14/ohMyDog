@@ -11,7 +11,7 @@ const users = [
     cp: "08005",
     dog: {
       namedog: "Lucky",
-      image: undefined,
+      image: "/images/Affenpinscher.jpg",
       breed: "Affenpinscher",
       sex: "female",
       description: "I am the best friend you were looking for",
