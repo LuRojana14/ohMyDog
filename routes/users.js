@@ -102,9 +102,6 @@ User.findByIdAndUpdate(
   });
 });
 
-
-
-
 // ACA VOY A HACER EL POPULATE
 
 router.get('/:userId', (req, res, next) => {
@@ -166,17 +163,17 @@ router.get("/add/newdog", (req, res, next) => {
   res.render("newdog");
 });
 
-// router.post('/newdog/add', (req, res, next) => {
-//   const { namedog, image, breed, sex, description, age, weigth } = req.body;
-//   const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
-//   newDog.save()
-//   .then((dog) => {
-//     res.redirect('/users/profile');
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   })
-// });
+router.post('/add/newdog', (req, res, next) => {
+  const { namedog, image, breed, sex, description, age, weigth } = req.body;
+  const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
+  newDog.save()
+  .then((dog) => {
+    res.redirect('/users/profile');
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+});
 
 //DELETE
 

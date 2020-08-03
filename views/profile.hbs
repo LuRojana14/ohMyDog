@@ -1,12 +1,3 @@
-<h2>My Profile</h2>
-
-
-{{#each myInfoProfile.dog}}
-
-<h1>{{this.namedog}}</h1>
-<img src="{{this.image}}" alt="">
-
-{{/each}}
 
 <nav>
   <ul>
@@ -14,16 +5,22 @@
   </ul>
 </nav>
 
-<h2>EDIT YOUR PROFILE</h2>
+{{#each myInfoProfile.dog}}
+
+<h3>{{this.namedog}}</h3>
+<img src="{{this.image}}" alt="">
+
+{{/each}}
+
+<h4>Personal Information</h4>
 
 <form action="/users/editUser" method="post" enctype="multipart/form-data">
-  
-    <div>
+  <div>
     <label for="">Username</label>
     <input type="text" name="telephone" value={{myInfoProfile.username}}>
   </div>
-  
- <div>
+
+  <div>
     <label for="">Telephone</label>
     <input type="text" name="telephone" value={{myInfoProfile.telephone}}>
   </div>
@@ -37,10 +34,11 @@
 
   {{#each myInfoProfile.dog}}
 
-<h2>PERRO</h2>
+  <h4>Dog Information</h4>
 
 
-<form action="/users/editdog/{{this._id}}" method="post" enctype="multipart/form-data">
+  <form action="/users/editDog/{{this._id}}" method="post"
+    enctype="multipart/form-data">
 
     <div>
       <label for="namedog">Namedog</label>
@@ -78,15 +76,16 @@
       <input type="text" name="weight" value={{this.weight}}>
     </div>
 
+    <button type="submit">EDIT</button>
+
   </form>
 
 
   {{/each}}
 
-  
-
-  <button><a href="/users/add/newdog">Add a dog</a></button>
-
-  <button><a href="/users/homeprivate">CANCEL</a></button>
+  <div>
+    <button><a href="/users/add/newdog">Add a dog</a></button>
+    <button><a href="/users/homeprivate">CANCEL</a></button>
+  </div>
 
 </form>
