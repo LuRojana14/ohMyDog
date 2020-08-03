@@ -16,17 +16,14 @@ router.get("/homeprivate", (req, res, next) => {
     });
 });
 
-
-// router.get('/profile', function(req, res, next) {
-//   res.render('profile');
-// });
-
 router.get("/profile", (req, res, next) => {
   if (req.session.currentUser._id) {
     User.findOne({ _id: req.session.currentUser._id})
     .populate('dog')
     .then(myUser => {
-      res.render("profile", { myInfoProfile: myUser });
+      
+      // console.log("hola", myUser.dog[0])
+      res.render("profile", { myInfoProfile: myUser});
     })
      .catch(error => {
         console.log('Error');
@@ -34,7 +31,7 @@ router.get("/profile", (req, res, next) => {
     }});
 
 
-//ROUTER.POST MODIFICADO 
+//EDIT USER
 
 router.post("/editUser", (req, res, next) => {
   const {
@@ -68,6 +65,44 @@ User.findByIdAndUpdate(
     console.log(error);
   });
 });
+
+
+//EDIT DOGPROFILE
+
+router.post("/editDog", (req, res, next) => {
+  const {
+  namedog,
+  image,
+  breed,
+  sex,
+  description,
+  age,
+  weigth,
+  cp,
+  telephone,
+  
+} = req.body;
+const _id = req.session.currentUser._id;
+Dog.findByIdAndUpdate(
+  _id,
+  { namedog, image, breed, sex, description, age, weigth},
+  { new: true }
+)
+
+User.findByIdAndUpdate(
+  _id,
+  { telephone, cp },
+  { new: true }  
+)
+  .then((updateDog) => {
+    res.redirect("/users/profile");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+});
+
+
 
 
 // ACA VOY A HACER EL POPULATE
@@ -127,21 +162,21 @@ router.get("/oneDog/:dogId", (req, res, next) => {
 
 //ADD NEW DOG
 
-router.get("/newdog", function (req, res, next) {
+router.get("/add/newdog", (req, res, next) => {
   res.render("newdog");
 });
 
-router.post('/newdog/add', (req, res, next) => {
-  const { namedog, image, breed, sex, description, age, weigth } = req.body;
-  const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
-  newDog.save()
-  .then((dog) => {
-    res.redirect('/users/profile');
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-});
+// router.post('/newdog/add', (req, res, next) => {
+//   const { namedog, image, breed, sex, description, age, weigth } = req.body;
+//   const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
+//   newDog.save()
+//   .then((dog) => {
+//     res.redirect('/users/profile');
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+// });
 
 //DELETE
 

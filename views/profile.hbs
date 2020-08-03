@@ -1,12 +1,12 @@
 <h2>My Profile</h2>
 
 
-{{myInfoProfile}}
+{{#each myInfoProfile.dog}}
 
-<h1>{{dog.namedog}}</h1>
-<img src="{{dog.image}}" alt="">
+<h1>{{this.namedog}}</h1>
+<img src="{{this.image}}" alt="">
 
-{{!-- {{/each}} --}}
+{{/each}}
 
 <nav>
   <ul>
@@ -40,7 +40,7 @@
 <h2>PERRO</h2>
 
 
-<form action="/dogs/editdog/{{this._id}}" method="post" enctype="multipart/form-data">
+<form action="/users/editdog/{{this._id}}" method="post" enctype="multipart/form-data">
 
     <div>
       <label for="namedog">Namedog</label>
@@ -74,8 +74,8 @@
     </div>
 
     <div>
-      <label for="">Weigth</label>
-      <input type="text" name="weigth" value={{this.weigth}}>
+      <label for="">Weight</label>
+      <input type="text" name="weight" value={{this.weight}}>
     </div>
 
   </form>
@@ -83,7 +83,9 @@
 
   {{/each}}
 
-  <button><a href="/users/newdog">ADD A DOG</a></button>
+  
+
+  <button><a href="/users/add/newdog">Add a dog</a></button>
 
   <button><a href="/users/homeprivate">CANCEL</a></button>
 
