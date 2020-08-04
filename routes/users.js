@@ -59,12 +59,11 @@ router.post("/editUser", (req, res, next) => {
 
 //EDIT DOGPROFILE
 
-router.post("/editDog", (req, res, next) => {
+router.post("/dogedit", (req, res, next) => {
   console.log(req.body, "holmmmmmmmma");
   const {
     _id,
     namedog,
-    image,
     description,
     age,
     weight,
@@ -75,7 +74,7 @@ router.post("/editDog", (req, res, next) => {
   // _id.find((id) => id == id);
   Dog.findByIdAndUpdate(
     _id,
-    { namedog, image, description, age, weight, breed, sex },
+    { namedog, description, age, weight, breed, sex },
     { new: true }
   )
     .then((updateDog) => {
