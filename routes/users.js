@@ -154,7 +154,7 @@ router.post("/add/newdog", (req, res, next) => {
   console.log(req.body);
   const { namedog, breed, sex, description, age, weight } = req.body;
   const userid = req.session.currentUser._id;
-  console.log(userid)
+  let dog;
   Dog.create({
     namedog: namedog,
     breed: breed,
@@ -163,15 +163,19 @@ router.post("/add/newdog", (req, res, next) => {
     age: age,
     weight: weight,
   })
-    .then((respuesta) => {
-      const dogId = respuesta._id
-      User.findByIdAndUpdate(userid, { $push: dog = dogId });
+  .then((respuesta) => {
+    dog = respuesta._id
+    console.log(dog, "aca dog2")
+      User.findByIdAndUpdate(userid, { $push: dog });
       res.redirect("/users/profile");
     })
+
+    
 
     .catch((error) => {
       console.log(error);
     });
+
 });
 
 //DELETE
