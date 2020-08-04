@@ -14,9 +14,9 @@ const dogSchema = new Schema(
         "female",
       ]
     },
-    description: String,
+    description: {type: String },
     age: { type: Number, min: 0 },
-    weight: String
+    weight: {type: String}
   },
   {
     timestamps: {

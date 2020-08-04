@@ -35,30 +35,24 @@ router.get("/profile", (req, res, next) => {
 
 router.post("/editUser", (req, res, next) => {
   const {
-  namedog,
-  image,
-  breed,
-  sex,
-  description,
-  age,
-  weigth,
+  username,
   cp,
   telephone,
   
 } = req.body;
 const _id = req.session.currentUser._id;
-Dog.findByIdAndUpdate(
-  _id,
-  { namedog, image, breed, sex, description, age, weigth},
-  { new: true }
-)
+// Dog.findByIdAndUpdate(
+//   _id,
+//   { image, breed, sex, description, age, weigth},
+//   { new: true }
+// )
 
 User.findByIdAndUpdate(
   _id,
-  { telephone, cp },
+  { telephone, cp, username },
   { new: true }  
 )
-  .then((updateDog) => {
+  .then((updateProfile) => {
     res.redirect("/users/profile");
   })
   .catch((error) => {
@@ -78,8 +72,6 @@ router.post("/editDog", (req, res, next) => {
   description,
   age,
   weigth,
-  cp,
-  telephone,
   
 } = req.body;
 const _id = req.session.currentUser._id;
@@ -89,11 +81,11 @@ Dog.findByIdAndUpdate(
   { new: true }
 )
 
-User.findByIdAndUpdate(
-  _id,
-  { telephone, cp },
-  { new: true }  
-)
+// User.findByIdAndUpdate(
+//   _id,
+//   { telephone, cp, username },
+//   { new: true }  
+// )
   .then((updateDog) => {
     res.redirect("/users/profile");
   })
