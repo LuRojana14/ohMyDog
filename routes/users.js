@@ -5,6 +5,19 @@ const User = require("../models/UserModel");
 const Dog = require('../models/DogModel');
 
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'ohmydog' });
+});
+
+//MIDDLEWARE
+router.use((req, res, next) => {
+  if (req.session.currentUser) { 
+    next(); 
+  } else {
+    res.redirect("/auth/login");
+  }
+});
+
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
   Dog.find()
@@ -120,9 +133,8 @@ router.get("/reviews", function (req, res, next) {
   res.render("oneUser");
 });
 
-//NUEVA VERSION AGREGAR REVIEW
+//AGREGAR REVIEW
 router.post('/reviews/add', (req, res, next) => {
-  
   const { userId, user, comments, } = req.body;
   User.update(
     { _id: userId },
@@ -136,6 +148,22 @@ router.post('/reviews/add', (req, res, next) => {
       console.log(error);
     });
 });
+
+//NUEVA VERSION AGREGAR REVIEW
+// router.post('/reviews/add', (req, res, next) => {
+//   const { user, comments, } = req.body;
+//   User.update(
+//     { _id: req.query.book_id }, 
+//     { $push: { reviews: { user, comments } } }
+//     )
+
+//     .then(user => {
+//       res.redirect('/users/oneUser/' + _id);
+//     })
+//     .catch(error => {
+//       console.log(error);
+//     });
+// });
 
 // VIEW PROFILE EN SEE MORE
 
@@ -159,7 +187,7 @@ router.post('/add/newdog', (req, res, next) => {
   const { namedog, image, breed, sex, description, age, weigth } = req.body;
   const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
   newDog.save()
-  .then((dog) => {
+  .then((user) => {
     res.redirect('/users/profile');
   })
   .catch((error) => {
