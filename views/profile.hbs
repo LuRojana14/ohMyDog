@@ -32,13 +32,13 @@
 
   <button type="submit">EDIT</button>
 
-  </form>
+</form>
 
 
-  <h4>Dog Information</h4>
+<h4>Dog Information</h4>
 
-  <form action="/users/dogedit" method="post">
-    
+ <form action="/users/dogedit" method="post">
+
       {{#each myInfoProfile.dog}}
 
     <div>
@@ -50,68 +50,28 @@
       <input type="text" name="namedog" value={{this.namedog}}>
     </div>
 
-    {{!-- <div>
-      <label for="">Description</label>
-      <input type="text" name="description" value={{this.description}}>
-    </div> --}}
-
     <div>
       <label for="">Age</label>
       <input type="text" name="age" value={{this.age}}>
     </div>
-
     <div>
       <label for="">Weight</label>
       <input type="text" name="weight" value={{this.weight}}>
     </div>
-
     <div>
       <label for="">Breed</label>
       <input type="text" name="breed" value={{this.breed}}>
     </div>
-
     <div>
       <label for="">Sex</label>
       <input type="text" name="sex" placeholder="e.g., male
         female" value={{this.sex}}>
     </div>
-
     <button type="submit">EDIT</button>
-
   {{/each}}
   </form>
 
-
-{{!-- FORM JULI --}}
-{{!-- 
-<form action="/users/prueba" method="post">
-{{#each myInfoProfile.dog}}
-  <div>
-    <label for="">namedog</label>
-    <input type="text" name="namedog" value={{this.namedog}}>
-  </div>
-  <div>
-    <label for="">age</label>
-    <input type="text" name="telephone" value={{this.age}}>
-  </div>
-  <div>
-    <label for="">breed</label>
-    <input type="text" name="breed" value={{this.breed}}>
-  </div>
-  <button type="submit">EDIT</button>
-{{/each}}
-  </form> --}}
-
-
-
-
-
-
-
-
-  <div>
-    <button><a href="/users/add/newdog">Add a dog</a></button>
-    <button><a href="/users/homeprivate">CANCEL</a></button>
-  </div>
-
-</form>
+<div>
+  <button><a href="/users/add/newdog">Add a dog</a></button>
+  <button><a href="/users/homeprivate">HOME</a></button>
+</div>

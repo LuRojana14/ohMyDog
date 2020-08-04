@@ -57,26 +57,6 @@ router.post("/editUser", (req, res, next) => {
     });
 });
 
-//EDIT DOGPROFILE
-
-router.post("/dogedit", (req, res, next) => {
-  console.log(req.body, "holmmmmmmmma");
-  const { _id, namedog, description, age, weight, breed, sex } = req.body;
-  const user_id = req.session.currentUser._id;
-  // _id.find((id) => id == id);
-  Dog.findByIdAndUpdate(
-    _id,
-    { namedog, description, age, weight, breed, sex },
-    { new: true }
-  )
-    .then((updateDog) => {
-      res.redirect("/users/profile");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
-
 // ACA VOY A HACER EL POPULATE
 
 router.get("/:userId", (req, res, next) => {
@@ -116,22 +96,6 @@ router.post("/reviews/add", (req, res, next) => {
     });
 });
 
-//NUEVA VERSION REVIEW
-// router.post('/reviews/add', (req, res, next) => {
-//   const { user, comments } = req.body;
-//   User.update(
-//     { _id: req.query.user_id },
-//     { $push: { reviews: { user, comments } } }
-//     )
-
-//     .then(user => {
-//       res.redirect('/users/oneUser/' + req.query.book_id);
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// });
-
 // VIEW PROFILE EN SEE MORE
 
 router.get("/oneDog/:dogId", (req, res, next) => {
@@ -151,31 +115,59 @@ router.get("/add/newdog", (req, res, next) => {
 });
 
 router.post("/add/newdog", (req, res, next) => {
-  console.log(req.body);
   const { namedog, breed, sex, description, age, weight } = req.body;
   const userid = req.session.currentUser._id;
-  let dog;
-  Dog.create({
+  let dogSubmission = {
     namedog: namedog,
     breed: breed,
     sex: sex,
     description: description,
     age: age,
     weight: weight,
-  })
-  .then((respuesta) => {
-    dog = respuesta._id
-    console.log(dog, "aca dog2")
-      User.findByIdAndUpdate(userid, { $push: dog });
-      res.redirect("/users/profile");
+  };
+  Dog.create(dogSubmission)
+    .then((doggy) => {
+      let dog = doggy._id;
+      User.findByIdAndUpdate(
+        userid,
+        { $push: { dog } },
+        { new: true }
+      ).then((user) => {
+        res.status(200);
+        res.redirect("/users/profile");
+      });
     })
-
-    
-
     .catch((error) => {
       console.log(error);
     });
+});
 
+//EDIT DOGPROFILE
+
+router.post("/dogedit", (req, res, next) => {
+  console.log(req.body, "hola");
+  const {
+    _id,
+    namedog,
+    description,
+    age,
+    weight,
+    breed,
+    sex,
+  } = req.body;
+  const user_id = req.session.currentUser._id;
+  // _id.find((id) => id == id);
+  Dog.findByIdAndUpdate(
+    _id,
+    { namedog, description, age, weight, breed, sex },
+    { new: true }
+  )
+    .then((updateDog) => {
+      res.redirect("/users/profile");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 
 //DELETE
