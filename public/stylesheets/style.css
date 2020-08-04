@@ -1,12 +1,10 @@
 /* Codigo de Index */
-​
-body{
-    font-family: 'Roboto Condensed', sans-serif;
-    text-decoration: none;
-    
+​ body {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
 }
 ​
-.btn{
+/* .btn{
 ​
     width:100%;
     height:100%;
@@ -87,7 +85,7 @@ body{
     padding-left: 8px;
     font-size: 20px;
    
-}
+} */
 ​
 ​
 ​
@@ -101,13 +99,13 @@ body{
 ​
 /* empieza estilo de profile */
 ​
-.contenedor-profileImage{
+/* .contenedor-profileImage{
     font-family: 'Roboto Condensed', sans-serif;
    
 ​
-}
+} */
 ​
-.fotoperfil{
+/* .fotoperfil{
     width: 100vw;
 }
 ​
@@ -120,9 +118,9 @@ body{
     font-size: 1rem;
     margin-left: 5px;
     
-}
+} */
 ​
-.formulario-usuario{
+/* .formulario-usuario{
     width: 340px;
     height: 300px;
     background-color:#42C0D2;
@@ -133,9 +131,9 @@ body{
     align-content: center;
     justify-content: center;
 ​
-}
+} */
 ​
-.formulario-perro{
+/* .formulario-perro{
     width: 340px;
     height: 300px;
     background-color: #42C0D2; 
@@ -147,9 +145,9 @@ body{
     align-content: center;
     justify-content: center;
     
-}
+} */
 ​
-.campoform{
+/* .campoform{
     padding-left: 10px;
     
    
@@ -161,9 +159,9 @@ body{
     height: 35px;
     background-color:#ECC046;
     
-}
+} */
 ​
-.navbar-footer{
+/* .navbar-footer{
     display: flex;
     background-color: #ECC046;
     margin-top: 20px;
@@ -174,11 +172,64 @@ body{
    align-items: center;
    
 ​
-}
+} */
 ​
-​
+/* ​
 .campo{
-    
     text-decoration: none;
-​
+} */
+
+
+/* ACA EMPIEZA MI STYLE: */
+
+.container-form {
+  border: 2px solid red;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; */
+}
+
+/* .container-form button {
+align-items: ;  
+} */
+
+.form-register {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center;
+  width: 200px;
+  border-radius: 2%; */
+}
+
+.form-register p {
+  margin-top: 4%;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.form-register label {
+  margin-bottom: 2px;
+  margin-top: 2%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column;
+  align-items: center; */
+  width: 70%;
+  border-radius: 2%;
+  border: 1px solid rgb(218, 212, 212);
+  color: rgb(131, 125, 125);
+}
+
+.account-section {
+  border: 2px solid violet;
+}
+
+.account-section p {
+  text-align: center;
 }
