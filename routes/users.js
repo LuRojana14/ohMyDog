@@ -61,15 +61,7 @@ router.post("/editUser", (req, res, next) => {
 
 router.post("/dogedit", (req, res, next) => {
   console.log(req.body, "holmmmmmmmma");
-  const {
-    _id,
-    namedog,
-    description,
-    age,
-    weight,
-    breed,
-    sex,
-  } = req.body;
+  const { _id, namedog, description, age, weight, breed, sex } = req.body;
   const user_id = req.session.currentUser._id;
   // _id.find((id) => id == id);
   Dog.findByIdAndUpdate(
@@ -159,21 +151,24 @@ router.get("/add/newdog", (req, res, next) => {
 });
 
 router.post("/add/newdog", (req, res, next) => {
-  const { namedog, image, breed, sex, description, age, weight } = req.body;
-  const newDog = new Dog({
-    namedog,
-    image,
-    breed,
-    sex,
-    description,
-    age,
-    weight,
-  });
-  newDog
-    .save()
-    .then((user) => {
+  console.log(req.body);
+  const { namedog, breed, sex, description, age, weight } = req.body;
+  const userid = req.session.currentUser._id;
+  console.log(userid)
+  Dog.create({
+    namedog: namedog,
+    breed: breed,
+    sex: sex,
+    description: description,
+    age: age,
+    weight: weight,
+  })
+    .then((respuesta) => {
+      const dogId = respuesta._id
+      User.findByIdAndUpdate(userid, { $push: dog = dogId });
       res.redirect("/users/profile");
     })
+
     .catch((error) => {
       console.log(error);
     });

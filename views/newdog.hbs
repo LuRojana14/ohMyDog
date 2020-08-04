@@ -2,16 +2,16 @@
 <p>Aca agregamos un nuevo perro, CREATE</p>
 <p>una vez que llenamos el formulario de add, renderizar la info en profile</p>
 
-<form action="/users/add/newdog" method="post" enctype="multipart/form-data">
+<form action="/users/add/newdog" method="post">
   <div>
     <label for="namedog">Namedog</label>
     <input type="text" name="namedog" value={{dog.namedog}}>
   </div>
 
-  <div>
+  {{!-- <div>
     <label for="">Image</label>
     <input type="file" name="photo" value={{dog.image}}>
-  </div>
+  </div> --}}
 
   <div>
     <label for="">Breed</label>

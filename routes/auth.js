@@ -64,7 +64,10 @@ router.post("/signup", uploadCloud.single('photo'), (req, res, next) => {
       sex: sexInput,
     };
 
-    Dog.create(dogSubmission).then((dog) => {
+    Dog.create(dogSubmission)
+    
+    
+    .then((dog) => {
       const userSubmission = {
         username: nameInput,
         mail: emailInput,
