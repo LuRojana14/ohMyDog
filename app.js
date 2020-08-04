@@ -74,7 +74,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 app.use("/auth", authRouter);
 app.use("/users", users);
-app.use("/", indexRouter);
+app.use("/", users);
 
 
 // catch 404 and forward to error handler

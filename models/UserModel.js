@@ -7,8 +7,8 @@ const userSchema = new Schema(
   username: { type: String, required: true },
   mail: { type: String, required: true },
   password: { type: String, required: true },
-  telephone: String,
-  cp:String,
+  telephone: {type: String},
+  cp: {type: String},
   dog:[{type : Schema.Types.ObjectId, ref: 'Dog'}],
   reviews:[
     {
