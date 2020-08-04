@@ -16,7 +16,7 @@ const dogSchema = new Schema(
     },
     description: {type: String },
     age: { type: Number, min: 0 },
-    weight: {type: String}
+    weight: {type: String} 
   },
   {
     timestamps: {

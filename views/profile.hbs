@@ -14,10 +14,10 @@
 
 <h4>Personal Information</h4>
 
-<form action="/users/editUser" method="post" enctype="multipart/form-data">
+<form action="/users/editUser" method="post">
   <div>
     <label for="">Username</label>
-    <input type="text" name="telephone" value={{myInfoProfile.username}}>
+    <input type="text" name="username" value={{myInfoProfile.username}}>
   </div>
 
   <div>
@@ -31,6 +31,8 @@
   </div>
 
   <button type="submit">EDIT</button>
+
+  </form>
 
   {{#each myInfoProfile.dog}}
 

@@ -47,6 +47,7 @@ router.get("/profile", (req, res, next) => {
 //EDIT USER
 
 router.post("/editUser", (req, res, next) => {
+  console.log("hola", req.body)
   const {
   username,
   cp,
@@ -84,13 +85,13 @@ router.post("/editDog", (req, res, next) => {
   sex,
   description,
   age,
-  weigth,
+  weight,
   
 } = req.body;
 const _id = req.session.currentUser._id;
 Dog.findByIdAndUpdate(
   _id,
-  { namedog, image, breed, sex, description, age, weigth},
+  { namedog, image, breed, sex, description, age, weight},
   { new: true }
 )
 

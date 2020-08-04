@@ -24,7 +24,7 @@ router.post("/signup", uploadCloud.single('photo'), (req, res, next) => {
   const imageInput = req.file.url;
   const descriptionInput = req.body.description;
   const ageInput = req.body.age;
-  const weigthInput = req.body.weight;
+  const weightInput = req.body.weight;
   const breedInput = req.body.breed;
   const sexInput = req.body.sex;
   const telephoneInput = req.body.telephone;
@@ -59,7 +59,7 @@ router.post("/signup", uploadCloud.single('photo'), (req, res, next) => {
       image: imageInput === "" ? undefined : imageInput,
       description: descriptionInput,
       age: ageInput,
-      weigth: weigthInput,
+      weight: weightInput,
       breed: breedInput,
       sex: sexInput,
     };
