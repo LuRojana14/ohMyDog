@@ -47,7 +47,7 @@ router.get("/profile", (req, res, next) => {
 //EDIT USER
 
 router.post("/editUser", (req, res, next) => {
-  console.log("hola", req.body)
+  // console.log("hola", req.body)
   const {
   username,
   cp,
@@ -55,11 +55,6 @@ router.post("/editUser", (req, res, next) => {
   
 } = req.body;
 const _id = req.session.currentUser._id;
-// Dog.findByIdAndUpdate(
-//   _id,
-//   { image, breed, sex, description, age, weigth},
-//   { new: true }
-// )
 
 User.findByIdAndUpdate(
   _id,
@@ -81,25 +76,18 @@ router.post("/editDog", (req, res, next) => {
   const {
   namedog,
   image,
-  breed,
-  sex,
   description,
   age,
   weight,
-  
+  breed,
+  sex,
 } = req.body;
 const _id = req.session.currentUser._id;
 Dog.findByIdAndUpdate(
   _id,
-  { namedog, image, breed, sex, description, age, weight},
+  { namedog, image, description, age, weight, breed, sex },
   { new: true }
 )
-
-// User.findByIdAndUpdate(
-//   _id,
-//   { telephone, cp, username },
-//   { new: true }  
-// )
   .then((updateDog) => {
     res.redirect("/users/profile");
   })
@@ -150,21 +138,22 @@ router.post('/reviews/add', (req, res, next) => {
     });
 });
 
-//NUEVA VERSION AGREGAR REVIEW
+//NUEVA VERSION REVIEW
 // router.post('/reviews/add', (req, res, next) => {
-//   const { user, comments, } = req.body;
+//   const { user, comments } = req.body;
 //   User.update(
-//     { _id: req.query.book_id }, 
+//     { _id: req.query.user_id },
 //     { $push: { reviews: { user, comments } } }
 //     )
 
 //     .then(user => {
-//       res.redirect('/users/oneUser/' + _id);
+//       res.redirect('/users/oneUser/' + req.query.book_id);
 //     })
 //     .catch(error => {
 //       console.log(error);
 //     });
 // });
+
 
 // VIEW PROFILE EN SEE MORE
 
@@ -185,8 +174,8 @@ router.get("/add/newdog", (req, res, next) => {
 });
 
 router.post('/add/newdog', (req, res, next) => {
-  const { namedog, image, breed, sex, description, age, weigth } = req.body;
-  const newDog = new Dog({ namedog, image, breed, sex, description, age, weigth})
+  const { namedog, image, breed, sex, description, age, weight } = req.body;
+  const newDog = new Dog({ namedog, image, breed, sex, description, age, weight})
   newDog.save()
   .then((user) => {
     res.redirect('/users/profile');

@@ -3,7 +3,6 @@
 <p>una vez que llenamos el formulario de add, renderizar la info en profile</p>
 
 <form action="/users/add/newdog" method="post" enctype="multipart/form-data">
-
   <div>
     <label for="namedog">Namedog</label>
     <input type="text" name="namedog" value={{dog.namedog}}>
@@ -21,7 +20,8 @@
 
   <div>
     <label for="">Sex</label>
-    <input type="text" name="sex" id="sex-input" placeholder="e.g., male female" value={{dog.sex}}>
+    <input type="text" name="sex" placeholder="e.g., male female"
+      value={{dog.sex}}>
   </div>
 
   <div>
@@ -40,8 +40,8 @@
   </div>
 
   <div>
-    <label for="">Weigth</label>
-    <input type="text" name="weigth" value={{dog.weigth}}>
+    <label for="">Weight</label>
+    <input type="text" name="weight" value={{dog.weight}}>
   </div>
 
   <div>
@@ -50,12 +50,11 @@
   </div>
 
 
- <div>
-        <button type="submit">Add</button>
-    </div>
+  <div>
+    <button type="submit">Add</button>
+  </div>
 
-  
+
 </form>
 
-  <button><a href="/users/homeprivate">CANCEL</a></button>
-
+<button><a href="/users/homeprivate">CANCEL</a></button>
