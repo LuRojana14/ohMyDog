@@ -57,6 +57,37 @@ router.post("/editUser", (req, res, next) => {
     });
 });
 
+//EDIT DOGPROFILE
+
+router.post("/dogedit", (req, res, next) => {
+  console.log(req.body, "hola");
+  const {
+    _id,
+    namedog,
+    description,
+    age,
+    weight,
+    breed,
+    sex,
+  } = req.body;
+  const user_id = req.session.currentUser._id;
+  // _id.find((id) => id == id);
+  Dog.findByIdAndUpdate(
+    _id,
+    { namedog, description, age, weight, breed, sex },
+    { new: true }
+  )
+    .then((updateDog) => {
+      res.redirect("/users/profile");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+
+
+
 // ACA VOY A HACER EL POPULATE
 
 router.get("/:userId", (req, res, next) => {
@@ -142,33 +173,6 @@ router.post("/add/newdog", (req, res, next) => {
     });
 });
 
-//EDIT DOGPROFILE
-
-router.post("/dogedit", (req, res, next) => {
-  console.log(req.body, "hola");
-  const {
-    _id,
-    namedog,
-    description,
-    age,
-    weight,
-    breed,
-    sex,
-  } = req.body;
-  const user_id = req.session.currentUser._id;
-  // _id.find((id) => id == id);
-  Dog.findByIdAndUpdate(
-    _id,
-    { namedog, description, age, weight, breed, sex },
-    { new: true }
-  )
-    .then((updateDog) => {
-      res.redirect("/users/profile");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
 
 //DELETE
 
