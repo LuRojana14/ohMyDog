@@ -243,7 +243,7 @@ body {
   border-radius: 2%;
 }
 .form-register p {
-    border: 2px solid brown;
+  border: 2px solid brown;
   margin-top: 0px;
   font-weight: bold;
   margin-bottom: 0px;
@@ -255,6 +255,8 @@ body {
   /* border: 1px solid rgb(218, 212, 212);
   color: rgb(131, 125, 125); */
 }
+
+/* CUANDO SAQUE EL BORDE, DESCOMENTAR LO DE CONTROLS */
 .form-register label {
   border: 2px solid yellow;
   margin-bottom: 2px;
@@ -333,3 +335,61 @@ body {
 .account-align {
   border: 2px solid lightpink;
 }
+
+/* NEW DOG */ 
+.controls-newdog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  /* border: 1px solid rgb(218, 212, 212);
+    color: rgb(131, 125, 125); */
+}
+
+.colorletter-cancel {
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .container-button {
+    border: 2px solid rgb(130, 238, 148);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px;
+    align-items: center;
+  }
+
+  .submit-button {
+    border: 2px solid rgb(214, 38, 38);
+    color: white;
+    margin 0px;
+    padding: 0px;
+    background-color: #dc7726;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* border-color: #dc7726; */
+    /* border-radius: 4%; */
+    /* padding: 4px; */
+    /* width: 60%; */
+  }
+
+  .cancel-button{
+    border: 2px solid blue;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background-color: #dc7726;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* border-color: #dc7726; */
+    /* border-radius: 4%; */
+    /* padding: 4px;Í */
+    /* width: 60%; */
+  }
