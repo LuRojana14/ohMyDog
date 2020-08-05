@@ -81,7 +81,7 @@ body {
   /* border: #dc7726; */
   /* padding: 4px; */
   width: 100%;
-  color: black;;
+  color: black;
 }
 
 .container-create {
@@ -117,30 +117,34 @@ body {
 @media (min-width: 576px) {
   .form-tocomplete {
     /* border: 2px solid coral; */
-    box-shadow: 5px 8px 10px rgb(209, 211, 209);
+    box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+      rgba(84, 70, 35, 0.15) 0px 1px 3px;
     width: 80%;
+  }
+
+  .container-form {
+    margin-top: 3%;
   }
 }
 
-  @media (min-width: 768px) {
-    .form-tocomplete {
-      /* border: 2px solid coral; */
-      box-shadow: 5px 8px 10px rgb(209, 211, 209);
-      width: 70%;
-    }
-
-    .formclass {
-      /* border: 2px solid yellow; */
-      width: 70%;
-    }
-
-    .form-tocomplete input {
-      /* border: 2px solid fuchsia; */
-      padding: 1%;
-    }
+@media (min-width: 768px) {
+  .form-tocomplete {
+    /* border: 2px solid coral; */
+    box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+      rgba(84, 70, 35, 0.15) 0px 1px 3px;
+    width: 70%;
   }
 
+  .formclass {
+    /* border: 2px solid yellow; */
+    width: 70%;
+  }
 
+  .form-tocomplete input {
+    /* border: 2px solid fuchsia; */
+    padding: 1%;
+  }
+}
 
 /* NEW DOG !!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -219,7 +223,7 @@ body {
   margin: 0px;
   padding: 0px;
   width: 40%;
-  align-items: center; 
+  align-items: center;
   border: rgb(238, 234, 234);
   background-color: rgb(238, 234, 234);
   padding: 4px;
@@ -230,7 +234,3 @@ body {
 }
 
 /* LOGIN !!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-
-
-
