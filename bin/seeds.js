@@ -286,10 +286,17 @@ const users = [
 ];
 
 // MONGOOSE CONNECTION
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+// mongoose.connect(process.env.MONGODB_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+
+const dbtitle = "ohmydog";
+mongoose
+  .connect(`mongodb://localhost:27017/${dbtitle}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 
   .then(() => {
     // const pr1 = User.collection.drop();

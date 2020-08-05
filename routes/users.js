@@ -107,21 +107,20 @@ router.get('/:userId', (req, res, next) => {
 
 //REVIEW
 
-router.get("/reviews", function (req, res, next) {
-  res.render("oneUser");
-});
+
 
 //NUEVA VERSION AGREGAR REVIEW
 router.post('/reviews/add', (req, res, next) => {
-  
-  const { userId, user, comments, } = req.body;
-  User.update(
-    { _id: userId },
-    { $push: { reviews: { user, comments } } }
+  let userId = req.session.currentUser._id;
+  const { user, comments, dogId } = req.body;
+  console.log(req.body, "hola")
+  Dog.update(
+    { _id: dogId },
+    { $push: { reviews: { user, comments, userId } } }
     )
 
     .then(user => {
-      res.redirect('/users/oneUser/' + userId);
+      res.redirect(`/users/oneDog/${dogId}`);
     })
     .catch(error => {
       console.log(error);
@@ -133,6 +132,7 @@ router.post('/reviews/add', (req, res, next) => {
 router.get("/oneDog/:dogId", (req, res, next) => {
   Dog.findById(req.params.dogId)
     .then(theDog => {
+      
       res.render("oneDogdetail", { dog: theDog });
     })
     .catch(error => {

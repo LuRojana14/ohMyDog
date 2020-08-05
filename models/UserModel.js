@@ -10,12 +10,6 @@ const userSchema = new Schema(
   telephone: String,
   cp:String,
   dog:[{type : Schema.Types.ObjectId, ref: 'Dog'}],
-  reviews:[
-    {
-      user: String,
-      comments: String
-    },
-  ],
 },
 {
   timestamps: {
