@@ -225,45 +225,42 @@ body {
 .container-form {
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
   align-items: center;
 }
 .container-form button {
-  /* border: 2px solid blue; */
   margin-top: 10px;
 }
 
 .form-register {
-  border: 2px solid coral;
+  /* border: 2px solid coral; */
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
   align-items: center;
   margin: 0px 40px 0px 40px;
   border-radius: 2%;
 }
 .form-register p {
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
   margin-top: 0px;
   font-weight: bold;
   margin-bottom: 0px;
+  color: #dc7726;
 }
 .controls {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid rgb(218, 212, 212);
-  color: rgb(131, 125, 125); */
+  border: 1px solid rgb(218, 212, 212);
+  color: rgb(131, 125, 125);
 }
 
-/* CUANDO SAQUE EL BORDE, DESCOMENTAR LO DE CONTROLS */
 .form-register label {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   margin-bottom: 2px;
-  /* margin-top: 1%; */
 }
+
 .form-register input {
-  border: 2px solid fuchsia;
+  /* border: 2px solid fuchsia; */
   width: 100%;
   margin-left: 0px;
   display: flex;
@@ -272,10 +269,10 @@ body {
   margin-bottom: 0px;
 }
 .account-section {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-content: center;
   margin-top: 0px;
   align-items: center;
 }
@@ -288,42 +285,34 @@ body {
   margin: auto;
   display: flex;
   justify-content: center;
-  /* width: 80%; */
   border-color: #dc7726;
   background-color: #dc7726;
   border-radius: 4%;
-  /* text-align: center;
-    margin-top:5px; */
   color: white;
   text-decoration: none;
   padding: 4px;
 }
 
-.account-button {
-  border: 2px solid purple;
+.container-create {
+  /* border: 2px solid violet; */
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.account-button {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
   margin-top: 10px;
   border-color: #dc7726;
   background-color: #dc7726;
-  border-radius: 4%;
   color: white;
   padding: 4px;
   width: 60%;
-}
-
-.account-create {
-  border: 2px solid violet;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 0px;
-  align-items: center;
-}
-.image-profile-button input {
-  /* border: 2px solid magenta; */
 }
 
 .color-letter {
@@ -333,10 +322,18 @@ body {
 }
 
 .account-align {
-  border: 2px solid lightpink;
+  /* border: 2px solid lightpink; */
+  display: flex;
+  align-content: center;
+  flex-direction: column;
 }
 
-/* NEW DOG */ 
+.prueba {
+  margin-bottom: 10px;
+}
+
+/* NEW DOG !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 .controls-newdog {
   display: flex;
   flex-direction: column;
@@ -348,48 +345,32 @@ body {
 }
 
 .colorletter-cancel {
-    color: white;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-  .container-button {
-    border: 2px solid rgb(130, 238, 148);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 0px;
-    align-items: center;
-  }
+.container-button {
+  border: 2px solid rgb(130, 238, 148);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0px;
+  align-items: center;
+}
 
-  .submit-button {
-    border: 2px solid rgb(214, 38, 38);
-    color: white;
-    margin 0px;
-    padding: 0px;
-    background-color: #dc7726;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* border-color: #dc7726; */
-    /* border-radius: 4%; */
-    /* padding: 4px; */
-    /* width: 60%; */
-  }
+.submit-button {
+  border: 2px solid rgb(214, 38, 38);
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  background-color: #dc7726;
+}
 
-  .cancel-button{
-    border: 2px solid blue;
-    color: white;
-    margin: 0px;
-    padding: 0px;
-    background-color: #dc7726;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* border-color: #dc7726; */
-    /* border-radius: 4%; */
-    /* padding: 4px;Í */
-    /* width: 60%; */
-  }
+.cancel-button {
+  border: 2px solid blue;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  background-color: #dc7726;
+}
