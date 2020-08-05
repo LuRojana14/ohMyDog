@@ -5,6 +5,16 @@ const User = require("../models/UserModel");
 const Dog = require('../models/DogModel');
 
 
+
+//MIDDLEWARE
+router.use((req, res, next) => {
+  if (req.session.currentUser) {
+    next();
+  } else {
+    res.redirect("/auth/login");
+  }
+});
+
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
   Dog.find()
@@ -16,72 +26,63 @@ router.get("/homeprivate", (req, res, next) => {
     });
 });
 
+router.get("/profile", (req, res, next) => {
+  if (req.session.currentUser._id) {
+    User.findOne({ _id: req.session.currentUser._id})
+    .populate('dog')
+    .then(myUser => {
+      
+      // console.log("hola", myUser.dog[0])
+      res.render("profile", { myInfoProfile: myUser});
+    })
+     .catch(error => {
+        console.log('Error');
+      })
+    }});
 
-router.get("/profile", function (req, res, next) {
-  res.render("profile");
+
+//EDIT USER
+
+router.post("/editUser", (req, res, next) => {
+  const { username, cp, telephone } = req.body;
+  const _id = req.session.currentUser._id;
+  User.findByIdAndUpdate(_id, { telephone, cp, username }, { new: true })
+    .then((updateProfile) => {
+      res.redirect("/users/profile");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 
-//ROUTER.POST ORIGINAL
-// router.post("/prueba", (req, res, next) => {
-//     const {
-//     namedog,
-//     image,
-//     breed,
-//     sex,
-//     telephone,
-//     description,
-//     age,
-//     weigth,
-//     cp,
-//   } = req.body;
-//   const _id = req.session.currentUser._id;
-//   Dog.findByIdAndUpdate(
-//     _id,
-//     { namedog, image, breed, sex, telephone, description, age, weigth, cp },
-//     { new: true }
-//   )
-//     .then((updateDog) => {
-//       res.redirect("/users/profile");
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
+//EDIT DOGPROFILE
 
-//ROUTER.POST MODIFICADO 
-
-router.post("/prueba", (req, res, next) => {
+router.post("/dogedit", (req, res, next) => {
+  // console.log(req.body, "hola");
   const {
-  namedog,
-  image,
-  breed,
-  sex,
-  description,
-  age,
-  weigth,
-  cp,
-  telephone,
-  
-} = req.body;
-const _id = req.session.currentUser._id;
-Dog.findByIdAndUpdate(
-  _id,
-  { namedog, image, breed, sex, description, age, weigth},
-  { new: true }
-)
-
-User.findByIdAndUpdate(
-  _id,
-  { telephone, cp },
-  { new: true }  
-)
-  .then((updateDog) => {
-    res.redirect("/users/profile");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+    _id,
+    namedog,
+    description,
+    age,
+    weight,
+    breed,
+    sex,
+  } = req.body;
+  const user_id = req.session.currentUser._id;
+  // _id.find((id) => id == id);
+  Dog.findByIdAndUpdate(
+    _id,
+    { namedog, description, age, weight, breed, sex },
+    { new: true }
+  )
+    .then((updateDog) => {
+      res.redirect("/users/profile");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
+
 
 
 // ACA VOY A HACER EL POPULATE
@@ -139,10 +140,48 @@ router.get("/oneDog/:dogId", (req, res, next) => {
     })
 });
 
-//NEW DOG
+//ADD NEW DOG
 
-router.get("/newdog", function (req, res, next) {
+router.get("/add/newdog", (req, res, next) => {
   res.render("newdog");
 });
+
+router.post("/add/newdog", (req, res, next) => {
+  const { namedog, breed, sex, description, age, weight } = req.body;
+  const userid = req.session.currentUser._id;
+  let dogSubmission = {
+    namedog: namedog,
+    breed: breed,
+    sex: sex,
+    description: description,
+    age: age,
+    weight: weight,
+  };
+  Dog.create(dogSubmission)
+    .then((doggy) => {
+      let dog = doggy._id;
+      User.findByIdAndUpdate(
+        userid,
+        { $push: { dog } },
+        { new: true }
+      ).then((user) => {
+        res.status(200);
+        res.redirect("/users/profile");
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+//DELETE
+
+// User.findByIdAndUpdate( req.session.currentUser._id, {dog: {$pull:_id}})
+// .then((user) => console.log(user))
+// .catch((err) => console.log(err));
+
+// User.deleteOne({dog: "_id"})
+// .then((user) => console.log(user))
+// .catch((err) => console.log(err));
 
 module.exports = router;

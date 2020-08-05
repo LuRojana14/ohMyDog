@@ -11,7 +11,7 @@ const users = [
     cp: "08005",
     dog: {
       namedog: "Lucky",
-      image: undefined,
+      image: "https://www.purina.es/sites/g/files/mcldtz1656/files/2019-06/Perro%20salchicha%20%28Miniatura%20de%20pelo%20liso%29_400x378_0.jpg",
       breed: "Affenpinscher",
       sex: "female",
       description: "I am the best friend you were looking for",
