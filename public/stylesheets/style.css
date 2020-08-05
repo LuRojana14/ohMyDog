@@ -4,9 +4,10 @@ body {
   margin-bottom: 20px;
 }
 
-/* empieza estilo de signup */
+/* SIGN UP */
 
 .container-form {
+  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,13 +62,26 @@ body {
 .account-section button {
   /* border: 2px solid lightseagreen; */
   margin: auto;
+  margin-bottom: 3%;
   display: flex;
   justify-content: center;
-  border-color: rgb(238, 234, 234);
+  border: rgb(238, 234, 234);
   background-color: rgb(238, 234, 234);
-  /* border-radius: 4%; */
   text-decoration: none;
   padding: 4px;
+  width: 50%;
+}
+
+.login-button {
+  /* border: 2px solid greenyellow; */
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  width: 40%;
+  /* border: #dc7726; */
+  /* padding: 4px; */
+  width: 100%;
+  color: black;;
 }
 
 .container-create {
@@ -85,25 +99,48 @@ body {
   justify-content: center;
   align-content: center;
   /* margin-top: 10px; */
-  border-color: #dc7726;
+  border: #dc7726;
   background-color: #dc7726;
   color: white;
   padding: 2%;
   width: 60%;
 }
 
-.color-letter {
-  color: black;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
 .account-align {
   /* border: 2px solid lightpink; */
   display: flex;
-  align-content: center;
+  text-align: center;
   flex-direction: column;
+  width: 50%;
 }
+
+@media (min-width: 576px) {
+  .form-tocomplete {
+    /* border: 2px solid coral; */
+    box-shadow: 5px 8px 10px rgb(209, 211, 209);
+    width: 80%;
+  }
+}
+
+  @media (min-width: 768px) {
+    .form-tocomplete {
+      /* border: 2px solid coral; */
+      box-shadow: 5px 8px 10px rgb(209, 211, 209);
+      width: 70%;
+    }
+
+    .formclass {
+      /* border: 2px solid yellow; */
+      width: 70%;
+    }
+
+    .form-tocomplete input {
+      /* border: 2px solid fuchsia; */
+      padding: 1%;
+    }
+  }
+
+
 
 /* NEW DOG !!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -165,13 +202,14 @@ body {
 }
 
 .submit-button {
-  border: 2px solid rgb(214, 38, 38);
+  /* border: 2px solid greenyellow; */
   color: white;
   margin: 0px;
   padding: 0px;
+  border: #dc7726;
   background-color: #dc7726;
   width: 40%;
-  border: #dc7726;
+  /* border: #dc7726; */
   padding: 4px;
 }
 
@@ -182,7 +220,7 @@ body {
   padding: 0px;
   width: 40%;
   align-items: center; 
-  border-color: rgb(238, 234, 234);
+  border: rgb(238, 234, 234);
   background-color: rgb(238, 234, 234);
   padding: 4px;
 }
