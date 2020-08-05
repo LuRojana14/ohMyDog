@@ -17,7 +17,16 @@ router.use((req, res, next) => {
 
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
-  Dog.find()
+
+  let breed = req.query.breed
+  let data = {}
+  if(breed){
+    data = {
+      breed: breed
+    }
+  }
+  console.log(data)
+  Dog.find(data)
     .then((allTheDogFromDB) => {
       res.render("homeprivate", { alldogs: allTheDogFromDB });
     })

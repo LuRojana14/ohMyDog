@@ -22,15 +22,18 @@ for(i=0; i<razas.length;i++){
   
  //escucho permanentemente el formulario buscar y cuando escuche submit dispare un evento  
 
- formBuscar.addEventListener('submit', (e) => {
+//  formBuscar.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     const categorias = document.querySelector('.categories-list');
     
+//     const categoriaSeleccionada =categorias.options[categorias.selectedIndex].value; 
+//     console.log(categoriaSeleccionada);
     
-    
-    const categorias = document.querySelector('.categories-list');
-    
-    const categoriaSeleccionada =categorias.options[categorias.selectedIndex].value; 
-    console.log(categoriaSeleccionada);
-    
-    window.location = ("/homeprivate" + categoriaSeleccionada);
-     
-})
+//     let params = new URLSearchParams({
+//       breed: categoriaSeleccionada
+//     })
+//     let baseUrl = window.location.href.split('?')[0];
+//     let url = baseUrl + "?" + params;
+//     window.location = url;
+// })
