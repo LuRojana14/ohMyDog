@@ -1,46 +1,66 @@
-<h2>Este es el perfil de otro perro!</h2>
 
 
-  <h3>Hello! I'm {{dog.namedog}}</h3>
 
 <div>
-  <img src="{{dog.image}}" alt="">
+  <img class="fotoDogDetail" src="{{dog.image}}" alt="">
+</div>
+<div>
+  <img class="epigrafeDogDetail" src="{{dog.description}}" alt="">
 </div>
 
-<div>
-  <h4>More details:</h4>
-  <p>Breed: {{dog.breed}}</p>
-  <p>Sex: {{dog.sex}}</p>
-  <p>Telephone:{{user.telephone}}</p>
-  <p>Age:{{dog.age}}</p>
-  <p>Weight:{{dog.weigth}}</p>
-  <p>CP:{{user.cp}}</p>
+
+<h3 class="name-dog">{{dog.namedog}}</h3>
+
+
+  
+  <div class="breed"> 
+  <p><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
+  </div>
+  
+  <hr class="lineaDogdetails">
+  <div class="contenedor-formulariodogs">
+  <div class="formulario-dogdetails"> 
+  <p>SEX: {{dog.sex}}</p>
+  </div>
+  <div class="formulario-dogdetails"> 
+  <p>TELEPHONE:{{user.telephone}}</p>
+  </div>
+  <div class="formulario-dogdetails"> 
+  <p>AGE:{{dog.age}}</p>
+  </div>
+  <div class="formulario-dogdetails"> 
+  <p>WEIGHT:{{dog.weigth}}</p>
+  </div>
+  <div class="formulario-dogdetails"> 
+  <p>POSTAL CODE:{{user.cp}}</p>
+  </div>
 </div>
 
-<div>
 
-<h4>Reviews</h4>
-<h4>Add a review</h4>
+
+
+
 <form action="/users/reviews/add" method="post">
-  <label for="">User:</label>
-  <input type="text" name="user">
-  <input type="hidden" name= "userId" value='{{user._id}}'>
-
-  <label for="">Comments:</label>
-  <textarea type="text" name="comments"></textarea>
-
-  <button type="submit">ADD</button>
+  <div class="form-group">
+    <label for="exampleFormControlInput1"></label>
+    <input type="text" name="user" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input type="hidden" name= "userId" value='{{user._id}}'>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">comments about {{dog.namedog}}</label>
+    <textarea class="form-control" type="text" name="comments" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <button type="submit">ADD</button>
+  </div>
 </form>
-</div>
 
 
-
+<div class="form-review">
 {{#each user.reviews}}
 <div class="review-item">
   <p>{{this.comments}}</p>
   <span>{{this.user}}</span>
 </div>
 {{/each}}
+</div>
 
-
-<button><a href="/users/homeprivate">Home</a></button>
+<button><a href="/users/homeprivate">Home</a></button> 
