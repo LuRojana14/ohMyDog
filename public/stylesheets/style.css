@@ -183,25 +183,33 @@
 /* ACA EMPIEZA MI STYLE: */
 
 .container-form {
-  border: 2px solid red;
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; */
-}
-
-/* .container-form button {
-align-items: ;  
-} */
-
-.form-register {
-  border: 2px solid red;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* align-items: center;
-  width: 200px;
-  border-radius: 2%; */
+  align-items: center;
+}
+
+.container-form button {
+  border: 2px solid blue;
+  margin-top: 10px;
+}
+
+.account-button {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form-register {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  border-radius: 2%;
 }
 
 .form-register p {
@@ -210,26 +218,48 @@ align-items: ;
   margin-bottom: 0px;
 }
 
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(218, 212, 212);
+  color: rgb(131, 125, 125);
+}
+
 .form-register label {
   margin-bottom: 2px;
   margin-top: 2%;
 }
 
-.controls {
+.form-register input {
+  width: 100%;
+  margin-left: 0px;
   display: flex;
   justify-content: center;
-  /* flex-direction: column;
-  align-items: center; */
-  width: 70%;
-  border-radius: 2%;
-  border: 1px solid rgb(218, 212, 212);
-  color: rgb(131, 125, 125);
+  align-items: center;
 }
 
 .account-section {
   border: 2px solid violet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  align-items: center;
 }
 
 .account-section p {
   text-align: center;
+  margin-top: 10px;
+}
+
+.account-section button {
+  border: 2px solid lightseagreen;
+  margin: 0px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-profile-button input {
+  border: 2px solid magenta;
 }

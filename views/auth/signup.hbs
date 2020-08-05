@@ -6,10 +6,11 @@
 </p>
 {{/if}}
 
-<div class="container-form">
 
-    <form action="/auth/signup" method="post" enctype="multipart/form-data">
-        <div class="form-register">
+<div class="container-form">
+    <div class="form-register">
+        <form action="/auth/signup" method="post" enctype="multipart/form-data">
+
             <p>Dog Information</p>
 
             <div>
@@ -17,7 +18,7 @@
                 <input class="controls" type="text" name="namedog">
             </div>
 
-            <div>
+            <div class="image-profile-button">
                 <label for="">Image</label>
                 <input class="controls" type="file" name="photo">
             </div>
@@ -81,12 +82,12 @@
                 <input class="controls" type="text" name="cp">
             </div>
 
-            <div>
+            <div class="account-button">
                 <button type="submit">Create Account</button>
             </div>
 
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <div class="account-section">
@@ -94,4 +95,4 @@
     <p>Already have an account?</p>
     <button><a href="/auth/login"> Log In </a></button>
 
-    </div>
+</div>
