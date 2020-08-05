@@ -1,225 +1,10 @@
-/* Codigo de Index */
+
 
 body {
   font-family: "Roboto Condensed", sans-serif;
   text-decoration: none;
   margin-bottom: 2%;
 }
-/* 
-.btn{
-
-    width:100%;
-    height:100%;
-    font-size:16px;
-    border-radius: 20px;
-    border-color: #ECC046;
-    background-color: #DC7726;
-    text-align: center;
-    margin-top:5px;
-    color:white !important;
-   
-
-}
-.links-homepage {
-    text-decoration: none;
-    color: white;
-}
-
-  
-.tituloppal{
-    
-    padding-top: 50px;
-    font-size: 25px;
-    color: white;
-    text-align: center !important;
-   
-}
-.textoppal{
-    color: white;
-    text-align: center;
-    margin-top: 40px;
-    margin-left: 10px
-
-}
-
-.contenedor-boton{
-    
-    
-    height: 35px;
-    width: 120px;
-    margin:auto;
-    display: flex;
-    margin-top: 70px;
-    justify-content:center;
-}
-​
-
-
-​
-
-
-.tituloppal:hover{
-    color:#ECC046;
-}
-​
-.textoicono{
-    color: black;
-    
-}
-
-.pruebastyle{
-   
-    background-image: url("/images/portadamobile.jpg");
-    width: 100%;
-    height: 580px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 100%;
-    
-}
-
- .capa-gris{
-    background-color: rgba(122, 120, 120, 0.619);
-    height: 100%;
-} 
-.navbar-brand{
-    display: flex;
-    align-items: center;
-}
-​
-.textoicono{
-    padding-left: 8px;
-    font-size: 20px;
-   
-}
-​
-
-​
-
-​ */
-
-​
-
-
-/* hasta aca estilo de home */
-
-/* empieza estilo de profile */
-
-/* .contenedor-profileImage{
-    font-family: 'Roboto Condensed', sans-serif;
-   
-
-}
-
-.fotoperfil{
-    width: 100vw;
-}
-
-.nombre{
-    background-color:#42C0D2;
-    color: white;
-    padding-left: 5px;
-}
-.epigrafe{
-    font-size: 1rem;
-    margin-left: 5px;
-    
-}
-
-.formulario-usuario{
-    width: 340px;
-    height: 300px;
-    background-color:#42C0D2;
-    display: flex;
-    margin: auto;
-    
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-}
-
-.formulario-perro{
-    width: 340px;
-    height: 300px;
-    background-color: #42C0D2; 
-    display: flex;
-    margin: auto;
-    margin-top: 25px;
-    
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    
-}
-
-.campoform{
-    padding-left: 10px;
-    
-   
-    
-}
-.contenedor-footer{
-    display: flex;
-    width: 100%;
-    height: 35px;
-    background-color:#ECC046;
-    
-}
-
-.navbar-footer{
-    display: flex;
-    background-color: #ECC046;
-    margin-top: 20px;
-    justify-content: space-between;
-    position: sticky;
-   color: white;
-   height: 35px;
-   align-items: center;
-   
-
-}
-
-
-.campo{
-    
-    text-decoration: none;
-
-} */
-
-/*-------------DOG DETAILS--------------*/
-/* .fotoDogDetail{
-    width: 100vw;
-    
-}
-.name-dog{
-    background-color: #42C0D2;
-    padding-left:10px;
-    color: white;
-
-}
-.contenedor-formulariodogs{
-    
-    width: 300px;
-    align-content: center;
-    padding-left: 10px;
-    color: rgb(175, 170, 170);
-    
-}
-.breed{
-    text-align:left;
-    padding-left: 5px;
-    
-    
-}
-
-
-
-.form-review{
-    flex-direction: column;
-}
- */
-
 
 /* empieza estilo de signup */
 
@@ -228,11 +13,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container-form button {
-  /* margin-top: 10px; */
-}
 
-.form-register {
+.form-tocomplete {
   /* border: 2px solid coral; */
   display: flex;
   justify-content: center;
@@ -240,7 +22,7 @@ body {
   margin: auto;
   border-radius: 2%;
 }
-.form-register p {
+.form-tocomplete p {
   /* border: 2px solid brown; */
   margin-top: 0px;
   font-weight: bold;
@@ -255,12 +37,12 @@ body {
   color: rgb(131, 125, 125);
 }
 
-.form-register label {
+.form-tocomplete label {
   /* border: 2px solid yellow; */
   margin-bottom: 2px;
 }
 
-.form-register input {
+.form-tocomplete input {
   /* border: 2px solid fuchsia; */
   width: 100%;
   margin-left: 0px;
@@ -327,15 +109,45 @@ body {
 
 /* NEW DOG !!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.controls-newdog {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  /* border: 1px solid rgb(218, 212, 212);
-    color: rgb(131, 125, 125); */
-}
+
+.form-add-dog {
+    border: 2px solid coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 2%;
+    width: 80%;
+  }
+  .form-add-dog p {
+    /* border: 2px solid brown; */
+    margin-top: 0px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #dc7726;
+  }
+  .controls-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(218, 212, 212);
+    color: rgb(131, 125, 125);
+  }
+  
+  .form-add-dog label {
+    border: 2px solid yellow;
+    margin-bottom: 2px;
+  }
+  
+  .form-add-dog input {
+    border: 2px solid fuchsia;
+    /* margin-left: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 0px; */
+    width: 100%;
+  }
 
 .colorletter-cancel {
   color: white;

@@ -1,24 +1,25 @@
-<p>Aca agregamos un nuevo perro, CREATE</p>
-<p>una vez que llenamos el formulario de add, renderizar la info en profile</p>
 ​
 ​<div class="container-form">
-  <div class="form-register">
+  <div class="form-add-dog">
     <form action="/users/add/newdog" method="post">
+
+    <p>Add a Dog</p>
+
       <div>
         <label for="namedog">Namedog</label>
-        <input class="controls-newdog" type="text" name="namedog"
+        <input class="controls-add" type="text" name="namedog"
           value={{dog.namedog}}>
       </div>
       ​
       <div>
         <label for="">Breed</label>
-        <input class="controls-newdog" type="text" name="breed"
+        <input class="controls" type="text" name="breed"
           value={{dog.breed}}>
       </div>
       ​
       <div>
         <label for="">Sex</label>
-        <input class="controls-newdog" type="text" name="sex" placeholder="e.g.,
+        <input class="controls-add" type="text" name="sex" placeholder="e.g.,
           male
           female"
           value={{dog.sex}}>
@@ -26,30 +27,30 @@
       ​
       <div>
         <label for="">Telephone</label>
-        <input class="controls-newdog" type="text" name="telephone"
+        <input class="controls-add" type="text" name="telephone"
           value={{user.telephone}}>
       </div>
       ​
       <div>
         <label for="">Description</label>
-        <input class="controls-newdog" type="text" name="description"
+        <input class="controls-add" type="text" name="description"
           value={{dog.description}}>
       </div>
       ​
       <div>
         <label for="">Age</label>
-        <input class="controls-newdog" type="text" name="age" value={{dog.age}}>
+        <input class="controls-add" type="text" name="age" value={{dog.age}}>
       </div>
       ​
       <div>
         <label for="">Weight</label>
-        <input class="controls-newdog" type="text" name="weight"
+        <input class="controls-add" type="text" name="weight"
           value={{dog.weight}}>
       </div>
       ​
       <div>
         <label for="">CP</label>
-        <input class="controls-newdog" type="text" name="cp" value={{dog.cp}}>
+        <input class="controls-add" type="text" name="cp" value={{dog.cp}}>
       </div>
       ​
       <div class="container-button">
@@ -57,6 +58,7 @@
         <button class="cancel-button"><a class="colorletter-cancel"
             href="/users/homeprivate">CANCEL</a></button>
       </div>
+
     </form>
   </div>
 </div>
