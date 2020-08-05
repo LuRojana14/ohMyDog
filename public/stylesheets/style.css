@@ -190,12 +190,12 @@
 }
 
 .container-form button {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin-top: 10px;
 }
 
 .account-button {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,7 +240,7 @@
 }
 
 .account-section {
-  border: 2px solid violet;
+  /* border: 2px solid violet; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,12 +254,13 @@
 }
 
 .account-section button {
-  border: 2px solid lightseagreen;
-  margin: 0px 50px;
+  /* border: 2px solid lightseagreen; */
+  margin: 0px 10px;
   display: flex;
   justify-content: center;
+  width: 40%;
 }
 
 .image-profile-button input {
-  border: 2px solid magenta;
+  /* border: 2px solid magenta; */
 }
