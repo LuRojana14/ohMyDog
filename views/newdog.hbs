@@ -1,60 +1,55 @@
-
 <p>Aca agregamos un nuevo perro, CREATE</p>
 <p>una vez que llenamos el formulario de add, renderizar la info en profile</p>
-
+​
+​
 <form action="/users/add/newdog" method="post">
   <div>
     <label for="namedog">Namedog</label>
     <input type="text" name="namedog" value={{dog.namedog}}>
   </div>
-
-  {{!-- <div>
-    <label for="">Image</label>
-    <input type="file" name="photo" value={{dog.image}}>
-  </div> --}}
-
+​
   <div>
     <label for="">Breed</label>
     <input type="text" name="breed" value={{dog.breed}}>
   </div>
-
+​
   <div>
     <label for="">Sex</label>
     <input type="text" name="sex" placeholder="e.g., male female"
       value={{dog.sex}}>
   </div>
-
+​
   <div>
     <label for="">Telephone</label>
     <input type="text" name="telephone" value={{user.telephone}}>
   </div>
-
+​
   <div>
     <label for="">Description</label>
     <input type="text" name="description" value={{dog.description}}>
   </div>
-
+​
   <div>
     <label for="">Age</label>
     <input type="text" name="age" value={{dog.age}}>
   </div>
-
+​
   <div>
     <label for="">Weight</label>
     <input type="text" name="weight" value={{dog.weight}}>
   </div>
-
+​
   <div>
     <label for="">CP</label>
     <input type="text" name="cp" value={{dog.cp}}>
   </div>
-
-
+​
+​
   <div>
     <button type="submit">Add</button>
   </div>
-
-
+​
+​
 </form>
-
+​
 <button><a href="/users/homeprivate">CANCEL</a></button>

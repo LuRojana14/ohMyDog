@@ -1,117 +1,86 @@
-<nav>
-  <ul>
-    <li><a href="/auth/logout">Log Out </a> </li>
-  </ul>
-</nav>
 
+<body>
 
 {{#each myInfoProfile.dog}}
+<div class="fondo-profile">
 
-<h3>{{this.namedog}}</h3>
-<img src="{{this.image}}" alt="">
-
+<div class="contenedor-profileImage">
+<img  src="{{this.image}}" class= "fotoperfil"  alt="...">
+<h1 class="nombre">{{this.namedog}}</h1>
+<h3 class="epigrafe">{{this.description}}</h3>
+</div>
 {{/each}}
 
-<h4>Personal Information</h4>
 
-<form action="/users/editUser" method="post">
-  <div>
-    <label for="">Username</label>
-    <input type="text" name="username" value={{myInfoProfile.username}}>
+ <div class="formulario-usuario">
+ <form action="/users/editUser" method="post">
+  <div class="form1">
+    <label class="campoform" for="">Username</label>
+    <input class="campo" type="text" name="username" value={{myInfoProfile.username}}>
   </div>
-
-  <div>
-    <label for="">Telephone</label>
-    <input type="text" name="telephone" value={{myInfoProfile.telephone}}>
+  <div class="form2">
+    <label class="campoform" for="">Telephone</label>
+    <input class="campo" type="text" name="telephone" value={{myInfoProfile.telephone}}>
   </div>
-
-  <div>
-    <label for="">CP</label>
-    <input type="text" name="cp" value={{myInfoProfile.cp}}>
-  </div>
-
+  <div class="form3"> 
+    <label class="campoform" for="">PostalCode</label>
+    <input class="campo" type="text" name="cp" value={{myInfoProfile.cp}}>
+  </div class="form1">
   <button type="submit">EDIT</button>
-
   </form>
+</div>
 
 
-  <h4>Dog Information</h4>
 
-  <form action="/users/dogedit" method="post">
-    
-      {{#each myInfoProfile.dog}}
 
+  
+
+
+
+
+<div class="formulario-perro">
+ <form action="/users/dogedit" method="post">
+    {{#each myInfoProfile.dog}}
     <div>
-      <input type="hidden" name= "_id" value='{{this._id}}'>
-  </div>
-
-    <div>
-      <label for="namedog">Namedog</label>
-      <input type="text" name="namedog" value={{this.namedog}}>
+      <input type="hidden" name="_id" value='{{this._id}}'>
     </div>
-
-    {{!-- <div>
-      <label for="">Description</label>
-      <input type="text" name="description" value={{this.description}}>
-    </div> --}}
-
     <div>
-      <label for="">Age</label>
-      <input type="text" name="age" value={{this.age}}>
+      <label class="campoform" for="namedog">Namedog</label>
+      <input class="campo" type="text" name="namedog" value={{this.namedog}}>
     </div>
-
     <div>
-      <label for="">Weight</label>
-      <input type="text" name="weight" value={{this.weight}}>
+      <label class="campoform" for="">Breed</label>
+      <input class="campo" type="text" name="breed" value={{this.breed}}>
     </div>
-
     <div>
-      <label for="">Breed</label>
-      <input type="text" name="breed" value={{this.breed}}>
-    </div>
-
-    <div>
-      <label for="">Sex</label>
-      <input type="text" name="sex" placeholder="e.g., male
+      <label class="campoform" for="">Sex</label>
+      <input class="campo" type="text" name="sex" id="sex-input" placeholder="e.g., male
         female" value={{this.sex}}>
     </div>
+    <div>
+      <label class="campoform" for="">Age</label>
+      <input class="campo" type="text" name="age" value={{this.age}}>
+    </div>
+    <div>
+      <label class="campoform" for="">Weight</label>
+      <input class="campo" type="text" name="weight" value={{this.weight}}>
+    </div>
+    <div>
+      <button class="boton-add" type="submit">EDIT</button>
+    </div>
+   {{/each}}
+   </form>
+ 
+</div>
 
-    <button type="submit">EDIT</button>
-
-  {{/each}}
-  </form>
-
-
-{{!-- FORM JULI --}}
-{{!-- 
-<form action="/users/prueba" method="post">
-{{#each myInfoProfile.dog}}
-  <div>
-    <label for="">namedog</label>
-    <input type="text" name="namedog" value={{this.namedog}}>
+  <div class="navbar-footer">
+    
+  <a href="/auth/logout">Log Out </a>
+  <a href="/users/add/newdog">Add a dog</a>
+  <a href="/users/homeprivate">CANCEL</a>
+ 
   </div>
-  <div>
-    <label for="">age</label>
-    <input type="text" name="telephone" value={{this.age}}>
-  </div>
-  <div>
-    <label for="">breed</label>
-    <input type="text" name="breed" value={{this.breed}}>
-  </div>
-  <button type="submit">EDIT</button>
-{{/each}}
-  </form> --}}
+</div>
+</div>
 
-
-
-
-
-
-
-
-  <div>
-    <button><a href="/users/add/newdog">Add a dog</a></button>
-    <button><a href="/users/homeprivate">CANCEL</a></button>
-  </div>
-
-</form>
+</body>

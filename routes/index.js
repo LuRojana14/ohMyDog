@@ -4,9 +4,10 @@ var router = express.Router();
 // const User = require('../models/UserModel.js')
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+router.get('/', function(req, res, next) {
+  res.render('index.hbs', { title: 'Express' });
+});
+
 
 // router.get("/profile", function (req, res, next) {
 //   res.render("profile");

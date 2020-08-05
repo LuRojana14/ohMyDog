@@ -1,18 +1,26 @@
-<p> Welcome to ohmydog. </p>
 
-{{#if isUserLoggedIn}}
-  <p> Hello, {{ currentUserInfo.name }}. </p>
-{{/if}}
+    {{!-- <div class="prueba">
+          <h5 class="testeo" style="font-size: 29px; color:blue">hola</h5>
+    </div> --}}
+     
+     <div class="pruebastyle">
+      <div class="capa-gris">
+      <h2 class="tituloppal">FIND THE SMELL<br> OF YOUR DOG LIFE</h2>
+      <p class="textoppal">we know how important <br>our four-legged friends are<br> so we want to find them <br> the perfect match</p>
+        <div class="contenedor-boton row">
+          
+          <button type="button" class="btn"><a href="/auth/signup" class="links-homepage">REGISTER</a> </button>
+          <button type="button" class="btn"><a href="/auth/login" class="links-homepage">LOGIN</a></button>
+        </div>
+      </div>
+   </div>
+    <footer class="contenedor-footer">
+    </footer>
+    
+    
+   
 
-<nav>
-  <ul>
-    {{#if isUserLoggedIn}}
-     <li> <a href="/users/profile"> My Profile</a> </li>
-      <li> <a href="/users/homeprivate"> Go Home </a> </li>
-      <li> <a href="/auth/logout"> Log Out </a> </li>
-    {{else}}
-      <li> <a href="/auth/signup"> Sign Up </a> </li>
-      <li> <a href="/auth/login"> Log In </a> </li>
-    {{/if}}
-  </ul>
-</nav>
+
+ 
+     
+   
