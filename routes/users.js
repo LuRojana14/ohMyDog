@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const mongoose = require("mongoose");
 const User = require("../models/UserModel");
 const Dog = require('../models/DogModel');
 
@@ -22,7 +22,7 @@ router.get("/homeprivate", (req, res, next) => {
       res.render("homeprivate", { alldogs: allTheDogFromDB });
     })
     .catch((error) => {
-      console.log("Error while getting the books from the DB: ", error);
+      console.log("Error while getting the dogs from the DB: ", error);
     });
 });
 
@@ -130,13 +130,22 @@ router.post('/reviews/add', (req, res, next) => {
 
 // VIEW PROFILE EN SEE MORE
 
+// GroupSchema.find({'admins': id });
+
 router.get("/oneDog/:dogId", (req, res, next) => {
   Dog.findById(req.params.dogId)
+
     .then(theDog => {
-      res.render("oneDogdetail", { dog: theDog });
+      var infoUserId = mongoose.Types.ObjectId(theDog._id);
+       User.find({dog:{$in:[infoUserId]}})
+       .then((user)=>{
+         console.log(user)
+         res.render("oneDogdetail", { dog: theDog, user:user });
+       })
+    
     })
     .catch(error => {
-      console.log('Error')
+      console.log('Error', error)
     })
 });
 

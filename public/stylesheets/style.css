@@ -214,6 +214,19 @@ body{
     
 }
 
+.btn-dog{
+   
+    
+    font-size:16px;
+    border-radius: 20px;
+    border-color: #ECC046;
+    background-color: #DC7726;
+    text-align: center;
+    margin-top:5px;
+    
+    
+
+}
 
 
 .form-review{
@@ -224,36 +237,31 @@ body{
 
 /* empieza estilo de signup */
 
+/* empieza estilo de signup */
+
 .container-form {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
   }
   .container-form button {
-    /* border: 2px solid blue; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
-  .account-button {
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
+  
   .form-register {
+    /* border: 2px solid coral; */
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: auto;
     border-radius: 2%;
   }
   .form-register p {
-    margin-top: 4%;
+    /* border: 2px solid brown; */
+    margin-top: 0px;
     font-weight: bold;
     margin-bottom: 0px;
+    color: #dc7726;
   }
   .controls {
     display: flex;
@@ -262,36 +270,92 @@ body{
     border: 1px solid rgb(218, 212, 212);
     color: rgb(131, 125, 125);
   }
+  
   .form-register label {
+    /* border: 2px solid yellow; */
     margin-bottom: 2px;
-    margin-top: 2%;
   }
+  
   .form-register input {
+    /* border: 2px solid fuchsia; */
     width: 100%;
     margin-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0px;
   }
   .account-section {
-    /* border: 2px solid violet; */
+    /* border: 2px solid blue; */
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-content: center;
     margin-top: 0px;
     align-items: center;
   }
-  .account-section p {
-    text-align: center;
-    margin-top: 10px;
-  }
+  
   .account-section button {
     /* border: 2px solid lightseagreen; */
-    margin: 0px 10px;
+    margin: auto;
     display: flex;
     justify-content: center;
-    width: 40%;
+    border-color: rgb(238, 234, 234);
+    background-color: rgb(238, 234, 234);
+    /* border-radius: 4%; */
+    text-decoration: none;
+    padding: 4px;
   }
-  .image-profile-button input {
-    /* border: 2px solid magenta; */
+  
+  .container-create {
+    /* border: 2px solid violet; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin-top: 0px;
   }
+  
+  .account-button {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* margin-top: 10px; */
+    border-color: #dc7726;
+    background-color: #dc7726;
+    color: white;
+    padding: 2%;
+    width: 60%;
+  }
+  
+  .color-letter {
+    color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .account-align {
+    /* border: 2px solid lightpink; */
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+
+
+  /* empieza home private */
+
+ .card-title{
+     color: #DC7726;
+ }
+
+  .card{
+   
+      margin:auto;
+      margin-top: 20px;
+   
+  }
+
+ .razadeperro{
+     font-style: italic;
+   
+ }
