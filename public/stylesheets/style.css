@@ -1,12 +1,10 @@
-
 /* Codigo de Index */
 
-body{
-    font-family: 'Roboto Condensed', sans-serif;
-    text-decoration: none;
-    
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
 }
-
+/* 
 .btn{
 
     width:100%;
@@ -97,7 +95,7 @@ body{
 
 ​
 
-​
+​ */
 
 ​
 
@@ -106,7 +104,7 @@ body{
 
 /* empieza estilo de profile */
 
-.contenedor-profileImage{
+/* .contenedor-profileImage{
     font-family: 'Roboto Condensed', sans-serif;
    
 
@@ -186,10 +184,10 @@ body{
     
     text-decoration: none;
 
-}
+} */
 
 /*-------------DOG DETAILS--------------*/
-.fotoDogDetail{
+/* .fotoDogDetail{
     width: 100vw;
     
 }
@@ -219,79 +217,119 @@ body{
 .form-review{
     flex-direction: column;
 }
-
+ */
 
 
 /* empieza estilo de signup */
 
 .container-form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  .container-form button {
-    /* border: 2px solid blue; */
-    margin-top: 10px;
-  }
-  .account-button {
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .form-register {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px;
-    border-radius: 2%;
-  }
-  .form-register p {
-    margin-top: 4%;
-    font-weight: bold;
-    margin-bottom: 0px;
-  }
-  .controls {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid rgb(218, 212, 212);
-    color: rgb(131, 125, 125);
-  }
-  .form-register label {
-    margin-bottom: 2px;
-    margin-top: 2%;
-  }
-  .form-register input {
-    width: 100%;
-    margin-left: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .account-section {
-    /* border: 2px solid violet; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 0px;
-    align-items: center;
-  }
-  .account-section p {
-    text-align: center;
-    margin-top: 10px;
-  }
-  .account-section button {
-    /* border: 2px solid lightseagreen; */
-    margin: 0px 10px;
-    display: flex;
-    justify-content: center;
-    width: 40%;
-  }
-  .image-profile-button input {
-    /* border: 2px solid magenta; */
-  }
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+}
+.container-form button {
+  /* border: 2px solid blue; */
+  margin-top: 10px;
+}
+
+.form-register {
+  border: 2px solid coral;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  margin: 0px 40px 0px 40px;
+  border-radius: 2%;
+}
+.form-register p {
+    border: 2px solid brown;
+  margin-top: 0px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid rgb(218, 212, 212);
+  color: rgb(131, 125, 125); */
+}
+.form-register label {
+  border: 2px solid yellow;
+  margin-bottom: 2px;
+  /* margin-top: 1%; */
+}
+.form-register input {
+  border: 2px solid fuchsia;
+  width: 100%;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.account-section {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  align-items: center;
+}
+.account-section p {
+  text-align: center;
+  margin-top: 10px;
+}
+.account-section button {
+  /* border: 2px solid lightseagreen; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  /* width: 80%; */
+  border-color: #dc7726;
+  background-color: #dc7726;
+  border-radius: 4%;
+  /* text-align: center;
+    margin-top:5px; */
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+}
+
+.account-button {
+  border: 2px solid purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-color: #dc7726;
+  background-color: #dc7726;
+  border-radius: 4%;
+  color: white;
+  padding: 4px;
+  width: 60%;
+}
+
+.account-create {
+  border: 2px solid violet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  align-items: center;
+}
+.image-profile-button input {
+  /* border: 2px solid magenta; */
+}
+
+.color-letter {
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.account-align {
+  border: 2px solid lightpink;
+}
