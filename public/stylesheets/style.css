@@ -138,18 +138,14 @@ body {
 
 .form-add-dog input {
   /* border: 2px solid fuchsia; */
-  /* margin-left: 0px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 0px; */
   width: 100%;
 }
 
 .colorletter-cancel {
-  color: white;
-  margin-left: 50px;
-  margin-right: 50px;
+  color: black;
 }
 
 .container-button {
@@ -159,15 +155,24 @@ body {
   align-items: center;
   margin-top: 0px;
   align-items: center;
+  width: 100%;
+}
+
+.dad-buttons {
+  /* border: 2px solid rgb(214, 38, 38); */
+  padding: 10px;
+  width: 100%;
 }
 
 .submit-button {
-  /* border: 2px solid rgb(214, 38, 38); */
+  border: 2px solid rgb(214, 38, 38);
   color: white;
   margin: 0px;
   padding: 0px;
   background-color: #dc7726;
+  width: 40%;
   border: #dc7726;
+  padding: 4px;
 }
 
 .cancel-button {
@@ -175,11 +180,13 @@ body {
   color: white;
   margin: 0px;
   padding: 0px;
-  background-color: #dc7726;
-  border: #dc7726;
+  width: 40%;
+  align-items: center; 
+  border-color: rgb(238, 234, 234);
+  background-color: rgb(238, 234, 234);
+  padding: 4px;
 }
 
 .form-style {
-  /* border: 2px solid blue; */
   width: 100%;
 }
