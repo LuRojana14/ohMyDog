@@ -46,18 +46,18 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(
-  session({
-    secret: "basic-auth-secret",
-    cookie: { maxAge: 6000000 },
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60, //1 day
-    }),
-    revsave: true,
-    saveuninitialized: true,
-  })
-);
+// app.use(
+//   session({
+//     secret: "basic-auth-secret",
+//     cookie: { maxAge: 6000000 },
+//     store: new MongoStore({
+//       mongooseConnection: mongoose.connection,
+//       ttl: 24 * 60 * 60, //1 day
+//     }),
+//     revsave: true,
+//     saveuninitialized: true,
+//   })
+// );
 
 app.use((req, res, next) => {
   if (req.session.currentUser) {
