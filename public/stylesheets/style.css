@@ -87,12 +87,13 @@ body{
 .navbar-brand{
     display: flex;
     align-items: center;
-}
+    /* position: fixed;*/
+} 
 ​
-.textoicono{
-    padding-left: 8px;
-    font-size: 20px;   
-}
+ .textoicono{
+    padding-left:8px;
+    font-size:20px;   
+} 
 
 
 
@@ -263,9 +264,11 @@ body{
   margin: 0px;
   padding: 2%;
   width: 60%;
-  color: black;
-  border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  color: white;
+  border-radius: 20px;
+  border: #DC7726;
+  background-color: #ecc046;
+  border:2px solid;
 }
 .campo {
   display: flex;
@@ -293,9 +296,11 @@ body{
   justify-content: center;
   padding: 2%;
   width: 60%;
-  color: black;
-  border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  color: white;
+  border-radius: 20px;
+  border:2px solid;
+  border: #DC7726;
+  background-color: #ecc046;
 }
 .container-footer {
   /* border: 2px solid blue; */
@@ -320,6 +325,7 @@ body{
   color: white;
 }
 /* ------------------empieza login------------------------- */
+/* ------------------empieza login------------------------- */
 .container-form-login {
   /* border: 2px solid blue; */
   display: flex;
@@ -327,12 +333,10 @@ body{
   align-items: center;
   margin-top: 8%;
 }
-
 .form-style-login {
   /* border: 2px solid violet; */
   width: 70%;
 }
-
 .form-login {
   /* border: 2px solid coral; */
   display: flex;
@@ -350,13 +354,11 @@ body{
   margin-bottom: 10px;
   color: #dc7726;
 }
-
 .form-login label {
   /* border: 2px solid yellow; */
   margin-bottom: 1%;
   margin-top: 4%;
 }
-
 .form-login input {
   /* border: 2px solid fuchsia; */
   display: flex;
@@ -365,20 +367,18 @@ body{
   width: 100%;
   margin-bottom: 4%;
 }
-
 .account-loginbutton {
   /* border: 2px solid rgb(124, 124, 194); */
   display: flex;
   justify-content: center;
   align-content: center;
   /* margin-top: 10px; */
+  border-radius: 20px;
   border: #dc7726;
   background-color: #dc7726;
-  color: white;
   padding: 2%;
   width: 40%;
 }
-
 .signup-section {
   /* border: 2px solid blue; */
   display: flex;
@@ -388,20 +388,19 @@ body{
   align-items: center;
   margin-top: 4%;
 }
-
 .signup-section button {
   /* border: 2px solid lightseagreen; */
   margin: auto;
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
-  border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  border-radius: 20px;
+  border: #dc7726;
+  background-color: #dc7726;
   text-decoration: none;
-  padding: 3px;
-  width: 50%;
+  padding: 2%;
+  width: 40%;
 }
-
 .containerlogin-create {
   /* border: 2px solid rgb(130, 213, 238); */
   display: flex;
@@ -410,7 +409,6 @@ body{
   flex-direction: row;
   margin-top: 10%;
 }
-
 .signup-align {
   /* border: 2px solid rgb(216, 15, 45); */
   display: flex;
@@ -419,17 +417,13 @@ body{
   width: 50%;
   margin-top: 4%;
 }
-
 .signup-button {
   /* border: 2px solid greenyellow; */
   color: white;
   margin: 0px;
   padding: 0px;
   width: 40%;
-  /* border: #dc7726; */
-  /* padding: 4px; */
   width: 100%;
-  color: black;
 }
 
 
@@ -481,7 +475,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 .form-tocomplete {
   /* border: 2px solid coral; */
   display: flex;
@@ -504,12 +497,10 @@ body{
   border: 1px solid rgb(218, 212, 212);
   color: rgb(131, 125, 125);
 }
-
 .form-tocomplete label {
   /* border: 2px solid yellow; */
   margin-bottom: 2px;
 }
-
 .form-tocomplete input {
   /* border: 2px solid fuchsia; */
   width: 100%;
@@ -527,7 +518,6 @@ body{
   margin-top: 0px;
   align-items: center;
 }
-
 .account-section button {
   /* border: 2px solid lightseagreen; */
   margin: auto;
@@ -540,9 +530,8 @@ body{
   padding: 4px;
   width: 50%;
 }
-
 .login-button {
-  /* border: 2px solid greenyellow; */
+  /* border: 2px solid black; */
   color: white;
   margin: 0px;
   padding: 0px;
@@ -552,7 +541,6 @@ body{
   width: 100%;
   color: black;
 }
-
 .container-create {
   /* border: 2px solid violet; */
   display: flex;
@@ -561,20 +549,18 @@ body{
   flex-direction: row;
   margin-top: 0px;
 }
-
 .account-button {
-  /* border: 2px solid blue; */
+  border: 2px solid greenyellow;
   display: flex;
   justify-content: center;
   align-content: center;
   /* margin-top: 10px; */
-  border: #dc7726;
+  /* border: #dc7726; */
   background-color: #dc7726;
   color: white;
   padding: 2%;
   width: 60%;
 }
-
 .account-align {
   /* border: 2px solid lightpink; */
   display: flex;
@@ -582,30 +568,6 @@ body{
   flex-direction: column;
   width: 50%;
 }
-
-/*-------------DOG DETAILS--------------*/
-.fotoDogDetail{
-  width: 100vw;
-}
-.name-dog{
-  background-color: #42C0D2;
-  padding-left:10px;
-  color: white;
-}
-.contenedor-formulariodogs{
-  width: 300px;
-  align-content: center;
-  padding-left: 10px;
-  color: rgb(175, 170, 170);
-}
-.breed{
-  text-align:left;
-  padding-left: 5px;
-}
-.form-review{
-  flex-direction: column;
-}
-
 
   /*------------- blog--------------------- */
 
@@ -650,6 +612,28 @@ body{
   .darda{
     color:#DC7726;
   }
+  /*-------------DOG DETAILS--------------*/
+.fotoDogDetail{
+  width: 100vw;
+}
+.name-dog{
+  background-color: #42C0D2;
+  padding-left:10px;
+  color: white;
+}
+.contenedor-formulariodogs{
+  width: 300px;
+  align-content: center;
+  padding-left: 10px;
+  color: rgb(175, 170, 170);
+}
+.breed{
+  text-align:left;
+  padding-left: 5px;
+}
+.form-review{
+  flex-direction: column;
+}
   /* --------MEDIA QUERYS------------ */
 
   

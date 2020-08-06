@@ -1,8 +1,6 @@
 <body>
-
   {{#each myInfoProfile.dog}}
   <div class="fondo-profile">
-
     <div class="contenedor-profileImage">
       <img src="{{this.image}}" class="fotoperfil" alt="...">
     </div>
@@ -10,13 +8,10 @@
     <p class="epigrafe">{{this.description}}</p>
   </div>
   {{/each}}
-
   <div class="container-edit-form">
     <div class="formulario-general">
       <form class="eselform" action="/users/editUser" method="post">
-
         <p>Personal Information</p>
-
         <div>
           <label for="">Username</label>
           <input class="campo" type="text" name="username"
@@ -31,23 +26,17 @@
           <label for="">PostalCode</label>
           <input class="campo" type="text" name="cp" value={{myInfoProfile.cp}}>
         </div class="form1">
-
         <div class="container-edit-button1">
           <button class="edit-button1" type="submit">Edit</button>
         </div>
-
       </form>
     </div>
   </div>
-
-
   <div class="container-edit-form">
     <div class="formulario-general">
       <form class="eselform" action="/users/dogedit" method="post">
         {{#each myInfoProfile.dog}}
-
         <p>Dog Information</p>
-
         <div>
           <input type="hidden" name="_id" value='{{this._id}}'>
         </div>
@@ -80,21 +69,17 @@
       </form>
     </div>
   </div>
-
-        <form action="/users/eraseDoggy/{{this._id}}" method="post">
-          <button type="submit">Delete</button>
-        </form>
-        {{/each}}
-
+<div class="container-delete">
+    <form class= "form-delete" action="/users/eraseDoggy/{{this._id}}" method="post">
+      <button class="delete-button" type="submit">Delete</button>
+    </form>
+  </div>
+  {{/each}}
   <div class="container-footer">
     <div class="navbar-footer">
-
       <a class="footer-letter" href="/users/add/newdog">Add a dog</a>
       <a class="footer-letter" href="/users/homeprivate">Home</a>
       <a class="footer-letter" href="/auth/logout">Log Out </a>
-
     </div>
   </div>
-
-
 </body>

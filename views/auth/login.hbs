@@ -3,33 +3,26 @@
   {{ errorMessage }}
 </p>
 {{/if}}
-
 <div class="container-form-login">
   <div class="form-login">
     <form class="form-style-login" action="/auth/login" method="post">
-
       <p>Login</p>
-
       <div>
         <label for="email-input"> Email </label>
         <input class="controls-add" type="email" name="email" id="email-input">
       </div>
-
       <div>
         <label for="password-input"> Password </label>
         <input class="controls-add" type="password" name="password"
           id="password-input">
       </div>
-
       <div class="containerlogin-create">
-        <button class="account-loginbutton" type="submit">Log In</button>
+        <button class="btn"type="submit">Log In</button>
       </div>
-
     </form>
   </div>
 </div>
-
-<div class="signup-section"> ​
+<div class="signup-section"> 
   <div class="signup-align">
     <p>Don't have an account?</p>
     <button><a class="signup-button" href="/auth/signup">Create</a></button>

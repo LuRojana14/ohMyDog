@@ -3,92 +3,72 @@
     {{ errorMessage }}
 </p>
 {{/if}}
-​
-​
 <div class="container-form">
     <div class="form-tocomplete">
         <form class="formclass"action="/auth/signup" method="post" enctype="multipart/form-data">
-            ​
             <p>Dog Information</p>
-            ​
             <div>
                 <label for="namedog">Namedog</label>
                 <input class="controls" type="text" name="namedog">
             </div>
-            ​
             <div class="image-profile-button">
                 <label for="">Image</label>
                 <input class="controls" type="file" name="photo">
             </div>
-            ​
             <div>
                 <label for="">Description</label>
                 <input class="controls" type="text" name="description">
             </div>
-            ​
             <div>
                 <label for="">Age</label>
                 <input class="controls" type="text" name="age">
             </div>
-            ​
             <div>
                 <label for="">Weight</label>
                 <input class="controls" type="text" name="weight">
             </div>
-            ​
             <div>
                 <label for="">Breed</label>
                 <input class="controls" type="text" name="breed">
             </div>
-            ​
             <div>
                 <label for="">Sex</label>
                 <input class="controls" type="text" name="sex"
                     id="sex-input"
                     placeholder="male, female">
             </div>
-            ​
             <p>Account Information</p>
-            ​
             <div>
                 <label for="name-input"> Username </label>
                 <input class="controls" type="text" name="username"
                     id="name-input">
             </div>
-            ​
             <div>
                 <label for="email-input"> Email </label>
                 <input class="controls" type="email" name="email"
                     id="email-input">
             </div>
-            ​
             <div>
                 <label for="password-input"> Password </label>
                 <input class="controls" type="password" name="password"
                     id="password-input">
             </div>
-            ​
             <p>Personal Information</p>
-            ​
             <div>
                 <label for="">Telephone</label>
                 <input class="controls" type="text" name="telephone">
             </div>
-            ​
             <div>
                 <label for="">CP</label>
                 <input class="controls" type="text" name="cp">
             </div>
-            ​
             <div class="container-create">
                 <button class="btn" type="submit">Sign Up</button>
             </div>
-            ​
         </form>
     </div>
 </div>
-​
-<div class="account-section"> ​
+<div class="account-section"> 
     <div class="account-align">
         <p>Already have an account?</p>
         <button><a class="btn" href="/auth/login"> Log In </a></button>
