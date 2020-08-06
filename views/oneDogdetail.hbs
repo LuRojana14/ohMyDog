@@ -18,7 +18,7 @@
   <div class="breed"> 
   <p><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
   <p>{{dog.description}}</p>
-  <button type="button" class="btn-dog"><a href="/users/dogchat" class="links-homepage">chat with {{dog.namedog}} parents</a></button> 
+  <button type="button" class="btn"><a href="/users/dogchat" class="links-homepage">chat with {{dog.namedog}} parents</a></button> 
   </div>
   
   <hr class="lineaDogdetails">
@@ -53,7 +53,7 @@
   <div class="form-group">
     <label for="exampleFormControlTextarea1">comments about {{dog.namedog}}</label>
     <textarea class="form-control" type="text" name="comments" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <button type="submit">ADD</button>
+    <button class="btn" type="submit">ADD</button>
   </div>
 </form>
 
@@ -67,4 +67,4 @@
 {{/each}}
 </div>
 
-<button><a href="/users/homeprivate">Home</a></button> 
+ 

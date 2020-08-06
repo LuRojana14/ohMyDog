@@ -21,6 +21,8 @@ body{
    
 
 }
+
+
 .links-homepage {
     text-decoration: none;
     color: white;
@@ -213,21 +215,6 @@ body{
     
     
 }
-
-.btn-dog{
-   
-    
-    font-size:16px;
-    border-radius: 20px;
-    border-color: #ECC046;
-    background-color: #DC7726;
-    text-align: center;
-    margin-top:5px;
-    
-    
-
-}
-
 
 .form-review{
     flex-direction: column;
@@ -693,5 +680,29 @@ body{
 
  .razadeperro{
      font-style: italic;
+   
+ }
+
+ .formulario-buscar{
+   display: flex;
+   flex-direction: row;
+   width: 325px;
+   margin: auto;
+   padding-top: 30px;
+  
+ }
+
+ .form-group2{
+   margin: auto;
+   justify-content: space-around;
+ }
+
+ .botonSearch{
+   border-radius: 20px;
+   border-color: #ECC046;
+   background-color: #DC7726;
+   color: white;
+   box-shadow: none;
+   border: solid;
    
  }

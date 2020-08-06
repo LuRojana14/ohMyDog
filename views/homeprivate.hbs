@@ -7,10 +7,11 @@
 
  <form action="/users/homeprivate" class="formulario-buscar" method="get">
         <div class="form-group2">
-          <label class= "category">Category</label>
+          <label class= "category">BREED</label>
           <select value="{{alldogs.breed}}" id="razas" class="categories-list" name="breed" required></select>
-        </div>
-        <input type="submit" class="buscar-boton" value="search">
+        
+        <input class="botonSearch" type="submit" class="buscar-boton" value="search">
+      
       </form>  
 
  {{#each alldogs}} 
