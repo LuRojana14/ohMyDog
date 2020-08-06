@@ -48,12 +48,12 @@
   <div class="form-group">
     <label for="exampleFormControlInput1"></label>
     <input type="text" name="user" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    <input type="hidden" name= "userId" value='{{dog._id}}'>
+    <input type="hidden" name= "dogId" value={{dog._id}}>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">comments about {{dog.namedog}}</label>
     <textarea class="form-control" type="text" name="comments" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <button class="btn" type="submit">ADD</button>
+    <button type="submit">ADD</button>
   </div>
 </form>
 
