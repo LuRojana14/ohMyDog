@@ -189,6 +189,7 @@ body {
   font-size: 1rem;
   padding: 2%;
   margin: 2%;
+  text-align: center;
 }
 
 .eselform {
@@ -263,7 +264,7 @@ body {
   color: rgb(131, 125, 125);
 }
 
-.form-delete{
+.form-delete {
   /* border: 2px solid red; */
   width: 70%;
   display: flex;
@@ -288,7 +289,6 @@ body {
   border: rgb(238, 234, 234);
   background-color: rgb(238, 234, 234);
 }
-
 
 .container-footer {
   /* border: 2px solid blue; */
@@ -676,6 +676,16 @@ article {
     align-items: center;
     width: 100%;
   }
+
+  .container-delete {
+    /* border: 2px solid fuchsia; */
+    padding-top: 3%;
+  }
+
+  .delete-button {
+    /* border: 2px solid blue; */
+    width: 50%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -717,9 +727,17 @@ article {
     padding: 1%;
     width: 100%;
   }
-
   .pruebastyle {
     background-image: url("/images/portada.jpg");
+  }
+  .container-delete {
+    /* border: 2px solid fuchsia; */
+    padding-top: 3%;
+  }
+
+  .delete-button {
+    /* border: 2px solid blue; */
+    width: 40%;
   }
 }
 
