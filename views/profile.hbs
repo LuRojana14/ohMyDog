@@ -81,10 +81,13 @@
     </div>
   </div>
 
-        <form action="/users/eraseDoggy/{{this._id}}" method="post">
-          <button type="submit">Delete</button>
-        </form>
-        {{/each}}
+<div class="container-delete">
+    <form class= "form-delete" action="/users/eraseDoggy/{{this._id}}" method="post">
+      <button class="delete-button" type="submit">Delete</button>
+    </form>
+  </div>
+
+  {{/each}}
 
   <div class="container-footer">
     <div class="navbar-footer">
