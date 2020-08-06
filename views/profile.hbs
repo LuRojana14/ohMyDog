@@ -78,10 +78,14 @@
         <div class="container-edit-button1">
           <button class="edit-button1" type="submit">Edit</button>
         </div>
-        {{/each}}
       </form>
     </div>
   </div>
+
+        <form action="/users/eraseDoggy/{{this._id}}" method="post">
+          <button type="submit">Delete</button>
+        </form>
+        {{/each}}
 
   <div class="container-footer">
     <div class="navbar-footer">

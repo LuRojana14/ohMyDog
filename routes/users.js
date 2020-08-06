@@ -155,6 +155,18 @@ router.post("/add/newdog", (req, res, next) => {
 
 //DELETE
 
+router.post("/eraseDoggy/:id", (req, res, next) => {
+  console.log('hola', req.params.id)
+    Dog.deleteOne({_id:req.params.id})
+     .then(() => {
+       res.redirect("/users/profile");
+     })
+     .catch((error) => {
+       console.log(error);
+     });
+});
+
+
 // User.findByIdAndUpdate( req.session.currentUser._id, {dog: {$pull:_id}})
 // .then((user) => console.log(user))
 // .catch((err) => console.log(err));
