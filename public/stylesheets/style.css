@@ -236,19 +236,14 @@ body{
 
 
 /* empieza estilo de signup */
-
-/* empieza estilo de signup */
-
 .container-form {
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .container-form button {
-    /* margin-top: 10px; */
-  }
   
-  .form-register {
+  .form-tocomplete {
     /* border: 2px solid coral; */
     display: flex;
     justify-content: center;
@@ -256,7 +251,7 @@ body{
     margin: auto;
     border-radius: 2%;
   }
-  .form-register p {
+  .form-tocomplete p {
     /* border: 2px solid brown; */
     margin-top: 0px;
     font-weight: bold;
@@ -271,12 +266,12 @@ body{
     color: rgb(131, 125, 125);
   }
   
-  .form-register label {
+  .form-tocomplete label {
     /* border: 2px solid yellow; */
     margin-bottom: 2px;
   }
   
-  .form-register input {
+  .form-tocomplete input {
     /* border: 2px solid fuchsia; */
     width: 100%;
     margin-left: 0px;
@@ -297,13 +292,26 @@ body{
   .account-section button {
     /* border: 2px solid lightseagreen; */
     margin: auto;
+    margin-bottom: 3%;
     display: flex;
     justify-content: center;
-    border-color: rgb(238, 234, 234);
+    border: rgb(238, 234, 234);
     background-color: rgb(238, 234, 234);
-    /* border-radius: 4%; */
     text-decoration: none;
     padding: 4px;
+    width: 50%;
+  }
+  
+  .login-button {
+    /* border: 2px solid greenyellow; */
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    width: 40%;
+    /* border: #dc7726; */
+    /* padding: 4px; */
+    width: 100%;
+    color: black;
   }
   
   .container-create {
@@ -321,28 +329,356 @@ body{
     justify-content: center;
     align-content: center;
     /* margin-top: 10px; */
-    border-color: #dc7726;
+    border: #dc7726;
     background-color: #dc7726;
     color: white;
     padding: 2%;
     width: 60%;
   }
   
-  .color-letter {
-    color: black;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  
   .account-align {
     /* border: 2px solid lightpink; */
     display: flex;
-    align-content: center;
+    text-align: center;
     flex-direction: column;
+    width: 50%;
+  }
+  
+  @media (min-width: 576px) {
+    .form-tocomplete {
+      /* border: 2px solid coral; */
+      box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+        rgba(84, 70, 35, 0.15) 0px 1px 3px;
+      width: 80%;
+    }
+  
+    .container-form {
+      margin-top: 3%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .form-tocomplete {
+      /* border: 2px solid coral; */
+      box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+        rgba(84, 70, 35, 0.15) 0px 1px 3px;
+      width: 70%;
+    }
+  
+    .formclass {
+      /* border: 2px solid yellow; */
+      width: 70%;
+    }
+  
+    .form-tocomplete input {
+      /* border: 2px solid fuchsia; */
+      padding: 1%;
+    }
+  }
+/* empieza estilo de newdog */
+
+.form-add-dog {
+    /* border: 2px solid coral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 2%;
+    width: 80%;
+  }
+  .form-add-dog p {
+    /* border: 2px solid brown; */
+    margin-top: 0px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #dc7726;
+  }
+  .controls-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(218, 212, 212);
+    color: rgb(131, 125, 125);
+  }
+  
+  .form-add-dog label {
+    /* border: 2px solid yellow; */
+    margin-bottom: 2px;
+  }
+  
+  .form-add-dog input {
+    /* border: 2px solid fuchsia; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .colorletter-cancel {
+    color: black;
+  }
+  
+  .container-button {
+    /* border: 2px solid rgb(130, 238, 148); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .dad-buttons {
+    /* border: 2px solid rgb(214, 38, 38); */
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .submit-button {
+    /* border: 2px solid greenyellow; */
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    border: #dc7726;
+    background-color: #dc7726;
+    width: 40%;
+    /* border: #dc7726; */
+    padding: 4px;
+    margin-bottom: 3%;
+  }
+  
+  .cancel-button {
+    /* border: 2px solid blue; */
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    width: 40%;
+    align-items: center;
+    border: rgb(238, 234, 234);
+    background-color: rgb(238, 234, 234);
+    padding: 4px;
+    margin-bottom: 3%;
+  }
+  
+  .form-style {
+    width: 100%;
+  }
+  
+  @media (min-width: 576px) {
+    .form-add-dog {
+      /* border: 2px solid coral; */
+      box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+        rgba(84, 70, 35, 0.15) 0px 1px 3px;
+      padding-top: 3%;
+      width: 80%;
+    }
+  
+    .container-form {
+      margin-top: 3%;
+    }
+  
+    .form-style {
+      /* border: 2px solid yellow; */
+      width: 60%;
+    }
+  
+    .form-add-dog input {
+      /* border: 2px solid fuchsia; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .form-add-dog {
+      /* border: 2px solid coral; */
+      box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+        rgba(84, 70, 35, 0.15) 0px 1px 3px;
+      padding-top: 3%;
+      width: 70%;
+    }
+  
+    .form-style {
+      /* border: 2px solid yellow; */
+      width: 70%;
+    }
+  
+    .form-add-dog input {
+      /* border: 2px solid fuchsia; */
+      padding: 1%;
+      width: 100%;
+    }
+  }
+/* ------------------empieza login------------------------- */
+.container-form-login {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+  }
+  
+  .form-style-login {
+    /* border: 2px solid violet; */
+    width: 70%;
+  }
+  
+  .form-login {
+    /* border: 2px solid coral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 2%;
+    width: 80%;
+    padding-top: 2%;
+  }
+  .form-login p {
+    /* border: 2px solid brown; */
+    margin-top: 0px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #dc7726;
+  }
+  
+  .form-login label {
+    /* border: 2px solid yellow; */
+    margin-bottom: 1%;
+    margin-top: 4%;
+  }
+  
+  .form-login input {
+    /* border: 2px solid fuchsia; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  
+  .account-loginbutton {
+    /* border: 2px solid rgb(124, 124, 194); */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* margin-top: 10px; */
+    border: #dc7726;
+    background-color: #dc7726;
+    color: white;
+    padding: 2%;
+    width: 40%;
+  }
+  
+  .signup-section {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0px;
+    align-items: center;
+    margin-top: 4%;
+  }
+  
+  .signup-section button {
+    /* border: 2px solid lightseagreen; */
+    margin: auto;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    border: rgb(238, 234, 234);
+    background-color: rgb(238, 234, 234);
+    text-decoration: none;
+    padding: 3px;
+    width: 50%;
+  }
+  
+  .containerlogin-create {
+    /* border: 2px solid rgb(130, 213, 238); */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin-top: 10%;
+  }
+  
+  .signup-align {
+    /* border: 2px solid rgb(216, 15, 45); */
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 4%;
+  }
+  
+  .signup-button {
+    /* border: 2px solid greenyellow; */
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    width: 40%;
+    /* border: #dc7726; */
+    /* padding: 4px; */
+    width: 100%;
+    color: black;
+  }
+  
+  @media (min-width: 576px) {
+    .form-login {
+      /* border: 2px solid coral; */
+      box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+        rgba(84, 70, 35, 0.15) 0px 1px 3px;
+      padding: 4% 0%;
+      width: 70%;
+    }
+  
+    .signup-section {
+      /* border: 2px solid blue; */
+      margin-top: 2%;
+    }
+  
+    .form-style-login {
+      /* border: 2px solid violet; */
+      width: 60%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .form-style-login {
+      /* border: 2px solid violet; */
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .form-style-login {
+      /* border: 2px solid violet; */
+      width: 70%;
+    }
+  
+    .form-login input {
+      /* border: 2px solid fuchsia; */
+      padding: 1%;
+    }
+  
+    .form-login {
+      /* border: 2px solid coral; */
+      margin-top: 0px;
+    }
+  
+    .signup-align {
+      /* border: 2px solid rgb(216, 15, 45); */
+      margin-top: 2%;
+    }
+  
+    .container-form-login {
+      /* border: 2px solid blue; */
+      margin-top: 4%;
+    }
   }
 
-
-  /* empieza home private */
+  /*------------- empieza home private--------------------- */
 
  .card-title{
      color: #DC7726;

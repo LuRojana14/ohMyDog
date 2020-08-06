@@ -31,7 +31,7 @@ const users = [
       image: "https://okdiario.com/img/2020/01/19/lo-que-debes-saber-sobre-el-braco-aleman.jpg",
       breed: "Braco Aleman",
       sex: "female",
-      description:"Soy una perra malcriada, me gusta estar todo el dia con mi mamá aunque la  extraño mucho porque se fue a esEspaña y nunca mas volvio",
+      description:"Soy una perra malcriada, me gusta estar todo el dia con mi mamá aunque la  extraño mucho porque se fue a España y nunca mas volvio",
       age: 7,
       weight: "22",
     },

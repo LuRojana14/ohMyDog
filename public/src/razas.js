@@ -14,9 +14,7 @@ for(i=0; i<razas.length;i++){
      cadaRaza.value=razas[i]
      cadaRaza.textContent=razas[i]
      categories.appendChild(cadaRaza)
-   //  let filterRazas = cadaRaza.value
-   //  let filtro= filterRazas.filter(raza=>raza==razas)
-   //  console.log(filtro)
+  
 }
 
   
