@@ -4,6 +4,267 @@ body {
   margin-bottom: 20px;
 }
 
+/* ESTILOS DE LOURDES */
+
+/* Codigo de Index */
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  border-radius: 20px;
+  border-color: #ecc046;
+  background-color: #dc7726;
+  text-align: center;
+  margin-top: 5px;
+  color: white !important;
+}
+.links-homepage {
+  text-decoration: none;
+  color: white;
+}
+
+.tituloppal {
+  padding-top: 50px;
+  font-size: 25px;
+  color: white;
+  text-align: center !important;
+}
+.textoppal {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.contenedor-boton {
+  height: 35px;
+  width: 120px;
+  margin: auto;
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+}
+​ .tituloppal:hover {
+  color: #ecc046;
+}
+​ .textoicono {
+  color: black;
+}
+
+.pruebastyle {
+  background-image: url("/images/portadamobile.jpg");
+  width: 100%;
+  height: 580px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 100%;
+}
+
+.capa-gris {
+  background-color: rgba(122, 120, 120, 0.619);
+  height: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+​ .textoicono {
+  padding-left: 8px;
+  font-size: 20px;
+}
+
+/* hasta aca estilo de home */
+
+/* COMIENZA EL ESTILO DE PROFILE!!!!!!!!!!!!!!!! */
+/* empieza estilo de profile */
+
+.contenedor-profileImage {
+  /* border: 2px solid red; */
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+}
+
+.fotoperfil {
+  /* border: 2px solid blue; */
+  width: 100vw;
+}
+
+.nombre {
+  /* border: 2px solid #42c0d2; */
+  background-color: #42c0d2;
+  border-radius: 2%;
+  color: white;
+  padding: 2%;
+  margin: 3%;
+}
+
+.epigrafe {
+  /* border: 2px solid fuchsia; */
+  font-size: 1rem;
+  padding: 2%;
+  margin: 2%;
+}
+
+.eselform {
+  /* border: 2px solid blue;  */
+  width: 70%;
+  padding: 4% 0%;
+}
+
+.container-edit-form {
+  /* border: 2px solid red;  */
+  margin-top: 3%;
+}
+
+.formulario-general {
+  /* border: 2px solid red;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 2%;
+  width: 60%;
+  box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+    rgba(84, 70, 35, 0.15) 0px 1px 3px;
+}
+
+.formulario-general p {
+  margin-top: 0px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #42c0d2;
+}
+
+.formulario-general input {
+  /* border: 2px solid fuchsia;  */
+  width: 100%;
+  margin-bottom: 3%;
+  padding: 1%;
+}
+
+.formulario-general label {
+  /* border: 2px solid rgb(229, 255, 0);  */
+  margin-bottom: 1%;
+  margin-top: 3%;
+}
+
+.container-edit-button1 {
+  /* border: 2px solid rgb(216, 100, 54); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.edit-button1 {
+  /* border: 2px solid black; */
+  margin: 0px;
+  padding: 2%;
+  width: 60%;
+  color: black;
+  border: rgb(238, 234, 234);
+  background-color: rgb(238, 234, 234);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(218, 212, 212);
+  color: rgb(131, 125, 125);
+}
+
+.container-footer {
+  /* border: 2px solid blue; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-footer {
+  box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+    rgba(84, 70, 35, 0.15) 0px 1px 3px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 2%;
+  width: 90%;
+  position: sticky;
+}
+
+.footer-letter {
+  color: #42c0d2;
+}
+
+/* .contenedor-footer {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  background-color: #ecc046;
+} */
+
+/*-------------DOG DETAILS--------------*/
+.fotoDogDetail {
+  width: 100vw;
+}
+.name-dog {
+  background-color: #42c0d2;
+  padding-left: 10px;
+  color: white;
+}
+.contenedor-formulariodogs {
+  width: 300px;
+  align-content: center;
+  padding-left: 10px;
+  color: rgb(175, 170, 170);
+}
+.breed {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.btn-dog {
+  font-size: 16px;
+  border-radius: 20px;
+  border-color: #ecc046;
+  background-color: #dc7726;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.form-review {
+  flex-direction: column;
+}
+
+/* empieza home private */
+
+.card-title {
+  color: #dc7726;
+}
+
+.card {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.razadeperro {
+  font-style: italic;
+}
+
+/* MIS ESTILOS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 /* SIGN UP */
 
 .container-form {
@@ -263,7 +524,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
   .form-add-dog {
     /* border: 2px solid coral; */
     box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
@@ -285,7 +545,6 @@ body {
 }
 
 /* LOGIN !!!!!!!!!!!!!!!!!!!!!!!!!! */
-
 
 .container-form-login {
   /* border: 2px solid blue; */
@@ -400,12 +659,11 @@ body {
 }
 
 @media (min-width: 576px) {
-
   .form-login {
     /* border: 2px solid coral; */
     box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
       rgba(84, 70, 35, 0.15) 0px 1px 3px;
-    padding: 4% 0%; 
+    padding: 4% 0%;
     width: 70%;
   }
 
@@ -421,7 +679,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
   .form-style-login {
     /* border: 2px solid violet; */
     width: 50%;
@@ -436,12 +693,12 @@ body {
 
   .form-login input {
     /* border: 2px solid fuchsia; */
-   padding: 1%;
+    padding: 1%;
   }
 
   .form-login {
     /* border: 2px solid coral; */
-margin-top: 0px;
+    margin-top: 0px;
   }
 
   .signup-align {
