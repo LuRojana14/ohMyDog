@@ -1,33 +1,40 @@
 
 
 
-<h2>This is Home Private Page</h2>
-
-<nav>
-<ul>
-{{!-- <li><a href="/profile">My Profile</a></li> --}}
-
-<li> <a href="/users/profile"> My Profile</a></li>
-<li> <a href="/auth/logout"> Log Out </a> </li>
-
-</ul>
-</nav>
 
 
-{{#each alldogs}}
 
+
+ <form action="/users/homeprivate" class="formulario-buscar" method="get">
+        <div class="form-group2">
+          <label class= "category">BREED</label>
+          <select value="{{alldogs.breed}}" id="razas" class="categories-list" name="breed" required></select>
+        
+        <input class="botonSearch" type="submit" class="buscar-boton" value="search">
+      
+      </form>  
+
+ {{#each alldogs}} 
+<div class="card" style="width: 18rem;">
+    
+  <img src="{{this.image}}" class="card-img-top" alt="PERRO">
+  <div class="card-body">
+    <h5 class="card-title">{{this.namedog}}</h5>
+    <p id="razaDelPerro" class="razadeperro">{{this.breed}}</p>
+    <p class="card-text">{{this.description}}</p>
+    <a href="/users/oneDog/{{this._id}}" class="btn btn-primary">see more</a>
+  </div>
+</div>
+{{/each}} 
+
+{{!-- {{#each alldogs}}
 <img src="{{this.image}}" alt="">
-
 <h3>{{this.namedog}}</h3>
-<p>Description: {{this.description}}</p>
-
+<p>Breed: {{this.breed}}</p>
+<p>{{this.description}}</p>
 <a href="/users/oneDog/{{this._id}}"><h4>SEE MORE</a></h4>
-
-
 {{/each}}
+  --}}
 
-</body>
-
-
-
+ <script type="text/javascript" src="/src/razas.js"></script>  
 

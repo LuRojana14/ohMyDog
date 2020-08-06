@@ -1,0 +1,55 @@
+
+html{
+
+}
+
+body{
+    background: #108dc7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ef8e38, #108dc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.textoicono{
+    padding-left: 8px;
+    font-size: 20px;
+   
+}
+
+#contentWrap{
+    margin-top: 70px;
+    display: none;
+
+}
+   
+.card-header{
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.btn{
+    background-color: #ef8e38;
+}
+
+h4{
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+h3{
+    font-size: 18px;
+    text-align: center;
+}
+
+.card{
+    
+}

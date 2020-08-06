@@ -16,7 +16,14 @@ const dogSchema = new Schema(
     },
     description: String,
     age: { type: Number, min: 0 },
-    weight: String
+    weight: String,
+    reviews:[
+      {
+        user: String,
+        comments: String,
+        userId: { type: Schema.Types.ObjectId, ref: 'User' }
+      },
+    ],
   },
   {
     timestamps: {
