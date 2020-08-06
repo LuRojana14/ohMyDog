@@ -706,3 +706,43 @@ body{
    border: solid;
    
  }
+
+  /*------------- blog--------------------- */
+
+   
+  article {margin-bottom:2em;padding-bottom:2em;border-bottom:1px solid #ccc;}
+
+  .social a {
+    padding: 0 .5em;
+  }
+  
+  .page-header {
+    margin-bottom:2rem;
+  }
+
+  .textoblog{
+    color:#DC7726;
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  .textoBlog{
+    font-style: italic;
+  }
+
+  .entry-content1{
+    padding-top: 10px;
+  }
+
+  #articulo3{
+    padding-top: 15px;
+  }
+
+  .list-group-item {
+    text-decoration: none;
+    color:#42C0D2;
+  }
+
+  .list-group-item-text{
+    color:black !important;
+  }

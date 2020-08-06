@@ -86,6 +86,12 @@ router.get("/dogchat",(req,res,next)=>{
   res.render("indexChat");
 });
 
+//BLOG
+
+router.get("/ohmyblog",(req,res,next)=>{
+  res.render("blog");
+}); 
+
 // ACA VOY A HACER EL POPULATE
 
 router.get("/:userId", (req, res, next) => {
