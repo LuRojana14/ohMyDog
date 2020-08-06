@@ -15,12 +15,21 @@ router.use((req, res, next) => {
 
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
-  Dog.find()
+
+  let breed = req.query.breed
+  let data = {}
+  if(breed){
+    data = {
+      breed: breed
+    }
+  }
+  console.log(data)
+  Dog.find(data)
     .then((allTheDogFromDB) => {
       res.render("homeprivate", { alldogs: allTheDogFromDB });
     })
     .catch((error) => {
-      console.log("Error while getting the books from the DB: ", error);
+      console.log("Error while getting the dogs from the DB: ", error);
     });
 });
 
@@ -71,6 +80,17 @@ router.post("/dogedit", (req, res, next) => {
       console.log(error);
     });
 });
+//CHAT
+
+router.get("/dogchat",(req,res,next)=>{
+  res.render("indexChat");
+});
+
+//BLOG
+
+router.get("/ohmyblog",(req,res,next)=>{
+  res.render("blog");
+}); 
 
 // ACA VOY A HACER EL POPULATE
 
@@ -153,6 +173,7 @@ router.post("/add/newdog", (req, res, next) => {
     });
 });
 
+
 //DELETE
 
 router.post("/eraseDoggy/:id", (req, res, next) => {
@@ -165,6 +186,5 @@ router.post("/eraseDoggy/:id", (req, res, next) => {
        console.log(error);
      });
 });
-
 
 module.exports = router;

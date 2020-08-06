@@ -1,17 +1,17 @@
 
-<nav>
-<ul>
-<li> <a href="/users/profile"> My Profile</a></li>
-<li> <a href="/auth/logout"> Log Out </a> </li>
-</ul>
-</nav>
+
+
+
+
+
 
  <form action="/users/homeprivate" class="formulario-buscar" method="get">
         <div class="form-group2">
-          <label class= "category">Category</label>
+          <label class= "category">BREED</label>
           <select value="{{alldogs.breed}}" id="razas" class="categories-list" name="breed" required></select>
-        </div>
-        <input type="submit" class="buscar-boton" value="search">
+        
+        <input class="botonSearch" type="submit" class="buscar-boton" value="search">
+      
       </form>  
 
  {{#each alldogs}} 
@@ -27,8 +27,14 @@
 </div>
 {{/each}} 
 
-</body>
+{{!-- {{#each alldogs}}
+<img src="{{this.image}}" alt="">
+<h3>{{this.namedog}}</h3>
+<p>Breed: {{this.breed}}</p>
+<p>{{this.description}}</p>
+<a href="/users/oneDog/{{this._id}}"><h4>SEE MORE</a></h4>
+{{/each}}
+  --}}
 
-
-
+ <script type="text/javascript" src="/src/razas.js"></script>  
 

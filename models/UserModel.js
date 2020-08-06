@@ -9,7 +9,8 @@ const userSchema = new Schema(
   password: { type: String, required: true },
   telephone: String,
   cp:String,
-  dog:[{type : Schema.Types.ObjectId, ref: 'Dog'}],
+  dog:[{type : Schema.Types.ObjectId, ref: 'Dog'}]
+
 },
 {
   timestamps: {

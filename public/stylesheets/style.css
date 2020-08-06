@@ -1,90 +1,112 @@
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-
-/* ESTILOS DE LOURDES */
 
 /* Codigo de Index */
 
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  text-decoration: none;
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    
 }
 
-.btn {
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  border-radius: 20px;
-  border-color: #ecc046;
-  background-color: #dc7726;
-  text-align: center;
-  margin-top: 5px;
-  color: white !important;
+.btn{
+
+    width:100%;
+    height:100%;
+    font-size:16px;
+    border-radius: 20px;
+    border-color: #ECC046;
+    background-color: #DC7726;
+    text-align: center;
+    margin-top:5px;
+    color:white !important;
+   
+
 }
+
+
 .links-homepage {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
-.tituloppal {
-  padding-top: 50px;
-  font-size: 25px;
-  color: white;
-  text-align: center !important;
+  
+.tituloppal{
+    
+    padding-top: 50px;
+    font-size: 25px;
+    color: white;
+    text-align: center !important;
+   
 }
-.textoppal {
-  color: white;
-  text-align: center;
-  margin-top: 40px;
-  margin-left: 10px;
+.textoppal{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 10px
+
 }
 
-.contenedor-boton {
-  height: 35px;
-  width: 120px;
-  margin: auto;
-  display: flex;
-  margin-top: 70px;
-  justify-content: center;
+.contenedor-boton{
+    
+    
+    height: 35px;
+    width: 120px;
+    margin:auto;
+    display: flex;
+    margin-top: 70px;
+    justify-content:center;
 }
-​ .tituloppal:hover {
-  color: #ecc046;
+​
+
+
+​
+
+
+.tituloppal:hover{
+    color:#ECC046;
 }
-​ .textoicono {
-  color: black;
+​
+.textoicono{
+    color: black;
+    
 }
 
-.pruebastyle {
-  background-image: url("/images/portadamobile.jpg");
-  width: 100%;
-  height: 580px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 100%;
+.pruebastyle{
+   
+    background-image: url("/images/portadamobile.jpg");
+    width: 100%;
+    height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 100%;
+    
 }
 
-.capa-gris {
-  background-color: rgba(122, 120, 120, 0.619);
-  height: 100%;
+ .capa-gris{
+    background-color: rgba(122, 120, 120, 0.619);
+    height: 100%;
+} 
+.navbar-brand{
+    display: flex;
+    align-items: center;
 }
+​
+.textoicono{
+    padding-left: 8px;
+    font-size: 20px;
+   
+}
+​
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-​ .textoicono {
-  padding-left: 8px;
-  font-size: 20px;
-}
+​
+
+​
+
+​
+
 
 /* hasta aca estilo de home */
 
-/* COMIENZA EL ESTILO DE PROFILE!!!!!!!!!!!!!!!! */
 /* empieza estilo de profile */
-
 .contenedor-profileImage {
   /* border: 2px solid red; */
   font-family: "Roboto Condensed", sans-serif;
@@ -225,58 +247,40 @@ body {
   }
 }
 
+
 /*-------------DOG DETAILS--------------*/
-.fotoDogDetail {
-  width: 100vw;
+.fotoDogDetail{
+    width: 100vw;
+    
 }
-.name-dog {
-  background-color: #42c0d2;
-  padding-left: 10px;
-  color: white;
-}
-.contenedor-formulariodogs {
-  width: 300px;
-  align-content: center;
-  padding-left: 10px;
-  color: rgb(175, 170, 170);
-}
-.breed {
-  text-align: left;
-  padding-left: 5px;
-}
+.name-dog{
+    background-color: #42C0D2;
+    padding-left:10px;
+    color: white;
 
-.btn-dog {
-  font-size: 16px;
-  border-radius: 20px;
-  border-color: #ecc046;
-  background-color: #dc7726;
-  text-align: center;
-  margin-top: 5px;
+}
+.contenedor-formulariodogs{
+    
+    width: 300px;
+    align-content: center;
+    padding-left: 10px;
+    color: rgb(175, 170, 170);
+    
+}
+.breed{
+    text-align:left;
+    padding-left: 5px;
+    
+    
 }
 
-.form-review {
-  flex-direction: column;
+.form-review{
+    flex-direction: column;
 }
 
-/* empieza home private */
 
-.card-title {
-  color: #dc7726;
-}
 
-.card {
-  margin: auto;
-  margin-top: 20px;
-}
-
-.razadeperro {
-  font-style: italic;
-}
-
-/* MIS ESTILOS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-/* SIGN UP */
-
+/* empieza estilo de signup */
 .container-form {
   /* border: 2px solid blue; */
   display: flex;
@@ -416,8 +420,7 @@ body {
     padding: 1%;
   }
 }
-
-/* NEW DOG !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* empieza estilo de newdog */
 
 .form-add-dog {
   /* border: 2px solid coral; */
@@ -554,8 +557,7 @@ body {
   }
 }
 
-/* LOGIN !!!!!!!!!!!!!!!!!!!!!!!!!! */
-
+/* ------------------empieza login------------------------- */
 .container-form-login {
   /* border: 2px solid blue; */
   display: flex;
@@ -721,3 +723,85 @@ body {
     margin-top: 4%;
   }
 }
+
+  /*------------- empieza home private--------------------- */
+
+ .card-title{
+     color: #DC7726;
+ }
+
+  .card{
+   
+      margin:auto;
+      margin-top: 20px;
+   
+  }
+
+ .razadeperro{
+     font-style: italic;
+   
+ }
+
+ .formulario-buscar{
+   display: flex;
+   flex-direction: row;
+   width: 325px;
+   margin: auto;
+   padding-top: 30px;
+  
+ }
+
+ .form-group2{
+   margin: auto;
+   justify-content: space-around;
+ }
+
+ .botonSearch{
+   border-radius: 20px;
+   border-color: #ECC046;
+   background-color: #DC7726;
+   color: white;
+   box-shadow: none;
+   border: solid;
+   
+ }
+
+  /*------------- blog--------------------- */
+
+   
+  article {margin-bottom:2em;padding-bottom:2em;border-bottom:1px solid #ccc;}
+
+  .social a {
+    padding: 0 .5em;
+  }
+  
+  .page-header {
+    margin-bottom:2rem;
+  }
+
+  .textoblog{
+    color:#DC7726;
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  .textoBlog{
+    font-style: italic;
+  }
+
+  .entry-content1{
+    padding-top: 10px;
+  }
+
+  #articulo3{
+    padding-top: 15px;
+  }
+
+  .list-group-item {
+    text-decoration: none;
+    color:#42C0D2;
+  }
+
+  .list-group-item-text{
+    color:black !important;
+  }
