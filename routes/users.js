@@ -167,20 +167,4 @@ router.post("/eraseDoggy/:id", (req, res, next) => {
 });
 
 
-// User.findByIdAndUpdate( req.session.currentUser._id, {dog: {$pull:_id}})
-// .then((user) => console.log(user))
-// .catch((err) => console.log(err));
-
-// router.post("/users/profile", (req, res, next) => {
-//   User.findByIdAndUpdate(req.session.currentUser._id, { dog: { $pull: _id } })
-//     .then((user) => {
-//       res.redirect("/users/profile");
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
-
-//quiero que el delete este en el mismo form que edit
-
 module.exports = router;
