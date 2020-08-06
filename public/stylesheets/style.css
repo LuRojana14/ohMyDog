@@ -215,6 +215,7 @@ body {
   width: 40%;
   /* border: #dc7726; */
   padding: 4px;
+  margin-bottom: 3%;
 }
 
 .cancel-button {
@@ -227,6 +228,7 @@ body {
   border: rgb(238, 234, 234);
   background-color: rgb(238, 234, 234);
   padding: 4px;
+  margin-bottom: 3%;
 }
 
 .form-style {
@@ -238,7 +240,7 @@ body {
     /* border: 2px solid coral; */
     box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
       rgba(84, 70, 35, 0.15) 0px 1px 3px;
-      padding-top: 3%;
+    padding-top: 3%;
     width: 80%;
   }
 
@@ -262,6 +264,24 @@ body {
 
 @media (min-width: 768px) {
 
+  .form-add-dog {
+    /* border: 2px solid coral; */
+    box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+      rgba(84, 70, 35, 0.15) 0px 1px 3px;
+    padding-top: 3%;
+    width: 70%;
+  }
+
+  .form-style {
+    /* border: 2px solid yellow; */
+    width: 70%;
+  }
+
+  .form-add-dog input {
+    /* border: 2px solid fuchsia; */
+    padding: 1%;
+    width: 100%;
+  }
 }
 
 /* LOGIN !!!!!!!!!!!!!!!!!!!!!!!!!! */
