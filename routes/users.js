@@ -2,9 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const User = require("../models/UserModel");
-const Dog = require('../models/DogModel');
-
-
+const Dog = require("../models/DogModel");
 
 //MIDDLEWARE
 router.use((req, res, next) => {
@@ -17,29 +15,37 @@ router.use((req, res, next) => {
 
 //SHOW ALL DOGS IN HOME PRIVATE PAGE
 router.get("/homeprivate", (req, res, next) => {
-  Dog.find()
+
+  let breed = req.query.breed
+  let data = {}
+  if(breed){
+    data = {
+      breed: breed
+    }
+  }
+  console.log(data)
+  Dog.find(data)
     .then((allTheDogFromDB) => {
       res.render("homeprivate", { alldogs: allTheDogFromDB });
     })
     .catch((error) => {
-      console.log("Error while getting the books from the DB: ", error);
+      console.log("Error while getting the dogs from the DB: ", error);
     });
 });
 
 router.get("/profile", (req, res, next) => {
   if (req.session.currentUser._id) {
-    User.findOne({ _id: req.session.currentUser._id})
-    .populate('dog')
-    .then(myUser => {
-      
-      // console.log("hola", myUser.dog[0])
-      res.render("profile", { myInfoProfile: myUser});
-    })
-     .catch(error => {
-        console.log('Error');
+    User.findOne({ _id: req.session.currentUser._id })
+      .populate("dog")
+      .then((myUser) => {
+        // console.log("hola", myUser.dog[0])
+        res.render("profile", { myInfoProfile: myUser });
       })
-    }});
-
+      .catch((error) => {
+        console.log("Error");
+      });
+  }
+});
 
 //EDIT USER
 
@@ -59,15 +65,7 @@ router.post("/editUser", (req, res, next) => {
 
 router.post("/dogedit", (req, res, next) => {
   // console.log(req.body, "hola");
-  const {
-    _id,
-    namedog,
-    description,
-    age,
-    weight,
-    breed,
-    sex,
-  } = req.body;
+  const { _id, namedog, description, age, weight, breed, sex } = req.body;
   const user_id = req.session.currentUser._id;
   // _id.find((id) => id == id);
   Dog.findByIdAndUpdate(
@@ -82,48 +80,51 @@ router.post("/dogedit", (req, res, next) => {
       console.log(error);
     });
 });
+//CHAT
 
+router.get("/dogchat",(req,res,next)=>{
+  res.render("indexChat");
+});
 
+//BLOG
+
+router.get("/ohmyblog",(req,res,next)=>{
+  res.render("blog");
+}); 
 
 // ACA VOY A HACER EL POPULATE
 
-router.get('/:userId', (req, res, next) => {
+router.get("/:userId", (req, res, next) => {
   let userId = req.params.userId;
-  if (!/^[0-9a-fA-F]{24}$/.test(userId)) { 
-    return res.status(404).render('not-found');
+  if (!/^[0-9a-fA-F]{24}$/.test(userId)) {
+    return res.status(404).render("not-found");
   }
-  User.findOne({'_id': userId})
-    .populate('dog')
-    .then(user => {
+  User.findOne({ _id: userId })
+    .populate("dog")
+    .then((user) => {
       if (!user) {
-          return res.status(404).render('not-found');
+        return res.status(404).render("not-found");
       }
-      res.render("oneUserdetail", { user })
+      res.render("oneUserdetail", { user });
     })
-    .catch(next)
+    .catch(next);
 });
 
 //ACA TERMINA EL POPULATE
 
 //REVIEW
 
-router.get("/reviews", function (req, res, next) {
-  res.render("oneUser");
-});
-
 //NUEVA VERSION AGREGAR REVIEW
-router.post('/reviews/add', (req, res, next) => {
-  
-  const { userId, user, comments, } = req.body;
-  User.update(
-    { _id: userId },
-    { $push: { reviews: { user, comments } } }
-    )
+router.post("/reviews/add", (req, res, next) => {
+  let userId = req.session.currentUser._id;
+  const { user, comments, dogId } = req.body;
+  console.log(req.body, "hola");
+  Dog.update({ _id: dogId }, { $push: { reviews: { user, comments, userId } } })
 
-    .then(user => {
-      res.redirect('/users/oneUser/' + userId);
+    .then((user) => {
+      res.redirect(`/users/oneDog/${dogId}`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.log(error);
     });
 });
@@ -132,12 +133,12 @@ router.post('/reviews/add', (req, res, next) => {
 
 router.get("/oneDog/:dogId", (req, res, next) => {
   Dog.findById(req.params.dogId)
-    .then(theDog => {
+    .then((theDog) => {
       res.render("oneDogdetail", { dog: theDog });
     })
-    .catch(error => {
-      console.log('Error')
-    })
+    .catch((error) => {
+      console.log("Error");
+    });
 });
 
 //ADD NEW DOG
@@ -160,28 +161,30 @@ router.post("/add/newdog", (req, res, next) => {
   Dog.create(dogSubmission)
     .then((doggy) => {
       let dog = doggy._id;
-      User.findByIdAndUpdate(
-        userid,
-        { $push: { dog } },
-        { new: true }
-      ).then((user) => {
-        res.status(200);
-        res.redirect("/users/profile");
-      });
+      User.findByIdAndUpdate(userid, { $push: { dog } }, { new: true }).then(
+        (user) => {
+          res.status(200);
+          res.redirect("/users/profile");
+        }
+      );
     })
     .catch((error) => {
       console.log(error);
     });
 });
 
+
 //DELETE
 
-// User.findByIdAndUpdate( req.session.currentUser._id, {dog: {$pull:_id}})
-// .then((user) => console.log(user))
-// .catch((err) => console.log(err));
-
-// User.deleteOne({dog: "_id"})
-// .then((user) => console.log(user))
-// .catch((err) => console.log(err));
+router.post("/eraseDoggy/:id", (req, res, next) => {
+  console.log('hola', req.params.id)
+    Dog.deleteOne({_id:req.params.id})
+     .then(() => {
+       res.redirect("/users/profile");
+     })
+     .catch((error) => {
+       console.log(error);
+     });
+});
 
 module.exports = router;

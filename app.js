@@ -17,14 +17,16 @@ const MongoStore = require("connect-mongo")(session);
 const authRouter = require("./routes/auth");
 const users = require("./routes/users");
 const indexRouter = require("./routes/index");
+// const razasSelect = require("./routes/razas");
+
 
 const app = express();
 
-
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -46,7 +48,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-
+// SESSION MIDDLEWARE
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -75,6 +77,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.use("/auth", authRouter);
 app.use("/users", users);
 app.use("/", indexRouter);
+// app.use("/razas", razasSelect);
 
 
 // catch 404 and forward to error handler
