@@ -10,6 +10,10 @@ router.get("/ohmyblog",(req,res,next)=>{
   res.render("blog");
 }); 
 
+router.get("/furiblog",(req,res,next)=>{
+  res.render("furi");
+}); 
+
 //MIDDLEWARE
 router.use((req, res, next) => {
   if (req.session.currentUser) {

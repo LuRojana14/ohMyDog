@@ -7,10 +7,12 @@ body{
     
 }
 
-  
+.contenedor-footer{
+  background-color:#ECC046;
+  height: 30px;
+}
 
 .btn{
-
     width:100%;
     height:100%;
     font-size:16px;
@@ -18,9 +20,8 @@ body{
     border-color: #ECC046;
     background-color: #DC7726;
     text-align: center;
-    margin-top:5px;
-    color:white !important;
-   
+    margin-top:15px;
+    color:white !important;  
 }
 
 
@@ -31,7 +32,6 @@ body{
 
   
 .tituloppal{
-    
   padding-top: 50px;
   font-size: 25px;
   color: white;
@@ -50,11 +50,12 @@ body{
     
     
     height: 35px;
-    width: 120px;
+    width: 115px;
     margin:auto;
     display: flex;
-    margin-top: 70px;
+    margin-top: 100px;
     justify-content:center;
+    
 }
  
 
@@ -191,12 +192,10 @@ body{
   font-family: "Roboto Condensed", sans-serif;
   width: 100%;
 }
-
 .fotoperfil {
   /* border: 2px solid blue; */
   width: 100vw;
 }
-
 .nombre {
   /* border: 2px solid #42c0d2; */
   background-color: #42c0d2;
@@ -205,25 +204,22 @@ body{
   padding: 2%;
   /* margin: 3%; */
 }
-
 .epigrafe {
   /* border: 2px solid fuchsia; */
   font-size: 1rem;
   padding: 2%;
   margin: 2%;
+  text-align: center;
 }
-
 .eselform {
   /* border: 2px solid blue;  */
   width: 70%;
   padding: 4% 0%;
 }
-
 .container-edit-form {
   /* border: 2px solid red;  */
   margin-top: 3%;
 }
-
 .formulario-general {
   /* border: 2px solid red;  */
   display: flex;
@@ -233,29 +229,25 @@ body{
   border-radius: 2%;
   width: 100%;
   /* box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
-    rgba(84, 70, 35, 0.15) 0px 1px 3px; */
+  rgba(84, 70, 35, 0.15) 0px 1px 3px; */
 }
-
 .formulario-general p {
   margin-top: 0px;
   font-weight: bold;
   margin-bottom: 0px;
   color: #42c0d2;
 }
-
 .formulario-general input {
   /* border: 2px solid fuchsia;  */
   width: 100%;
   margin-bottom: 3%;
   padding: 1%;
 }
-
 .formulario-general label {
   /* border: 2px solid rgb(229, 255, 0);  */
   margin-bottom: 1%;
   margin-top: 3%;
 }
-
 .container-edit-button1 {
   /* border: 2px solid rgb(216, 100, 54); */
   display: flex;
@@ -266,7 +258,6 @@ body{
   margin-bottom: 2%;
   width: 100%;
 }
-
 .edit-button1 {
   /* border: 2px solid black; */
   margin: 0px;
@@ -276,7 +267,6 @@ body{
   border: rgb(238, 234, 234);
   background-color: rgb(238, 234, 234);
 }
-
 .campo {
   display: flex;
   flex-direction: column;
@@ -284,7 +274,29 @@ body{
   border: 1px solid rgb(218, 212, 212);
   color: rgb(131, 125, 125);
 }
-
+.form-delete {
+  /* border: 2px solid red; */
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.container-delete {
+  /* border: 2px solid fuchsia; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.delete-button {
+  /* border: 2px solid blue; */
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  width: 60%;
+  color: black;
+  border: rgb(238, 234, 234);
+  background-color: rgb(238, 234, 234);
+}
 .container-footer {
   /* border: 2px solid blue; */
   width: 100%;
@@ -293,7 +305,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 .navbar-footer {
   box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
     rgba(84, 70, 35, 0.15) 0px 1px 3px;
@@ -305,14 +316,9 @@ body{
   width: 100%;
   position: sticky;
 }
-
 .footer-letter {
   color: white;
 }
-
-
-
-
 /* ------------------empieza login------------------------- */
 .container-form-login {
   /* border: 2px solid blue; */
@@ -577,6 +583,28 @@ body{
   width: 50%;
 }
 
+/*-------------DOG DETAILS--------------*/
+.fotoDogDetail{
+  width: 100vw;
+}
+.name-dog{
+  background-color: #42C0D2;
+  padding-left:10px;
+  color: white;
+}
+.contenedor-formulariodogs{
+  width: 300px;
+  align-content: center;
+  padding-left: 10px;
+  color: rgb(175, 170, 170);
+}
+.breed{
+  text-align:left;
+  padding-left: 5px;
+}
+.form-review{
+  flex-direction: column;
+}
 
 
   /*------------- blog--------------------- */
@@ -619,6 +647,9 @@ body{
   }
 
 
+  .darda{
+    color:#DC7726;
+  }
   /* --------MEDIA QUERYS------------ */
 
   
@@ -680,6 +711,12 @@ body{
     align-items: center;
     width: 100%;
   }
+  .container-delete {
+    padding-top: 3%;
+  }
+  .delete-button {
+   width: 50%;
+  }
 }
 
 
@@ -690,7 +727,10 @@ body{
       rgba(84, 70, 35, 0.15) 0px 1px 3px;
     width: 70%;
   }
-
+  .contenedor-footer{
+    background-color:#ECC046;
+    height: 75px;
+  }
   .formclass {
     /* border: 2px solid yellow; */
     width: 70%;
@@ -724,6 +764,63 @@ body{
     width: 100%;
   }
 
+  .pruebastyle{
+   background-image: url("/images/portada.jpg"); 
+   height: 1050px;
+}
+.tituloppal{
+  padding-top: 60px;
+  font-style:bold;
+  font-size: 60px;
+  text-align: left;
+  color:white;
+}
+
+.textoppal{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+.contenedor-boton{
+  height: 35px;
+  width: 150px;
+  margin-top: 170px;
+  
+}
+.btn{
+  font-size:20px;
+  border-radius: 20px;
+  border-color: #ECC046;
+  background-color: #DC7726;
+  text-align: center;
+  margin-top:20px;
+}
+.container-delete {
+  /* border: 2px solid fuchsia; */
+  padding-top: 3%;
+}
+.delete-button {
+  /* border: 2px solid blue; */
+  width: 40%;
+}
+.contenedor-boton{
+  height: 50px;
+  width: 160px;
+  margin:auto;
+  display: flex;
+  margin-top: 150px;
+  justify-content:center;
+}
+.navDarda{
+  width: 75px;
+  height: 75px;
+}
+
+.navbar-brand{
+  padding-left: 20px;
+}
 }
 
 
