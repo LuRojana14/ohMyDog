@@ -4,6 +4,12 @@ const router = express.Router();
 const User = require("../models/UserModel");
 const Dog = require("../models/DogModel");
 
+//BLOG
+
+router.get("/ohmyblog",(req,res,next)=>{
+  res.render("blog");
+}); 
+
 //MIDDLEWARE
 router.use((req, res, next) => {
   if (req.session.currentUser) {
@@ -86,11 +92,7 @@ router.get("/dogchat",(req,res,next)=>{
   res.render("indexChat");
 });
 
-//BLOG
 
-router.get("/ohmyblog",(req,res,next)=>{
-  res.render("blog");
-}); 
 
 // ACA VOY A HACER EL POPULATE
 
