@@ -399,3 +399,48 @@ body {
   color: black;
 }
 
+@media (min-width: 576px) {
+
+  .form-login {
+    /* border: 2px solid coral; */
+    box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+      rgba(84, 70, 35, 0.15) 0px 1px 3px;
+    padding: 4% 0%; 
+    width: 70%;
+  }
+
+  .signup-section {
+    /* border: 2px solid blue; */
+    margin-top: 2%;
+  }
+
+  .form-style-login {
+    /* border: 2px solid violet; */
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .form-style-login {
+    /* border: 2px solid violet; */
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-style-login {
+    /* border: 2px solid violet; */
+    width: 70%;
+  }
+
+  .form-login input {
+    /* border: 2px solid fuchsia; */
+   padding: 1%;
+  }
+
+  .form-login {
+    /* border: 2px solid coral; */
+margin-top: 0px;
+  }
+
