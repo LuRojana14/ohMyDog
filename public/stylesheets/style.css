@@ -252,8 +252,9 @@ body {
   padding: 2%;
   width: 60%;
   color: black;
-  border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  border-radius: 20px;
+  border: #ecc046;
+  background-color: #ecc046;
 }
 
 .campo {
@@ -286,8 +287,9 @@ body {
   padding: 2%;
   width: 60%;
   color: black;
-  border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  border-radius: 20px;
+  border: #ecc046;
+  background-color: #ecc046;
 }
 
 .container-footer {
@@ -313,6 +315,52 @@ body {
 
 .footer-letter {
   color: white;
+}
+
+
+/*-------------DOG DETAILS--------------*/
+.fotoDogDetail {
+  width: 100vw;
+}
+.name-dog {
+  background-color: #42c0d2;
+  padding-left: 10px;
+  color: white;
+}
+
+.dog-details {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.contenedor-formulariodogs {
+  /* border: 2px solid red; */
+  color: rgb(65, 62, 62);
+  width: 95%;
+}
+
+.breed {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.container-reviews {
+  border: 2px solid rgb(255, 0, 157);
+}
+
+.container-add-button {
+  border: 2px solid black;
+}
+
+.add-button {
+  border: 2px solid red;
+}
+
+.form-details {
+  border: 2px solid rgb(238, 255, 0);
 }
 
 /* ------------------empieza login------------------------- */
@@ -368,9 +416,9 @@ body {
   justify-content: center;
   align-content: center;
   /* margin-top: 10px; */
+  border-radius: 20px;
   border: #dc7726;
   background-color: #dc7726;
-  color: white;
   padding: 2%;
   width: 40%;
 }
@@ -391,11 +439,12 @@ body {
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
-  border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  border-radius: 20px;
+  border: #dc7726;
+  background-color: #dc7726;
   text-decoration: none;
-  padding: 3px;
-  width: 50%;
+  padding: 2%;
+  width: 40%;
 }
 
 .containerlogin-create {
@@ -422,10 +471,7 @@ body {
   margin: 0px;
   padding: 0px;
   width: 40%;
-  /* border: #dc7726; */
-  /* padding: 4px; */
   width: 100%;
-  color: black;
 }
 
 /*------------- empieza home private--------------------- */
@@ -532,7 +578,7 @@ body {
 }
 
 .login-button {
-  /* border: 2px solid greenyellow; */
+  /* border: 2px solid black; */
   color: white;
   margin: 0px;
   padding: 0px;
@@ -553,12 +599,12 @@ body {
 }
 
 .account-button {
-  /* border: 2px solid blue; */
+  border: 2px solid greenyellow;
   display: flex;
   justify-content: center;
   align-content: center;
   /* margin-top: 10px; */
-  border: #dc7726;
+  /* border: #dc7726; */
   background-color: #dc7726;
   color: white;
   padding: 2%;

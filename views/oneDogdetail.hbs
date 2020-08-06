@@ -14,57 +14,74 @@
 
 
 
-  
-  <div class="breed"> 
+
+<div class="breed">
   <p><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
   <p>{{dog.description}}</p>
-  <button type="button" class="btn"><a href="/users/dogchat" class="links-homepage">chat with {{dog.namedog}} parents</a></button> 
-  </div>
-  
-  <hr class="lineaDogdetails">
+  <button type="button" class="btn"><a href="/users/dogchat"
+      class="links-homepage">chat with {{dog.namedog}} parents</a></button>
+</div>
+
+<hr class="lineaDogdetails">
+<div class="dog-details">
   <div class="contenedor-formulariodogs">
-  <div class="formulario-dogdetails"> 
-  <p>SEX: {{dog.sex}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>TELEPHONE:{{user.telephone}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>AGE:{{dog.age}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>WEIGHT:{{dog.weight}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>POSTAL CODE:{{user.cp}}</p>
+
+    <div>
+      <p>Sex: {{dog.sex}}</p>
+    </div>
+
+    <div>
+      <p>Telephone: {{user.telephone}}</p>
+    </div>
+
+    <div>
+      <p>Age: {{dog.age}}</p>
+    </div>
+
+    <div>
+      <p>Weight: {{dog.weight}}</p>
+    </div>
+
+    <div>
+      <p>Postal Code: {{user.cp}}</p>
+    </div>
+
   </div>
 </div>
 
 
 
 
+<div class="container-reviews">
+  <form action="/users/reviews/add" method="post">
 
-<form action="/users/reviews/add" method="post">
-  <div class="form-group">
-    <label for="exampleFormControlInput1"></label>
-    <input type="text" name="user" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    <input type="hidden" name= "dogId" value={{dog._id}}>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">comments about {{dog.namedog}}</label>
-    <textarea class="form-control" type="text" name="comments" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <button type="submit">ADD</button>
-  </div>
-</form>
+    <div class="form-details">
+      <label for="exampleFormControlInput1"></label>
+      <input type="text" name="user" class="form-control"
+        id="exampleFormControlInput1" placeholder="name@example.com">
+      <input type="hidden" name="dogId" value={{dog._id}}>
+    
 
-
-<div class="form-review">
-{{#each dog.reviews}}
-<div class="review-item">
-  <p>{{this.comments}}</p>
-  <span>{{this.user}}</span>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">{{dog.namedog}} Reviews</label>
+      <textarea class="form-control" type="text" name="comments"
+        id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
 </div>
-{{/each}}
+    <div class="container-add-button">
+      <button class="add-button" type="submit">ADD</button>
+    </div>
+
+
+  </form>
 </div>
 
- 
+
+<div>
+  {{#each dog.reviews}}
+  <div>
+    <p>{{this.comments}}</p>
+    <span>{{this.user}}</span>
+  </div>
+  {{/each}}
+</div>
