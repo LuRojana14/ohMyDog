@@ -285,3 +285,117 @@ body {
 }
 
 /* LOGIN !!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.container-form-login {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+}
+
+.form-style-login {
+  /* border: 2px solid violet; */
+  width: 70%;
+}
+
+.form-login {
+  /* border: 2px solid coral; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 2%;
+  width: 80%;
+  padding-top: 2%;
+}
+.form-login p {
+  /* border: 2px solid brown; */
+  margin-top: 0px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #dc7726;
+}
+
+.form-login label {
+  /* border: 2px solid yellow; */
+  margin-bottom: 1%;
+  margin-top: 4%;
+}
+
+.form-login input {
+  /* border: 2px solid fuchsia; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+.account-loginbutton {
+  /* border: 2px solid rgb(124, 124, 194); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* margin-top: 10px; */
+  border: #dc7726;
+  background-color: #dc7726;
+  color: white;
+  padding: 2%;
+  width: 40%;
+}
+
+.signup-section {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 0px;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.signup-section button {
+  /* border: 2px solid lightseagreen; */
+  margin: auto;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  border: rgb(238, 234, 234);
+  background-color: rgb(238, 234, 234);
+  text-decoration: none;
+  padding: 3px;
+  width: 50%;
+}
+
+.containerlogin-create {
+  /* border: 2px solid rgb(130, 213, 238); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+.signup-align {
+  /* border: 2px solid rgb(216, 15, 45); */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 4%;
+}
+
+.signup-button {
+  /* border: 2px solid greenyellow; */
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  width: 40%;
+  /* border: #dc7726; */
+  /* padding: 4px; */
+  width: 100%;
+  color: black;
+}
+

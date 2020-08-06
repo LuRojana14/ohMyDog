@@ -5,36 +5,34 @@
 </p>
 {{/if}}
 
-<div class="container-form">
-  <div class="form-add-dog">
-    <form action="/auth/login" method="post">
+<div class="container-form-login">
+  <div class="form-login">
+    <form class="form-style-login" action="/auth/login" method="post">
 
       <p>Login</p>
 
       <div>
         <label for="email-input"> Email </label>
-        <input class="controls-add" type="email" name="email" id="email-input"
-          placeholder="e.g., xena@warrior.company">
+        <input class="controls-add" type="email" name="email" id="email-input">
       </div>
 
       <div>
         <label for="password-input"> Password </label>
         <input class="controls-add" type="password" name="password"
-          id="password-input"
-          placeholder="e.g., ••••••••••••">
+          id="password-input">
       </div>
 
-      <div>
-        <button type="submit">Log In</button>
+      <div class="containerlogin-create">
+        <button class="account-loginbutton" type="submit">Log In</button>
       </div>
 
     </form>
   </div>
 </div>
 
-<div class="account-section"> ​
-  <div class="account-align">
+<div class="signup-section"> ​
+  <div class="signup-align">
     <p>Don't have an account?</p>
-    <button><a class="color-letter" href="/auth/signup">Create</a></button>
+    <button><a class="signup-button" href="/auth/signup">Create</a></button>
   </div>
 </div>
