@@ -9,6 +9,10 @@ body{
 .contenedor-paginas{
   margin-top: 66px;
 }
+
+.contenedor-paginas2{
+  margin-top: 90px;
+}
 .contenedor-footer{
   background-color:#ECC046;
   height: 30px;
@@ -197,7 +201,6 @@ body{
 
 /* empieza estilo de profile */
 .contenedor-profileImage {
-  /* border: 2px solid red; */
   font-family: "Roboto Condensed", sans-serif;
   width: 100%;
 }
@@ -626,6 +629,7 @@ body{
 /*-------------DOG DETAILS--------------*/
 .fotoDogDetail {
   width: 100vw;
+  
 }
 
 
@@ -649,6 +653,7 @@ body{
 .breed {
   text-align: left;
   padding-left: 5px;
+
  
 }
 
@@ -670,6 +675,7 @@ body{
   color: white;
   padding: 2%;
   margin-top: 0px;
+ 
 }
 .container-btn-chat {
   /* border: 2px solid #42c0d2; */
@@ -847,7 +853,9 @@ body{
     padding: 1%;
     width: 100%;
   }
-
+  .contenedor-paginas2{
+    margin-top: 150px;
+  }
   .pruebastyle{
    background-image: url("/images/portada.jpg"); 
    height: 1050px;
