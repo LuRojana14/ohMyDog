@@ -1,70 +1,75 @@
-
-
-
-<div>
+<div class="contenedor-paginas">
+<div class="contenedor-profileImage">
   <img class="fotoDogDetail" src="{{dog.image}}" alt="">
 </div>
-<div>
-  <img class="epigrafeDogDetail" src="{{dog.description}}" alt="">
+<div class="nombre-see-more">
+<h3>{{dog.namedog}}</h3>
 </div>
+<img class="epigrafeDogDetail" src="{{dog.description}}" alt="">
 
-
-<h3 class="name-dog">{{dog.namedog}}</h3>
-
-
-
-
-  
-  <div class="breed"> 
-  <p><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
-  <p>{{dog.description}}</p>
-  <button type="button" class="btn"><a href="/users/dogchat" class="links-homepage">chat with {{dog.namedog}} parents</a></button> 
+<div class="breed">
+  <p class="epigrafe"><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
+  <p class="epigrafe">{{dog.description}}</p>
+  <div class="container-btn-chat">
+    <button type="button" class="btn-chat"><a href="/users/dogchat"
+        class="links-homepage">Chat with {{dog.namedog}} parents</a></button>
   </div>
-  
-  <hr class="lineaDogdetails">
+</div>
+<hr class="lineaDogdetails">
+<div class="dog-details">
   <div class="contenedor-formulariodogs">
-  <div class="formulario-dogdetails"> 
-  <p>SEX: {{dog.sex}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>TELEPHONE:{{user.telephone}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>AGE:{{dog.age}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>WEIGHT:{{dog.weight}}</p>
-  </div>
-  <div class="formulario-dogdetails"> 
-  <p>POSTAL CODE:{{user.cp}}</p>
+    <div>
+      <p>Sex: {{dog.sex}}</p>
+    </div>
+    <div>
+      <p>Telephone: {{user.telephone}}</p>
+    </div>
+    <div>
+      <p>Age: {{dog.age}}</p>
+    </div>
+    <div>
+      <p>Weight: {{dog.weight}}</p>
+    </div>
+    <div>
+      <p>Postal Code: {{user.cp}}</p>
+    </div>
   </div>
 </div>
-
-
-
-
-
-<form action="/users/reviews/add" method="post">
-  <div class="form-group">
-    <label for="exampleFormControlInput1"></label>
-    <input type="text" name="user" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    <input type="hidden" name= "dogId" value={{dog._id}}>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">comments about {{dog.namedog}}</label>
-    <textarea class="form-control" type="text" name="comments" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <button type="submit">ADD</button>
-  </div>
-</form>
-
-
-<div class="form-review">
-{{#each dog.reviews}}
-<div class="review-item">
-  <p>{{this.comments}}</p>
-  <span>{{this.user}}</span>
+<div class="container-reviews">
+  <form action="/users/reviews/add" method="post">
+    <div class="container-textarea">
+      <div class="text-dad">
+        <div>
+          <label class="text-style" for="exampleFormControlTextarea1">{{dog.namedog}}
+            Reviews</label>
+        </div>
+        <div>
+          <input type="text" name="user" id="exampleFormControlInput1"
+            placeholder="name@example.com">
+          <input type="hidden" name="dogId" value={{dog._id}}>
+        </div>
+        <div>
+          <textarea type="text" name="comments"
+            id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="container-add-button">
+          <button class="add-button" type="submit">Add</button>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
-{{/each}}
+<div>
+  {{#each dog.reviews}}
+  <div class="new-review">
+    <span>{{this.user}}: {{this.comments}}</span>
+  </div>
+  {{/each}}
 </div>
-
- 
+ <div class="container-footer">
+    <div class="navbar-footer">
+      <a class="footer-letter" href="/users/homeprivate">Home</a>
+      <a class="footer-letter" href="/auth/logout">Log Out </a>
+    </div>
+  </div>
+</div>

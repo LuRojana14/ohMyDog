@@ -23,7 +23,7 @@ const indexRouter = require("./routes/index");
 const app = express();
 
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect("mongodb://localhost/ohmydog", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -48,7 +48,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-// SESSION MIDDLEWARE
 app.use(
   session({
     secret: "basic-auth-secret",
