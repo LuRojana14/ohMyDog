@@ -1,7 +1,7 @@
 
 
 
-<div>
+<div class="contenedor-profileImage">
   <img class="fotoDogDetail" src="{{dog.image}}" alt="">
 </div>
 <div>
@@ -9,17 +9,15 @@
 </div>
 
 
-<h3 class="name-dog">{{dog.namedog}}</h3>
-
-
-
-
+<h3 class="nombre-see-more">{{dog.namedog}}</h3>
 
 <div class="breed">
-  <p><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
-  <p>{{dog.description}}</p>
-  <button type="button" class="btn"><a href="/users/dogchat"
-      class="links-homepage">chat with {{dog.namedog}} parents</a></button>
+  <p class="epigrafe"><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
+  <p class="epigrafe">{{dog.description}}</p>
+  <div class="container-btn-chat">
+    <button type="button" class="btn-chat"><a href="/users/dogchat"
+        class="links-homepage">Chat with {{dog.namedog}} parents</a></button>
+  </div>
 </div>
 
 <hr class="lineaDogdetails">
@@ -55,20 +53,13 @@
 <div class="container-reviews">
   <form action="/users/reviews/add" method="post">
 
-    {{!-- <div>
-      <label for="exampleFormControlInput1"></label>
-    </div> --}}
-
-  
-
-
-
     <div class="container-textarea">
       <div class="text-dad">
 
-  <div>
-      <label for="exampleFormControlTextarea1">{{dog.namedog}} Reviews</label>
-    </div>
+        <div>
+          <label class="text-style" for="exampleFormControlTextarea1">{{dog.namedog}}
+            Reviews</label>
+        </div>
         <div>
           <input type="text" name="user" id="exampleFormControlInput1"
             placeholder="name@example.com">
@@ -80,13 +71,13 @@
             id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
+        <div class="container-add-button">
+          <button class="add-button" type="submit">Add</button>
+        </div>
+
       </div>
-
     </div>
 
-    <div class="container-add-button">
-      <button class="add-button" type="submit">ADD</button>
-    </div>
 
 
   </form>
@@ -95,9 +86,8 @@
 
 <div>
   {{#each dog.reviews}}
-  <div>
-    <p>{{this.comments}}</p>
-    <span>{{this.user}}</span>
+  <div class="new-review">
+    <span>{{this.user}}: {{this.comments}}</span>
   </div>
   {{/each}}
 </div>
