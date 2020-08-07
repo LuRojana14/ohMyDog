@@ -317,7 +317,6 @@ body {
   color: white;
 }
 
-
 /*-------------DOG DETAILS--------------*/
 .fotoDogDetail {
   width: 100vw;
@@ -348,20 +347,54 @@ body {
 }
 
 .container-reviews {
-  border: 2px solid rgb(255, 0, 157);
+  /* border: 2px solid rgb(255, 0, 157); */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .container-add-button {
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .add-button {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-.form-details {
-  border: 2px solid rgb(238, 255, 0);
+.form-details1 {
+  /* border: 2px solid rgb(0, 225, 255);
+  display: flex;
+  justify-content: center; */
 }
+
+.container-textarea {
+  /* border: 2px solid blue; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.text-dad{
+  /* border: 2px solid orange; */
+  box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+    rgba(84, 70, 35, 0.15) 0px 1px 3px;
+  width: 95%;
+  padding: 2%;
+}
+
+.container-textarea input {
+  border: 2px solid rgb(238, 234, 234);
+  display: flex;
+  width: 100%;
+}
+
+.container-textarea textarea{
+  border: 2px solid rgb(238, 234, 234);
+  display: flex;
+  width: 100%;
+}
+
 
 /* ------------------empieza login------------------------- */
 .container-form-login {
