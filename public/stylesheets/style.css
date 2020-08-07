@@ -480,6 +480,7 @@ body{
    
  }
 /*------------- signup--------------------- */
+/*------------- signup--------------------- */
 .container-form {
   /* border: 2px solid blue; */
   display: flex;
@@ -496,7 +497,7 @@ body{
 }
 .form-tocomplete p {
   /* border: 2px solid brown; */
-  margin-top: 0px;
+  margin-top: 6%;
   font-weight: bold;
   margin-bottom: 0px;
   color: #dc7726;
@@ -521,6 +522,17 @@ body{
   align-items: center;
   margin-bottom: 0px;
 }
+.btn-signup {
+  width: 70%;
+  padding: 2%;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #ecc046;
+  background-color: #dc7726;
+  text-align: center;
+  margin-top: 6%;
+  color: white;
+}
 .account-section {
   /* border: 2px solid blue; */
   display: flex;
@@ -530,7 +542,7 @@ body{
   align-items: center;
 }
 .account-section button {
-  /* border: 2px solid lightseagreen; */
+  border: 2px solid lightseagreen;
   margin: auto;
   margin-bottom: 3%;
   display: flex;
@@ -538,19 +550,20 @@ body{
   border: rgb(238, 234, 234);
   background-color: white;
   text-decoration: none;
-  padding: 4px;
+  /* padding: 4px; */
   width: 50%;
 }
-.login-button {
-  /* border: 2px solid black; */
+.btn-login {
+  width: 70%;
+  padding: 3%;
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: #dc7726;
+  border-color: #ecc046;
+  text-align: center;
   color: white;
-  margin: 0px;
-  padding: 0px;
-  width: 40%;
-  /* border: #dc7726; */
-  /* padding: 4px; */
   width: 100%;
-
+  margin-bottom: 6%;
 }
 .container-create {
   /* border: 2px solid violet; */
@@ -560,25 +573,17 @@ body{
   flex-direction: row;
   margin-top: 0px;
 }
-/* NO ESTA HACIENDO NADA */
- /* .account-button {
-  border: 2px solid;
-  display: flex;
-  justify-content: center;
-  border-color: #ECC046;
-  align-content: center;
-  background-color: #dc7726;
-  color: white;
-  padding: 2%;
-  width: 60%;
-}  */
 .account-align {
   /* border: 2px solid lightpink; */
   display: flex;
   text-align: center;
   flex-direction: column;
   width: 50%;
-  
+  margin-top: 3%;
+}
+.account-align p {
+  /* border: 2px solid lightpink; */
+  margin-bottom: 0px;
 }
 
 
