@@ -6,7 +6,9 @@ body{
     text-decoration: none;
     
 }
-
+.contenedor-paginas{
+  margin-top: 66px;
+}
 .contenedor-footer{
   background-color:#ECC046;
   height: 30px;
@@ -87,9 +89,15 @@ body{
 .navbar-brand{
     display: flex;
     align-items: center;
-    /* position: fixed;*/
+   
 } 
-​
+.navbar{
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 1;
+}
+
  .textoicono{
     padding-left:8px;
     font-size:20px;   
@@ -210,7 +218,6 @@ body{
   font-size: 1rem;
   padding: 2%;
   margin: 2%;
-  text-align: center;
 }
 .eselform {
   /* border: 2px solid blue;  */
@@ -449,7 +456,8 @@ body{
    display: flex;
    flex-direction: row;
    width: 325px;
-   margin: auto;
+   margin: auto; 
+   margin-top: 75px;
    padding-top: 30px;
   
  }
@@ -525,7 +533,7 @@ body{
   display: flex;
   justify-content: center;
   border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  background-color: white;
   text-decoration: none;
   padding: 4px;
   width: 50%;
@@ -539,7 +547,7 @@ body{
   /* border: #dc7726; */
   /* padding: 4px; */
   width: 100%;
-  color: black;
+
 }
 .container-create {
   /* border: 2px solid violet; */
@@ -549,25 +557,27 @@ body{
   flex-direction: row;
   margin-top: 0px;
 }
-.account-button {
-  border: 2px solid greenyellow;
+/* NO ESTA HACIENDO NADA */
+ /* .account-button {
+  border: 2px solid;
   display: flex;
   justify-content: center;
+  border-color: #ECC046;
   align-content: center;
-  /* margin-top: 10px; */
-  /* border: #dc7726; */
   background-color: #dc7726;
   color: white;
   padding: 2%;
   width: 60%;
-}
+}  */
 .account-align {
   /* border: 2px solid lightpink; */
   display: flex;
   text-align: center;
   flex-direction: column;
   width: 50%;
+  
 }
+
 
   /*------------- blog--------------------- */
 
@@ -613,26 +623,116 @@ body{
     color:#DC7726;
   }
   /*-------------DOG DETAILS--------------*/
-.fotoDogDetail{
+/*-------------DOG DETAILS--------------*/
+.fotoDogDetail {
   width: 100vw;
 }
-.name-dog{
-  background-color: #42C0D2;
-  padding-left:10px;
+
+
+.name-dog {
+  background-color: #42c0d2;
+  padding-left: 10px;
   color: white;
 }
-.contenedor-formulariodogs{
-  width: 300px;
-  align-content: center;
-  padding-left: 10px;
-  color: rgb(175, 170, 170);
+.dog-details {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0px;
 }
-.breed{
-  text-align:left;
+.contenedor-formulariodogs {
+  /* border: 2px solid red; */
+  color: rgb(65, 62, 62);
+  width: 95%;
+}
+.breed {
+  text-align: left;
   padding-left: 5px;
+ 
 }
-.form-review{
+
+.container-reviews {
+  /* border: 2px solid rgb(255, 0, 157); */
+  display: flex;
+  justify-content: center;
   flex-direction: column;
+  width: 100%;
+}
+.new-review {
+  margin-left: 4%;
+  margin-bottom: 1%;
+}
+.nombre-see-more {
+  /* border: 2px solid #42c0d2; */
+  background-color: #42c0d2;
+  border-radius: 2%;
+  color: white;
+  padding: 2%;
+  margin-top: 0px;
+}
+.container-btn-chat {
+  /* border: 2px solid #42c0d2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
+}
+.btn-chat {
+  width: 70%;
+  padding: 1%;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #DC7726;
+  background-color: #ecc046;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+.text-style {
+  color: #42c0d2;
+}
+.container-add-button {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.add-button {
+  /* border: 2px solid red; */
+  width: 30%;
+  border-radius: 20px;
+  border:1px solid;
+  border-color:#DC7726;
+  background-color: #ecc046;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+.container-textarea {
+  /* border: 2px solid blue; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.text-dad {
+  /* border: 2px solid orange; */
+  box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+    rgba(84, 70, 35, 0.15) 0px 1px 3px;
+  width: 95%;
+  padding: 2%;
+  margin-bottom: 3%;
+}
+.container-textarea input {
+  border: 2px solid rgb(238, 234, 234);
+  display: flex;
+  width: 100%;
+}
+.container-textarea textarea {
+  border: 2px solid rgb(238, 234, 234);
+  display: flex;
+  width: 100%;
 }
   /* --------MEDIA QUERYS------------ */
 
@@ -804,6 +904,7 @@ body{
 
 .navbar-brand{
   padding-left: 20px;
+  
 }
 }
 
