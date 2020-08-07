@@ -1,13 +1,10 @@
 
-
-
 <div class="contenedor-profileImage">
   <img class="fotoDogDetail" src="{{dog.image}}" alt="">
 </div>
 <div>
   <img class="epigrafeDogDetail" src="{{dog.description}}" alt="">
 </div>
-
 
 <h3 class="nombre-see-more">{{dog.namedog}}</h3>
 
@@ -47,9 +44,6 @@
   </div>
 </div>
 
-
-
-
 <div class="container-reviews">
   <form action="/users/reviews/add" method="post">
 
@@ -78,8 +72,6 @@
       </div>
     </div>
 
-
-
   </form>
 </div>
 
@@ -91,3 +83,12 @@
   </div>
   {{/each}}
 </div>
+
+  <div class="container-footer">
+    <div class="navbar-footer">
+
+      <a class="footer-letter" href="/users/homeprivate">Home</a>
+      <a class="footer-letter" href="/auth/logout">Log Out </a>
+
+    </div>
+  </div>

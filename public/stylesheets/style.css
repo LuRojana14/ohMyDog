@@ -189,7 +189,7 @@ body {
   font-size: 1rem;
   padding: 1%;
   margin: 1%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .eselform {
@@ -355,8 +355,6 @@ body {
 }
 
 .new-review {
-  /* border: 2px solid rgb(255, 0, 157);  */
-  /* padding: 1%; */
   margin-left: 4%;
   margin-bottom: 1%;
 
@@ -383,8 +381,6 @@ body {
 .btn-chat {
   width: 50%;
   padding: 1%;
-  /* height: 100%; */
-  /* font-size: 16px; */
   border-radius: 20px;
   border: #ecc046;
   background-color: #ecc046;
