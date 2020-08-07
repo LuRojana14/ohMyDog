@@ -1,81 +1,116 @@
+
 /* Codigo de Index */
 
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  text-decoration: none;
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    
+}
+.contenedor-paginas{
+  margin-top: 66px;
 }
 
-.btn {
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  border-radius: 20px;
-  border-color: #ecc046;
-  background-color: #dc7726;
-  text-align: center;
-  margin-top: 5px;
-  color: white !important;
+.contenedor-paginas2{
+  margin-top: 90px;
 }
+.contenedor-footer{
+  background-color:#ECC046;
+  height: 30px;
+}
+
+.btn{
+    width:100%;
+    height:100%;
+    font-size:16px;
+    border-radius: 20px;
+    border-color: #ECC046;
+    background-color: #DC7726;
+    text-align: center;
+    margin-top:15px;
+    color:white !important;  
+}
+
 
 .links-homepage {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
-.tituloppal {
+  
+.tituloppal{
   padding-top: 50px;
   font-size: 25px;
   color: white;
   text-align: center !important;
 }
 
-.textoppal {
-  color: white;
-  text-align: center;
-  margin-top: 40px;
-  margin-left: 10px;
+.textoppal{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 10px
+
 }
 
-.contenedor-boton {
-  height: 35px;
-  width: 120px;
-  margin: auto;
-  display: flex;
-  margin-top: 70px;
-  justify-content: center;
+.contenedor-boton{
+    
+    
+    height: 35px;
+    width: 115px;
+    margin:auto;
+    display: flex;
+    margin-top: 100px;
+    justify-content:center;
+    
+}
+ 
+
+
+.tituloppal:hover{
+    color:#ECC046;
+}
+​
+.textoicono{
+    color: black;
+    
 }
 
-.tituloppal:hover {
-  color: #ecc046;
+.pruebastyle{
+   
+    background-image: url("/images/portadamobile.jpg");
+    width: 100%;
+    height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 100%;
+    
 }
 
-​ .textoicono {
-  color: black;
-}
-
-.pruebastyle {
-  background-image: url("/images/portadamobile.jpg");
+ .capa-gris{
+    background-color: rgba(122, 120, 120, 0.619);
+    height: 100%;
+} 
+.navbar-brand{
+    display: flex;
+    align-items: center;
+   
+} 
+.navbar{
   width: 100%;
-  height: 580px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 100%;
+  position: fixed;
+  top:0;
+  z-index: 1;
 }
 
-.capa-gris {
-  background-color: rgba(122, 120, 120, 0.619);
-  height: 100%;
-}
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-​ .textoicono {
-  padding-left: 8px;
-  font-size: 20px;
-}
+ .textoicono{
+    padding-left:8px;
+    font-size:20px;   
+} 
 
-/* newdog !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+
+
+
+/* newdog */
 .form-add-dog {
   /* border: 2px solid coral; */
   display: flex;
@@ -163,18 +198,16 @@ body {
   width: 100%;
 }
 
-/* empieza estilo de profile !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* empieza estilo de profile */
 .contenedor-profileImage {
-  /* border: 2px solid red; */
   font-family: "Roboto Condensed", sans-serif;
   width: 100%;
 }
-
 .fotoperfil {
   /* border: 2px solid blue; */
   width: 100vw;
 }
-
 .nombre {
   /* border: 2px solid #42c0d2; */
   background-color: #42c0d2;
@@ -183,26 +216,21 @@ body {
   padding: 2%;
   /* margin: 3%; */
 }
-
 .epigrafe {
   /* border: 2px solid fuchsia; */
   font-size: 1rem;
-  padding: 1%;
-  margin: 1%;
-  /* text-align: center; */
+  padding: 2%;
+  margin: 2%;
 }
-
 .eselform {
   /* border: 2px solid blue;  */
   width: 70%;
   padding: 4% 0%;
 }
-
 .container-edit-form {
   /* border: 2px solid red;  */
   margin-top: 3%;
 }
-
 .formulario-general {
   /* border: 2px solid red;  */
   display: flex;
@@ -214,27 +242,23 @@ body {
   /* box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
   rgba(84, 70, 35, 0.15) 0px 1px 3px; */
 }
-
 .formulario-general p {
   margin-top: 0px;
   font-weight: bold;
   margin-bottom: 0px;
   color: #42c0d2;
 }
-
 .formulario-general input {
   /* border: 2px solid fuchsia;  */
   width: 100%;
   margin-bottom: 3%;
   padding: 1%;
 }
-
 .formulario-general label {
   /* border: 2px solid rgb(229, 255, 0);  */
   margin-bottom: 1%;
   margin-top: 3%;
 }
-
 .container-edit-button1 {
   /* border: 2px solid rgb(216, 100, 54); */
   display: flex;
@@ -245,18 +269,17 @@ body {
   margin-bottom: 2%;
   width: 100%;
 }
-
 .edit-button1 {
   /* border: 2px solid black; */
   margin: 0px;
   padding: 2%;
   width: 60%;
-  color: black;
+  color: white;
   border-radius: 20px;
-  border: #ecc046;
+  border: #DC7726;
   background-color: #ecc046;
+  border:2px solid;
 }
-
 .campo {
   display: flex;
   flex-direction: column;
@@ -264,21 +287,18 @@ body {
   border: 1px solid rgb(218, 212, 212);
   color: rgb(131, 125, 125);
 }
-
 .form-delete {
   /* border: 2px solid red; */
   width: 70%;
   display: flex;
   justify-content: center;
 }
-
 .container-delete {
   /* border: 2px solid fuchsia; */
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
 .delete-button {
   /* border: 2px solid blue; */
   margin: 0px;
@@ -286,12 +306,12 @@ body {
   justify-content: center;
   padding: 2%;
   width: 60%;
-  color: black;
+  color: white;
   border-radius: 20px;
-  border: #ecc046;
+  border:2px solid;
+  border: #DC7726;
   background-color: #ecc046;
 }
-
 .container-footer {
   /* border: 2px solid blue; */
   width: 100%;
@@ -300,7 +320,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .navbar-footer {
   box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
     rgba(84, 70, 35, 0.15) 0px 1px 3px;
@@ -312,133 +331,10 @@ body {
   width: 100%;
   position: sticky;
 }
-
 .footer-letter {
   color: white;
 }
-
-/*-------------DOG DETAILS--------------*/
-.fotoDogDetail {
-  width: 100vw;
-}
-.name-dog {
-  background-color: #42c0d2;
-  padding-left: 10px;
-  color: white;
-}
-
-.dog-details {
-  /* border: 2px solid blue; */
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 0px;
-}
-
-.contenedor-formulariodogs {
-  /* border: 2px solid red; */
-  color: rgb(65, 62, 62);
-  width: 95%;
-}
-
-.breed {
-  text-align: left;
-  padding-left: 5px;
-}
-
-.container-reviews {
-  /* border: 2px solid rgb(255, 0, 157); */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.new-review {
-  margin-left: 4%;
-  margin-bottom: 1%;
-
-}
-
-.nombre-see-more {
-  /* border: 2px solid #42c0d2; */
-  background-color: #42c0d2;
-  border-radius: 2%;
-  color: white;
-  padding: 2%;
-  margin-top: 0px;
-}
-
-.container-btn-chat {
-  /* border: 2px solid #42c0d2; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 0px;
-}
-
-.btn-chat {
-  width: 50%;
-  padding: 1%;
-  border-radius: 20px;
-  border: #ecc046;
-  background-color: #ecc046;
-  text-align: center;
-  margin-top: 5px;
-  color: white;
-}
-
-.text-style {
-  color: #42c0d2;
-}
-
-.container-add-button {
-  /* border: 2px solid black; */
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.add-button {
-  /* border: 2px solid red; */
-  width: 30%;
-  border-radius: 20px;
-  border: #ecc046;
-  background-color: #ecc046;
-  text-align: center;
-  margin-top: 5px;
-  color: white;
-}
-
-.container-textarea {
-  /* border: 2px solid blue; */
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.text-dad {
-  /* border: 2px solid orange; */
-  box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
-    rgba(84, 70, 35, 0.15) 0px 1px 3px;
-  width: 95%;
-  padding: 2%;
-  margin-bottom: 3%;
-}
-
-.container-textarea input {
-  border: 2px solid rgb(238, 234, 234);
-  display: flex;
-  width: 100%;
-}
-
-.container-textarea textarea {
-  border: 2px solid rgb(238, 234, 234);
-  display: flex;
-  width: 100%;
-}
-
+/* ------------------empieza login------------------------- */
 /* ------------------empieza login------------------------- */
 .container-form-login {
   /* border: 2px solid blue; */
@@ -447,12 +343,10 @@ body {
   align-items: center;
   margin-top: 8%;
 }
-
 .form-style-login {
   /* border: 2px solid violet; */
   width: 70%;
 }
-
 .form-login {
   /* border: 2px solid coral; */
   display: flex;
@@ -470,13 +364,11 @@ body {
   margin-bottom: 10px;
   color: #dc7726;
 }
-
 .form-login label {
   /* border: 2px solid yellow; */
   margin-bottom: 1%;
   margin-top: 4%;
 }
-
 .form-login input {
   /* border: 2px solid fuchsia; */
   display: flex;
@@ -485,7 +377,6 @@ body {
   width: 100%;
   margin-bottom: 4%;
 }
-
 .account-loginbutton {
   /* border: 2px solid rgb(124, 124, 194); */
   display: flex;
@@ -498,7 +389,6 @@ body {
   padding: 2%;
   width: 40%;
 }
-
 .signup-section {
   /* border: 2px solid blue; */
   display: flex;
@@ -508,7 +398,6 @@ body {
   align-items: center;
   margin-top: 4%;
 }
-
 .signup-section button {
   /* border: 2px solid lightseagreen; */
   margin: auto;
@@ -522,7 +411,6 @@ body {
   padding: 2%;
   width: 40%;
 }
-
 .containerlogin-create {
   /* border: 2px solid rgb(130, 213, 238); */
   display: flex;
@@ -531,7 +419,6 @@ body {
   flex-direction: row;
   margin-top: 10%;
 }
-
 .signup-align {
   /* border: 2px solid rgb(216, 15, 45); */
   display: flex;
@@ -540,7 +427,6 @@ body {
   width: 50%;
   margin-top: 4%;
 }
-
 .signup-button {
   /* border: 2px solid greenyellow; */
   color: white;
@@ -550,42 +436,50 @@ body {
   width: 100%;
 }
 
-/*------------- empieza home private--------------------- */
 
-.card-title {
-  color: #dc7726;
-}
+  /*------------- empieza home private--------------------- */
 
-.card {
-  margin: auto;
-  margin-top: 20px;
-}
+ .card-title{
+     color: #DC7726;
+ }
 
-.razadeperro {
-  font-style: italic;
-}
+  .card{
+   
+      margin:auto;
+      margin-top: 20px;
+   
+  }
 
-.formulario-buscar {
-  display: flex;
-  flex-direction: row;
-  width: 325px;
-  margin: auto;
-  padding-top: 30px;
-}
+ .razadeperro{
+     font-style: italic;
+   
+ }
 
-.form-group2 {
-  margin: auto;
-  justify-content: space-around;
-}
+ .formulario-buscar{
+   display: flex;
+   flex-direction: row;
+   width: 325px;
+   margin: auto; 
+   margin-top: 75px;
+   padding-top: 30px;
+  
+ }
 
-.botonSearch {
-  border-radius: 20px;
-  border-color: #ecc046;
-  background-color: #dc7726;
-  color: white;
-  box-shadow: none;
-  border: solid;
-}
+ .form-group2{
+   margin: auto;
+   justify-content: space-around;
+ }
+
+ .botonSearch{
+   border-radius: 20px;
+   border-color: #ECC046;
+   background-color: #DC7726;
+   color: white;
+   box-shadow: none;
+   border: solid;
+   
+ }
+/*------------- signup--------------------- */
 /*------------- signup--------------------- */
 .container-form {
   /* border: 2px solid blue; */
@@ -593,7 +487,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .form-tocomplete {
   /* border: 2px solid coral; */
   display: flex;
@@ -604,7 +497,7 @@ body {
 }
 .form-tocomplete p {
   /* border: 2px solid brown; */
-  margin-top: 0px;
+  margin-top: 6%;
   font-weight: bold;
   margin-bottom: 0px;
   color: #dc7726;
@@ -616,12 +509,10 @@ body {
   border: 1px solid rgb(218, 212, 212);
   color: rgb(131, 125, 125);
 }
-
 .form-tocomplete label {
   /* border: 2px solid yellow; */
   margin-bottom: 2px;
 }
-
 .form-tocomplete input {
   /* border: 2px solid fuchsia; */
   width: 100%;
@@ -631,6 +522,17 @@ body {
   align-items: center;
   margin-bottom: 0px;
 }
+.btn-signup {
+  width: 70%;
+  padding: 2%;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #ecc046;
+  background-color: #dc7726;
+  text-align: center;
+  margin-top: 6%;
+  color: white;
+}
 .account-section {
   /* border: 2px solid blue; */
   display: flex;
@@ -639,32 +541,30 @@ body {
   margin-top: 0px;
   align-items: center;
 }
-
 .account-section button {
-  /* border: 2px solid lightseagreen; */
+  border: 2px solid lightseagreen;
   margin: auto;
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
   border: rgb(238, 234, 234);
-  background-color: rgb(238, 234, 234);
+  background-color: white;
   text-decoration: none;
-  padding: 4px;
+  /* padding: 4px; */
   width: 50%;
 }
-
-.login-button {
-  /* border: 2px solid black; */
+.btn-login {
+  width: 70%;
+  padding: 3%;
+  border: 1px solid;
+  border-radius: 20px;
+  background-color: #dc7726;
+  border-color: #ecc046;
+  text-align: center;
   color: white;
-  margin: 0px;
-  padding: 0px;
-  width: 40%;
-  /* border: #dc7726; */
-  /* padding: 4px; */
   width: 100%;
-  color: black;
+  margin-bottom: 6%;
 }
-
 .container-create {
   /* border: 2px solid violet; */
   display: flex;
@@ -673,73 +573,181 @@ body {
   flex-direction: row;
   margin-top: 0px;
 }
-
-.account-button {
-  border: 2px solid greenyellow;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  /* margin-top: 10px; */
-  /* border: #dc7726; */
-  background-color: #dc7726;
-  color: white;
-  padding: 2%;
-  width: 60%;
-}
-
 .account-align {
   /* border: 2px solid lightpink; */
   display: flex;
   text-align: center;
   flex-direction: column;
   width: 50%;
+  margin-top: 3%;
+}
+.account-align p {
+  /* border: 2px solid lightpink; */
+  margin-bottom: 0px;
 }
 
-/*------------- blog--------------------- */
 
-article {
-  margin-bottom: 2em;
-  padding-bottom: 2em;
-  border-bottom: 1px solid #ccc;
+  /*------------- blog--------------------- */
+
+  article {margin-bottom:2em;padding-bottom:2em;border-bottom:1px solid #ccc;}
+
+  .social a {
+    padding: 0 .5em;
+  }
+  
+  .page-header {
+    margin-bottom:2rem;
+  }
+
+  .textoblog{
+    color:#DC7726;
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  .textoBlog{
+    font-style: italic;
+  }
+
+  .entry-content1{
+    padding-top: 10px;
+  }
+
+  #articulo3{
+    padding-top: 15px;
+  }
+
+  .list-group-item {
+    text-decoration: none;
+    color:#42C0D2;
+  }
+
+  .list-group-item-text{
+    color:black !important;
+  }
+
+
+  .darda{
+    color:#DC7726;
+  }
+  /*-------------DOG DETAILS--------------*/
+/*-------------DOG DETAILS--------------*/
+.fotoDogDetail {
+  width: 100vw;
+  
 }
 
-.social a {
-  padding: 0 0.5em;
+
+.name-dog {
+  background-color: #42c0d2;
+  padding-left: 10px;
+  color: white;
+}
+.dog-details {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0px;
+}
+.contenedor-formulariodogs {
+  /* border: 2px solid red; */
+  color: rgb(65, 62, 62);
+  width: 95%;
+}
+.breed {
+  text-align: left;
+  padding-left: 5px;
+
+ 
 }
 
-.page-header {
-  margin-bottom: 2rem;
+.container-reviews {
+  /* border: 2px solid rgb(255, 0, 157); */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
-
-.textoblog {
-  color: #dc7726;
-  font-style: italic;
-  font-size: 24px;
+.new-review {
+  margin-left: 4%;
+  margin-bottom: 1%;
 }
-
-.textoBlog {
-  font-style: italic;
+.nombre-see-more {
+  /* border: 2px solid #42c0d2; */
+  background-color: #42c0d2;
+  border-radius: 2%;
+  color: white;
+  padding: 2%;
+  margin-top: 0px;
+ 
 }
-
-.entry-content1 {
-  padding-top: 10px;
+.container-btn-chat {
+  /* border: 2px solid #42c0d2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
 }
-
-#articulo3 {
-  padding-top: 15px;
+.btn-chat {
+  width: 70%;
+  padding: 1%;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #DC7726;
+  background-color: #ecc046;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
 }
-
-.list-group-item {
-  text-decoration: none;
+.text-style {
   color: #42c0d2;
 }
-
-.list-group-item-text {
-  color: black !important;
+.container-add-button {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
+.add-button {
+  /* border: 2px solid red; */
+  width: 30%;
+  border-radius: 20px;
+  border:1px solid;
+  border-color:#DC7726;
+  background-color: #ecc046;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+.container-textarea {
+  /* border: 2px solid blue; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.text-dad {
+  /* border: 2px solid orange; */
+  box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
+    rgba(84, 70, 35, 0.15) 0px 1px 3px;
+  width: 95%;
+  padding: 2%;
+  margin-bottom: 3%;
+}
+.container-textarea input {
+  border: 2px solid rgb(238, 234, 234);
+  display: flex;
+  width: 100%;
+}
+.container-textarea textarea {
+  border: 2px solid rgb(238, 234, 234);
+  display: flex;
+  width: 100%;
+}
+  /* --------MEDIA QUERYS------------ */
 
-/* --------MEDIA QUERYS------------ */
-
+  
 @media (min-width: 576px) {
   .form-tocomplete {
     /* border: 2px solid coral; */
@@ -798,17 +806,14 @@ article {
     align-items: center;
     width: 100%;
   }
-
   .container-delete {
-    /* border: 2px solid fuchsia; */
     padding-top: 3%;
   }
-
   .delete-button {
-    /* border: 2px solid blue; */
-    width: 50%;
+   width: 50%;
   }
 }
+
 
 @media (min-width: 768px) {
   .form-tocomplete {
@@ -817,7 +822,10 @@ article {
       rgba(84, 70, 35, 0.15) 0px 1px 3px;
     width: 70%;
   }
-
+  .contenedor-footer{
+    background-color:#ECC046;
+    height: 75px;
+  }
   .formclass {
     /* border: 2px solid yellow; */
     width: 70%;
@@ -837,6 +845,7 @@ article {
       rgba(84, 70, 35, 0.15) 0px 1px 3px;
   }
   .form-add-dog {
+    
     box-shadow: rgba(84, 70, 35, 0.15) 0px 2px 8px,
       rgba(84, 70, 35, 0.15) 0px 1px 3px;
     padding-top: 3%;
@@ -849,19 +858,70 @@ article {
     padding: 1%;
     width: 100%;
   }
-  .pruebastyle {
-    background-image: url("/images/portada.jpg");
+  .contenedor-paginas2{
+    margin-top: 150px;
   }
-  .container-delete {
-    /* border: 2px solid fuchsia; */
-    padding-top: 3%;
-  }
-
-  .delete-button {
-    /* border: 2px solid blue; */
-    width: 40%;
-  }
+  .pruebastyle{
+   background-image: url("/images/portada.jpg"); 
+   height: 1050px;
 }
+.tituloppal{
+  padding-top: 60px;
+  font-style:bold;
+  font-size: 60px;
+  text-align: left;
+  color:white;
+}
+
+.textoppal{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+.contenedor-boton{
+  height: 35px;
+  width: 150px;
+  margin-top: 170px;
+  
+}
+.btn{
+  font-size:20px;
+  border-radius: 20px;
+  border-color: #ECC046;
+  background-color: #DC7726;
+  text-align: center;
+  margin-top:20px;
+}
+.container-delete {
+  /* border: 2px solid fuchsia; */
+  padding-top: 3%;
+}
+.delete-button {
+  /* border: 2px solid blue; */
+  width: 40%;
+}
+.contenedor-boton{
+  height: 50px;
+  width: 160px;
+  margin:auto;
+  display: flex;
+  margin-top: 150px;
+  justify-content:center;
+}
+.navDarda{
+  width: 75px;
+  height: 75px;
+}
+
+.navbar-brand{
+  padding-left: 20px;
+  
+}
+}
+
+
 
 @media (min-width: 992px) {
   .form-style-login {

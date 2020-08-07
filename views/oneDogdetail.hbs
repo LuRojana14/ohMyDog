@@ -1,12 +1,11 @@
-
+<div class="contenedor-paginas">
 <div class="contenedor-profileImage">
   <img class="fotoDogDetail" src="{{dog.image}}" alt="">
 </div>
-<div>
-  <img class="epigrafeDogDetail" src="{{dog.description}}" alt="">
+<div class="nombre-see-more">
+<h3>{{dog.namedog}}</h3>
 </div>
-
-<h3 class="nombre-see-more">{{dog.namedog}}</h3>
+<img class="epigrafeDogDetail" src="{{dog.description}}" alt="">
 
 <div class="breed">
   <p class="epigrafe"><i class="fas fa-paw"></i> Hello I'm a {{dog.breed}}</p>
@@ -16,40 +15,30 @@
         class="links-homepage">Chat with {{dog.namedog}} parents</a></button>
   </div>
 </div>
-
 <hr class="lineaDogdetails">
 <div class="dog-details">
   <div class="contenedor-formulariodogs">
-
     <div>
       <p>Sex: {{dog.sex}}</p>
     </div>
-
     <div>
       <p>Telephone: {{user.telephone}}</p>
     </div>
-
     <div>
       <p>Age: {{dog.age}}</p>
     </div>
-
     <div>
       <p>Weight: {{dog.weight}}</p>
     </div>
-
     <div>
       <p>Postal Code: {{user.cp}}</p>
     </div>
-
   </div>
 </div>
-
 <div class="container-reviews">
   <form action="/users/reviews/add" method="post">
-
     <div class="container-textarea">
       <div class="text-dad">
-
         <div>
           <label class="text-style" for="exampleFormControlTextarea1">{{dog.namedog}}
             Reviews</label>
@@ -59,23 +48,17 @@
             placeholder="name@example.com">
           <input type="hidden" name="dogId" value={{dog._id}}>
         </div>
-
         <div>
           <textarea type="text" name="comments"
             id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-
         <div class="container-add-button">
           <button class="add-button" type="submit">Add</button>
         </div>
-
       </div>
     </div>
-
   </form>
 </div>
-
-
 <div>
   {{#each dog.reviews}}
   <div class="new-review">
@@ -83,12 +66,10 @@
   </div>
   {{/each}}
 </div>
-
-  <div class="container-footer">
+ <div class="container-footer">
     <div class="navbar-footer">
-
       <a class="footer-letter" href="/users/homeprivate">Home</a>
       <a class="footer-letter" href="/auth/logout">Log Out </a>
-
     </div>
   </div>
+</div>

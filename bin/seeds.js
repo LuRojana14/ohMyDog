@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 const User = require("../models/UserModel");
 const Dog = require("../models/DogModel");
 
-require('dotenv').config();
-
 const users = [
   {
     username: "agust",
@@ -114,8 +112,8 @@ const users = [
     telephone: "602344620",
     cp: "08028",
     dog: {
-      namedog: "Ringo",
-      image: "https://lh3.googleusercontent.com/proxy/BbSifzPyCCPfiC5t8vx4XCC9JphvlrQuJQPscNcG58kxjMp_eJSxWMYhFAQb8dhE_l7Opl_Mjn-OOIZDJF5N65bbkvOtpAUdiHMJVyTmZ5oo_IcqNsDv_03LSYUE9hKIzFBT2Rr7RXff9cCa4RXjtZcPZFwPBjaCQ0KjAhZwDqDsTQCsMh8IqEwrZV7w1A",
+      namedog: "RINGO",
+      image: "https://i.pinimg.com/originals/59/7b/4f/597b4fd1ec4b885deca3c7bc97d92fbc.jpg",
       breed: "Bull terrier",
       sex: "male",
       description:"A little adult but I never get tired, we are going to have a lot of fun together",
@@ -132,7 +130,7 @@ const users = [
     cp: "08030",
     dog: {
       namedog: "HUGO",
-      image: "https://lh3.googleusercontent.com/proxy/N_uzuKLaO1NRUvyaMGIWMJPUfIFVcwcYng8e7mR9r627bqrfS_9QJIs_hPFUGqhlxmcmJTVOFvFWxXvklCFSAPaPBtShD_2HeFjH382DTQVtUTasCJPK9kcmAboXHLs9EwZEfQ",
+      image: "https://www.donpeludo.com/wp-content/uploads/2018/10/braco-aleman-2.jpg",
       breed: "Braco Aleman",
       sex: "male",
       description: "Soy el mas romantico, si buscas amor, ya lo encontraste",
@@ -277,11 +275,28 @@ const users = [
     },
     review: [],
   },
+  {
+    username: "sofi",
+    mail: "sofi@gmail.com",
+    password: "123456",
+    telephone: "604443220",
+    cp: "08024",
+    dog: {
+      namedog: "JORGE",
+      image: "https://demascotas.info/wp-content/uploads/2018/03/english-bulldog-538485_1280.jpg",
+      breed: "Bulldog",
+      sex: "male",
+      description:"I am very active, I go for a walk every day, on weekends I do not rest",
+      age: 4,
+      weight: "10",
+    },
+    review: [],
+  },
 ];
 
 const dbtitle = "ohmydog";
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect(`mongodb://localhost:27017/${dbtitle}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

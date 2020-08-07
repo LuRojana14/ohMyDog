@@ -4,16 +4,18 @@
 
 
 
-
+<div class="contenedor-paginas">
  <form action="/users/homeprivate" class="formulario-buscar" method="get">
         <div class="form-group2">
           <label class= "category">BREED</label>
           <select value="{{alldogs.breed}}" id="razas" class="categories-list" name="breed" required></select>
-        
-        <input class="botonSearch" type="submit" class="buscar-boton" value="search">
-      
-      </form>  
+          <input class="botonSearch" type="submit" class="buscar-boton" value="search">
+        </div>
+</form>  
 
+
+
+<div class="foto-card">
  {{#each alldogs}} 
 <div class="card" style="width: 18rem;">
     
@@ -26,7 +28,7 @@
   </div>
 </div>
 {{/each}} 
-
+</div>
 {{!-- {{#each alldogs}}
 <img src="{{this.image}}" alt="">
 <h3>{{this.namedog}}</h3>
@@ -35,6 +37,6 @@
 <a href="/users/oneDog/{{this._id}}"><h4>SEE MORE</a></h4>
 {{/each}}
   --}}
-
+</div>
  <script type="text/javascript" src="/src/razas.js"></script>  
 
